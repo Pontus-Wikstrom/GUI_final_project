@@ -1,0 +1,4 @@
+/.idea
+.gitignore
+build/
+.DS_Store

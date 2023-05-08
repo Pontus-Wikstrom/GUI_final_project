@@ -4,340 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a2536e4e-bb5e-48df-b0ca-521de2355a68" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI_final_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/GUI_final_project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._creditcard.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._customer.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._eco.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._favorites.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._images" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._orders" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._prefs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._products.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._shoppingcart.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/._user.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_100.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_102.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_107.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_108.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_109.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_110.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_111.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_112.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_113.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_114.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_115.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_116.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_117.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_118.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_119.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_120.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_121.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_122.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_123.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_124.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_125.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_126.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_127.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_128.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_129.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_130.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_131.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_132.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_133.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_134.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_135.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_136.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_137.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_138.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_139.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_140.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_141.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_142.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_143.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_144.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_145.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_146.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_147.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_148.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_154.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_37.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_38.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_42.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_43.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_44.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_45.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_46.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_47.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_48.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_49.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_50.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_51.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_52.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_53.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_54.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_55.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_56.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_57.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_58.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_59.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_60.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_61.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_62.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_63.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_65.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_66.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_67.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_68.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_69.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_70.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_71.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_72.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_73.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_74.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_75.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_76.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_77.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_78.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_79.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_80.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_81.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_82.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_83.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_84.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_85.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_86.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_87.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_88.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_89.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_90.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_91.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_92.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_93.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_94.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_95.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_96.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_97.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_98.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/images/._product_99.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/__MACOSX/imat/orders/._.DS_Store" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/creditcard.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/customer.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/eco.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/favorites.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_100.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_101.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_102.bmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_102.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_103.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_104.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_105.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_106.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_107.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_108.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_109.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_110.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_111.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_112.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_113.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_114.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_115.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_116.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_117.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_118.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_119.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_120.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_121.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_122.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_123.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_124.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_125.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_126.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_127.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_128.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_129.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_130.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_131.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_132.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_133.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_134.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_135.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_136.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_137.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_138.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_139.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_140.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_141.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_142.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_143.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_144.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_145.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_146.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_147.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_148.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_149.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_150.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_151.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_152.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_153.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_154.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_27.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_28.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_29.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_30.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_31.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_32.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_33.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_34.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_35.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_36.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_37.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_38.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_39.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_40.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_41.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_42.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_43.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_44.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_45.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_46.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_47.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_48.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_49.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_50.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_51.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_52.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_53.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_54.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_55.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_56.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_57.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_58.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_59.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_60.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_61.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_62.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_63.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_64.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_65.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_66.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_67.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_68.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_69.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_70.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_71.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_72.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_73.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_74.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_75.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_76.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_77.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_78.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_79.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_80.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_81.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_82.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_83.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_84.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_85.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_86.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_87.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_88.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_89.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_90.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_91.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_92.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_93.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_94.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_95.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_96.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_97.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_98.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/images/product_99.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/prefs.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/products.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/shoppingcart.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/resources/imat/imat/user.txt" beforeDir="false" />
-    </list>
+    <list default="true" id="a2536e4e-bb5e-48df-b0ca-521de2355a68" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -354,23 +32,23 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Pontus Wikström/Documents/GitHub/GUI_final_project/resources/resources/projectbackend.jar",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Pontus Wikström/Documents/GitHub/GUI_final_project",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="ProductEditor.jar" type="JarApplication" temporary="true">
-      <option name="JAR_PATH" value="$PROJECT_DIR$/resources/resources/producteditor/producteditor/ProductEditor.jar" />
-      <method v="2" />
+    <configuration name="iMatApp" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="imat.iMatApp" />
+      <module name="GUI_final_project" />
+      <option name="VM_PARAMETERS" value="--module-path &quot;C:\Users\Pontus Wikström\Documents\javafx-sdk-19.0.2.1\lib&quot; --add-modules javafx.controls,javafx.fxml" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="JAR Application.ProductEditor.jar" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -382,5 +60,15 @@
       <updated>1683534033406</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IllegalArgumentException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

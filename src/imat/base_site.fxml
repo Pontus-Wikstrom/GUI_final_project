@@ -7,7 +7,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@base_site.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane prefHeight="173.0" prefWidth="1920.0" stylesheets="@base_site.css">
@@ -114,6 +113,89 @@
          <children>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
             <Text layoutX="1789.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="burger_menu" prefHeight="1080.0" prefWidth="365.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1080.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="365.0" />
+            <AnchorPane layoutX="80.0" layoutY="20.0" prefHeight="173.0" prefWidth="173.0">
+               <children>
+                  <ImageView fitHeight="173.0" fitWidth="173.0" layoutX="16.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/loga.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Text layoutX="40.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favoriter">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <Text layoutX="40.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erbjudanden">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <Text layoutX="40.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="60.0" fitWidth="365.0" layoutY="410.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/divier.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="40.0" layoutY="515.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Mejeri">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <Text layoutX="40.0" layoutY="596.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Kött">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <Text layoutX="40.0" layoutY="672.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Skafferi">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <Text layoutX="40.0" layoutY="734.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt; Grönsaker">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="60.0" fitWidth="365.0" layoutY="750.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/divier.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="111.0" layoutY="870.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hjälp">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
+            <AnchorPane layoutX="81.0" layoutY="890.0" prefHeight="173.0" prefWidth="169.0">
+               <children>
+                  <ImageView fitHeight="173.0" fitWidth="173.0" layoutX="-2.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@resources/varukorgsak.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="128.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                     <font>
+                        <Font size="37.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="40.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000 kr">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>

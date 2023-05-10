@@ -1,0 +1,6 @@
+.navbuttons{
+
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 15px, 0, 0, 0);
+    
+    
+}

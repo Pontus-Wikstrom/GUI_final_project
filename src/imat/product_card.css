@@ -1,0 +1,67 @@
+#product_card_rec{
+    -fx-background-color: white;
+    -fx-background-radius: 25px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
+}
+
+.varukorg_rec{
+    -fx-background-color: #2B9EB3;
+    -fx-background-radius: 50px;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 2, 0, 0, 0);
+}
+
+.plus_minus_buttons_and_text_rec{
+    -fx-background-color: #ffffff;
+}
+
+.circle_minus_plus{
+    -fx-height: 100%;
+}
+
+.circle_minus_plus:hover{
+    -fx-cursor: hand;
+}
+
+.circle_minus_plus:pressed{
+    -fx-border-color: #00BABE;
+}
+
+.circle_test{
+    -fx-background-radius: 60px;
+    -fx-background-color: #FCAB10;
+}
+
+.circle_test:hover{
+    -fx-background-color: #E9A016;
+    -fx-cursor: hand;
+}
+
+.rec_in_circle_test{
+    -fx-background-color: #000000;
+    -fx-background-radius: 5px;
+}
+
+.star{
+    -fx-background-color: darkgrey;
+}
+
+.star:hover{
+    -fx-background-color: yellow;
+}
+
+.prototype_image_background{
+    -fx-background-color: black;
+}
+
+.productname_text{
+
+}
+
+.price_product{
+
+}
+
+.amount_of_items_text_product{
+
+}
+

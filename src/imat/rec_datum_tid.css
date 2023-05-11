@@ -1,0 +1,46 @@
+#datum_tid_rec{
+    -fx-background-color: #ffffff;
+}
+
+.splitter_datum_val{
+}
+
+.rec_datum_tid_val{
+    -fx-background-color: #ffffff;
+}
+
+.datum_tid_val{
+    -fx-background-color: #f5f5f5;
+    -fx-border-color: #000000;
+}
+
+.datum_tid_val:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #2B9EB3;
+}
+
+.black_button{
+    -fx-background-color: #000000;
+    -fx-background-radius: 50px;
+}
+
+.black_button:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #9a9a9a;
+}
+
+.text_datum_information{
+
+}
+
+.text_dag_information{
+
+}
+
+.text_tidpunkt_information{
+
+}
+
+.text_bokning_information{
+
+}

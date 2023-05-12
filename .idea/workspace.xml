@@ -4,8 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="">
+    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="moved fxml to resources">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Betalning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Betalning.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Varukorg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Varukorg.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/done.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/done.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iMatApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/iMatApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/paypalochklarna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/paypalochklarna.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,14 +34,21 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Pontus Wikström/Documents/GitHub/JawasOchWIkensGui/RecipeSearch&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/amandalindell/GUI_final_project&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/imat" />
+      <recent name="$PROJECT_DIR$/src/imat/resources" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="iMatApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-19" />
@@ -68,5 +81,20 @@
       <updated>1616707927049</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="moved fxml to resources" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved fxml to resources" />
   </component>
 </project>

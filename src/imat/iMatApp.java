@@ -3,10 +3,13 @@ package imat;
 
 import java.util.ResourceBundle;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.stage.PopupWindow.AnchorLocation;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -14,6 +17,8 @@ import javafx.stage.Stage;
  * and open the template in the editor.
  */
 public class iMatApp extends Application {
+
+   
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -36,5 +41,7 @@ public class iMatApp extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
+    
     
 }

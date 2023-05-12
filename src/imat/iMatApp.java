@@ -20,9 +20,9 @@ public class iMatApp extends Application {
         
         ResourceBundle bundle = java.util.ResourceBundle.getBundle("imat/resources/iMat");
         
-        Parent root = FXMLLoader.load(getClass().getResource("imat_app.fxml"), bundle);
+        Parent root = FXMLLoader.load(getClass().getResource("base_site.fxml"), bundle);
         
-        Scene scene = new Scene(root, 1000, 700);
+        Scene scene = new Scene(root, 1920, 1080);
         
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);

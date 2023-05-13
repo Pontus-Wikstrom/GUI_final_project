@@ -300,7 +300,7 @@
                   </SplitPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="contentAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="729.0" prefWidth="1920.0" />
+            <AnchorPane fx:id="contentAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" />
          </children>
       </StackPane>
    </children>

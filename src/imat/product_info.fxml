@@ -20,7 +20,7 @@
                   </Text>
                   <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="148.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="135.0">
                      <image>
-                        <Image url="@../../../../../Pictures/plus_trans_new.png" />
+                        <Image url="@resources/kundvagn.png" />
                      </image>
                   </ImageView>
                   <AnchorPane layoutX="776.0" layoutY="22.0" prefHeight="50.0" prefWidth="150.0" styleClass="close_button" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">

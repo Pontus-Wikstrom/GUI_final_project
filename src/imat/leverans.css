@@ -7,3 +7,8 @@
 .not_achieved_button{
 -fx-background-color: #8b8b8b;
 }
+
+.buttons:hover{
+-fx-background-color: #525252;
+
+}

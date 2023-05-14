@@ -17,10 +17,9 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3423.0" prefWidth="1920.0">
                      <children>
-                        <FlowPane fx:id="productListFlowPane" layoutX="134.0" layoutY="272.0" prefHeight="96.0" prefWidth="1632.0" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="3595.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="701.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="buttons" width="500.0" />
-                        <Text layoutX="712.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veckans Erbjudanden">
+                        <FlowPane fx:id="productListFlowPane" layoutX="134.0" layoutY="347.0" prefHeight="96.0" prefWidth="1632.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="100.0" layoutX="701.0" layoutY="210.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="buttons" width="500.0" />
+                        <Text layoutX="712.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Veckans Erbjudanden">
                            <font>
                               <Font size="50.0" />
                            </font>

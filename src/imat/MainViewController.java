@@ -6,6 +6,7 @@ import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -17,6 +18,8 @@ public class MainViewController implements Initializable {
     // Label pathLabel;
     @FXML
     private AnchorPane categoryButton;
+    @FXML 
+    private AnchorPane helpButton;
 
     @FXML 
     private AnchorPane contentAnchorPane;
@@ -26,6 +29,8 @@ public class MainViewController implements Initializable {
     private AnchorPane productCard;
     @FXML
     private AnchorPane offersPage;
+    @FXML
+    private AnchorPane helpPage;
 
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -33,7 +38,10 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         AnchorPane deliveryPage = new leverans(this);
-        AnchorPane offersPage 
+        offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));
+        helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
+
+        
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
         // pathLabel.setText(iMatDirectory);
@@ -46,8 +54,12 @@ public class MainViewController implements Initializable {
       //  productListFlowPane.getChildren().add(card);
     }
 
-    public void categoryClick() {
+    public void offersPageClick() {
         setPage(offersPage);
+    }
+
+    public void helpPageClick() {
+        setPage(helpPage);
     }
     
     public void setPage(AnchorPane page){

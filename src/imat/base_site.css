@@ -4,3 +4,11 @@
     
     
 }
+.navbuttons{
+-fx-background-color: #ffffff;
+}
+.navbuttons:hover{
+    -fx-cursor: hand;
+    -fx-background-color: #bad5e9;
+    
+}

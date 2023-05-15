@@ -4,3 +4,6 @@
     
     
 }
+.buttons:hover{
+    -fx-background-color: #717171;
+}

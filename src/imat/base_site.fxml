@@ -195,7 +195,6 @@
                   </SplitPane>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="contentAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" />
             <AnchorPane prefHeight="173.0" prefWidth="1920.0" stylesheets="@base_site.css">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="173.0" stroke="#ebae07" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
@@ -221,7 +220,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="386.0" prefHeight="173.0" prefWidth="273.0" styleClass="navbuttons">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="173.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="273.0" />
+                        <Rectangle fx:id="buttons" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="173.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="273.0" />
                         <Text layoutX="18.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier">
                            <font>
                               <Font size="52.0" />
@@ -241,9 +240,9 @@
                         <Rectangle fx:id="favourite_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="970.0" prefHeight="173.0" prefWidth="368.0" styleClass="navbuttons">
+                  <AnchorPane fx:id="navbuttons" layoutX="970.0" prefHeight="173.0" prefWidth="368.0" styleClass="navbuttons">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="173.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="368.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="173.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="navbuttons" width="368.0" />
                         <Text layoutX="42.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erbjudanden">
                            <font>
                               <Font size="52.0" />
@@ -298,6 +297,7 @@
                         </Text>
                      </children>
                   </AnchorPane>
+                  <AnchorPane fx:id="contentAnchorPane" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="906.0" prefWidth="1920.0" />
                </children>
             </AnchorPane>
          </children>

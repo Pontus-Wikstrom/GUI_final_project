@@ -15,7 +15,7 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2100.0" prefWidth="1920.0" stylesheets="@leverans.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane prefHeight="1080.0" prefWidth="1920.0">
+      <ScrollPane prefHeight="907.0" prefWidth="1920.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2100.0" prefWidth="1920.0">
                <children>

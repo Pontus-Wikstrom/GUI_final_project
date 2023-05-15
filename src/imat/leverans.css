@@ -1,0 +1,14 @@
+.last_buttons{
+-fx-background-color: #2B9EB3;
+-fx-text-color: white;
+-fx-background-radius: 16, 16, 16;
+
+}
+.not_achieved_button{
+-fx-background-color: #8b8b8b;
+}
+
+.buttons:hover{
+-fx-background-color: #525252;
+
+}

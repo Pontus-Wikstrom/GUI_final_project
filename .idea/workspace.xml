@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< Updated upstream
     <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="moved fxml to resources">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-=======
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/src/imat/product_info.css" afterDir="false" />
->>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Betalning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Betalning.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Varukorg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Varukorg.fxml" afterDir="false" />

@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/base_site.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/base_site.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/iMatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/iMatApp.java" afterDir="false" />
-    </list>
+    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -75,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1616707927049</updated>
       <workItem from="1683785543110" duration="6889000" />
-      <workItem from="1683875901523" duration="4979000" />
+      <workItem from="1683875901523" duration="5348000" />
     </task>
     <servers />
   </component>

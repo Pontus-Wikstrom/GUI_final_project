@@ -217,7 +217,7 @@
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="386.0" prefHeight="173.0" prefWidth="273.0" styleClass="navbuttons">
+                  <AnchorPane fx:id="categoryButton" layoutX="386.0" onMouseClicked="#categoryClick" prefHeight="173.0" prefWidth="273.0" styleClass="navbuttons">
                      <children>
                         <Text layoutX="18.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier">
                            <font>

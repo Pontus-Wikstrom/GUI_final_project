@@ -15,18 +15,25 @@ public class MainViewController implements Initializable {
 
     // @FXML
     // Label pathLabel;
+    @FXML
+    private AnchorPane categoryButton;
+
     @FXML 
     private AnchorPane contentAnchorPane;
     @FXML
     private FlowPane productListFlowPane;
     @FXML 
     private AnchorPane productCard;
+    @FXML
+    private AnchorPane offersPage;
+
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
         
         AnchorPane deliveryPage = new leverans(this);
+        AnchorPane offersPage 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
         // pathLabel.setText(iMatDirectory);
@@ -37,6 +44,10 @@ public class MainViewController implements Initializable {
     public void fillProductListFlowPane(AnchorPane card){
         
       //  productListFlowPane.getChildren().add(card);
+    }
+
+    public void categoryClick() {
+        setPage(offersPage);
     }
     
     public void setPage(AnchorPane page){

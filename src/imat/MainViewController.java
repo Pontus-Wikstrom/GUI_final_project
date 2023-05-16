@@ -29,6 +29,8 @@ public class MainViewController implements Initializable {
     @FXML
     private AnchorPane hamburgerMenu;
     @FXML
+    private AnchorPane hamburgerMenuBackground;
+    @FXML
     private AnchorPane productDescription;
     @FXML
     private AnchorPane baseSite;
@@ -77,10 +79,10 @@ public class MainViewController implements Initializable {
     }
 
     public void openHamburgerMenu() {
-        hamburgerMenu.toFront();
+        hamburgerMenuBackground.toFront();
     }
 
     public void closeHamburgerMenu() {
-        hamburgerMenu.toBack();
+        hamburgerMenuBackground.toBack();
     }
 }

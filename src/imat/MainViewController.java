@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -20,9 +21,17 @@ public class MainViewController implements Initializable {
     private AnchorPane categoryButton;
     @FXML 
     private AnchorPane helpButton;
+    @FXML
+    private AnchorPane hamburgerMenuButton;
 
     @FXML 
     private AnchorPane contentAnchorPane;
+    @FXML
+    private AnchorPane hamburgerMenu;
+    @FXML
+    private AnchorPane productDescription;
+    @FXML
+    private AnchorPane baseSite;
     @FXML
     private FlowPane productListFlowPane;
     @FXML 
@@ -38,10 +47,10 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         AnchorPane deliveryPage = new leverans(this);
-        offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));
+        offersPage = new OffersSite(this);
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
 
-        
+
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
         // pathLabel.setText(iMatDirectory);
@@ -65,5 +74,9 @@ public class MainViewController implements Initializable {
     public void setPage(AnchorPane page){
         contentAnchorPane.getChildren().clear();
         contentAnchorPane.getChildren().add(page);
+    }
+
+    public void openHamburgerMenu() {
+        hamburgerMenu.toFront();
     }
 }

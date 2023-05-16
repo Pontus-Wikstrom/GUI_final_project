@@ -6,11 +6,11 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 
 public class SitePane extends AnchorPane{
-    MainViewController controller;
+    private MainViewController controller;
     FXMLLoader fxmlLoader;
+
     public SitePane(MainViewController controller, FXMLLoader fxmlLoader) {
         this.fxmlLoader = fxmlLoader;
-        this.fxmlLoader.setRoot(this);
         this.fxmlLoader.setController(this);
 
         try {

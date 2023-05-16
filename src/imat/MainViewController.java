@@ -79,4 +79,8 @@ public class MainViewController implements Initializable {
     public void openHamburgerMenu() {
         hamburgerMenu.toFront();
     }
+
+    public void closeHamburgerMenu() {
+        hamburgerMenu.toBack();
+    }
 }

@@ -1,0 +1,8 @@
+.tillkassan{
+-fx-background-color: #09cdda;
+-fx-background-radius: 20px;
+}
+
+.tillkassan:hover{
+-fx-background-color: #09929c;
+}

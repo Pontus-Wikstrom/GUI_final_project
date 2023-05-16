@@ -14,7 +14,7 @@
             <Font size="55.0" />
          </font>
       </Text>
-      <TextArea layoutX="186.0" layoutY="530.0" prefHeight="330.0" prefWidth="1540.0" text="&#10;&#10;Email: Gmail@gmail.se&#10;Mobil: 083 293 93 12&#10;&#10;">
+      <TextArea editable="false" layoutX="186.0" layoutY="530.0" prefHeight="330.0" prefWidth="1540.0" text="&#10;&#10;Email: Gmail@gmail.se&#10;Mobil: 083 293 93 12&#10;&#10;">
          <font>
             <Font size="35.0" />
          </font>
@@ -24,7 +24,7 @@
             <Font size="55.0" />
          </font>
       </Text>
-      <TextArea layoutX="184.0" layoutY="149.0" prefHeight="306.0" prefWidth="1534.0" text="&#10;Fråga 1:&#10;Svar 1:&#10;Fråga 2:&#10;Svar 2:">
+      <TextArea editable="false" layoutX="184.0" layoutY="149.0" prefHeight="306.0" prefWidth="1534.0" text="&#10;Fråga 1:&#10;Svar 1:&#10;Fråga 2:&#10;Svar 2:">
          <font>
             <Font size="35.0" />
          </font>

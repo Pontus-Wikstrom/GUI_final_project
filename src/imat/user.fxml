@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -8,103 +9,142 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" stylesheets="@user.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Label prefHeight="235.0" prefWidth="235.0" style="-fx-border-radius: 120; -fx-border-width: 5; -fx-border-color: #D5F25E;" AnchorPane.leftAnchor="842.5" AnchorPane.topAnchor="50.0">
-         <graphic>
-            <ImageView fitHeight="235.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@resources/skepparn.png" />
-               </image>
-            </ImageView>
-         </graphic>
-      </Label>
-      <Label alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="287.0">
-         <font>
-            <Font size="50.0" />
-         </font>
-      </Label>
-      <Line endX="1920.0" layoutY="380.0" scaleY="5.0" />
-      <ScrollPane layoutX="354.0" layoutY="531.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="380.0">
-         <content>
-            <FlowPane prefHeight="527.0" prefWidth="1920.0">
+      <ScrollPane prefHeight="907.0" prefWidth="1920.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2200.0" prefWidth="1920.0">
                <children>
-                  <Label prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #ffffff;" translateX="1480.0" translateY="90.0">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="2200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+                  <Label prefHeight="235.0" prefWidth="235.0" style="-fx-border-radius: 120; -fx-border-width: 5; -fx-border-color: #D5F25E;" AnchorPane.leftAnchor="842.5" AnchorPane.topAnchor="50.0">
                      <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" translateX="2.5">
+                        <ImageView fitHeight="235.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@resources/2560px-Klarna_Payment_Badge.svg.png" />
+                              <Image url="@resources/skepparn.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Label>
-                  <Label text="Adress Information" translateX="282.0">
+                  <Label alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="287.0">
                      <font>
                         <Font size="50.0" />
                      </font>
                   </Label>
-                  <Label text="Betalningsätt" translateX="950.0">
+                  <Line endX="1920.0" layoutY="400.0" strokeWidth="6.0" />
+                  <Text layoutX="430.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress information">
                      <font>
                         <Font size="50.0" />
                      </font>
-                  </Label>
-                  <Label text="Gatuadress:" translateX="-600.0" translateY="150.0">
+                  </Text>
+                  <Text layoutX="1150.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningssätt:">
                      <font>
-                        <Font size="40.0" />
+                        <Font size="50.0" />
                      </font>
-                  </Label>
-                  <TextField prefHeight="50.0" prefWidth="500.0" promptText="Villavägen 3" translateX="-575.0" translateY="150.0">
+                  </Text>
+                  <Text layoutX="446.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gatuadress">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1100.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="446.0" layoutY="858.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="1100.0" layoutY="855.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bank">
+                     <font>
+                        <Font size="35.0" />
+                     </font>
+                  </Text>
+                  <TextField layoutX="1100.0" layoutY="740.0" prefHeight="65.0" prefWidth="430.0" text="pettersson">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <Label text="Postadress:" translateX="-1305.0" translateY="300.0">
-                     <font>
-                        <Font size="40.0" />
-                     </font>
-                  </Label>
-                  <TextField prefHeight="50.0" prefWidth="500.0" promptText="214 78 Kristianstad" translateX="375.0" translateY="220.0">
+                  <TextField layoutX="446.0" layoutY="743.0" prefHeight="65.0" prefWidth="430.0" text="Vägen 3">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <Label text="Kortnummer:" translateX="600.0" translateY="90.0">
+                  <TextField layoutX="446.0" layoutY="873.0" prefHeight="65.0" prefWidth="430.0" text="40142">
                      <font>
-                        <Font size="40.0" />
+                        <Font size="30.0" />
                      </font>
-                  </Label>
-                  <Label prefHeight="80.0" prefWidth="80.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20 0 0 20;" translateX="685.0" translateY="10.0">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/Paypal_2014_logo.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
-                  <Label prefHeight="80.0" prefWidth="90.0" style="-fx-background-color: #ffffff;" translateX="760.0" translateY="10.0">
-                     <graphic>
-                        <ImageView fitHeight="150.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
-                           <image>
-                              <Image url="@resources/2695971.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
-                  <Label prefHeight="80.0" prefWidth="70.0" style="-fx-background-color: #ffffff; -fx-background-radius: 0 20 20 0;" translateX="760.0" translateY="10.0">
-                     <graphic>
-                        <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true" preserveRatio="true" translateX="5.0">
-                           <image>
-                              <Image url="@resources/Swish_Logo_Primary_Light-BG_P3.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </Label>
+                  </TextField>
+                  <TextField fx:id="bank" layoutX="1100.0" layoutY="870.0" prefHeight="65.0" prefWidth="430.0" text="0730212943">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="savePaymentOptionButton" layoutX="1100.0" layoutY="1000.0" mnemonicParsing="false" styleClass="buttons" text="Spara betalningssätt">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                  </Button>
+                  <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="1100.0" layoutY="509.0" prefHeight="200.0" prefWidth="616.0" rowValignment="TOP">
+                     <children>
+                        <AnchorPane fx:id="paypal_button" prefHeight="141.0" prefWidth="137.0" styleClass="buttons">
+                           <children>
+                              <ImageView fitHeight="115.0" fitWidth="106.0" layoutX="25.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/Paypal_2014_logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="klarna_button" prefHeight="153.0" prefWidth="203.0" styleClass="buttons">
+                           <children>
+                              <ImageView fitHeight="92.0" fitWidth="186.0" layoutX="19.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/2560px-Klarna_Payment_Badge.svg.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="card_button" prefHeight="143.0" prefWidth="139.0" styleClass="buttons">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/2695971.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="swish_button" prefHeight="130.0" prefWidth="127.0" styleClass="buttons">
+                           <children>
+                              <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@resources/Swish_Logo_Primary_Light-BG_P3.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </FlowPane>
+                  <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" styleClass="buttons" text="Spara adress ändring">
+                     <font>
+                        <Font size="45.0" />
+                     </font>
+                  </Button>
+                  <Line endX="1920.0" layoutY="1162.0" strokeWidth="6.0" />
+                  <Text layoutX="812.0" layoutY="1262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köphistorik">
+                     <font>
+                        <Font size="60.0" />
+                     </font>
+                  </Text>
+                  <FlowPane fx:id="historyFlowPane" alignment="CENTER" layoutX="522.0" layoutY="1288.0" prefHeight="200.0" prefWidth="930.0" />
                </children>
-            </FlowPane>
-         </content>
+            </AnchorPane>
+        </content>
       </ScrollPane>
    </children>
 </AnchorPane>

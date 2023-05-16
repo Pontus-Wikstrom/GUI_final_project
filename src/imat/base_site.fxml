@@ -199,7 +199,7 @@
                <children>
                   <AnchorPane fx:id="contentAnchorPane" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="906.0" prefWidth="1920.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="173.0" stroke="#ebae07" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                  <AnchorPane prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
+                  <AnchorPane fx:id="hamburgerMenuButton" onMouseClicked="#openHamburgerMenu" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
                      <children>
                         <ImageView fitHeight="173.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
                            <image>

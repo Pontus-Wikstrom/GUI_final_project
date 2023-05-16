@@ -72,7 +72,7 @@ public class MainViewController implements Initializable {
     public void helpPageClick() {
         setPage(helpPage);
     }
-    
+        
     public void setPage(AnchorPane page){
         contentAnchorPane.getChildren().clear();
         contentAnchorPane.getChildren().add(page);

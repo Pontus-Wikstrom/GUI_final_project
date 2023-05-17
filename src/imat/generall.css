@@ -6,3 +6,7 @@
 .tillkassan:hover{
 -fx-background-color: #09929c;
 }
+
+.background{
+-fx-background-color: #f5f5f5;
+}

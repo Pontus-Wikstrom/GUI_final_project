@@ -62,22 +62,22 @@
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="1100.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" text="pettersson">
+                  <TextField layoutX="1100.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" promptText="pettersson">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" text="Jakob">
+                  <TextField layoutX="600.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" promptText="Jakob">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" text="jakob.petterson@gmail.com">
+                  <TextField layoutX="600.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" promptText="jakob.petterson@gmail.com">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="1100.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" text="0730212943">
+                  <TextField layoutX="1100.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" promptText="0730212943">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -103,22 +103,22 @@
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="1100.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" text="Gothenburg">
+                  <TextField layoutX="1100.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" promptText="Gothenburg">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" text="Vägen 3">
+                  <TextField layoutX="600.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" promptText="Vägen 3">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" text="4124124">
+                  <TextField layoutX="600.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" promptText="4124124">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="1100.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" text="Våning 3 gata 4....">
+                  <TextField layoutX="1100.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" promptText="Våning 3 gata 4....">
                      <font>
                         <Font size="30.0" />
                      </font>

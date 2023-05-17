@@ -11,6 +11,7 @@ public class SitePane extends AnchorPane{
 
     public SitePane(MainViewController controller, FXMLLoader fxmlLoader) {
         this.fxmlLoader = fxmlLoader;
+        fxmlLoader.setRoot(this);
         this.fxmlLoader.setController(this);
 
         try {

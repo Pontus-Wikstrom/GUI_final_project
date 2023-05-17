@@ -7,6 +7,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
+import javafx.event.Event;
 import javafx.scene.Group;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
@@ -65,24 +66,34 @@ public class MainViewController implements Initializable {
       //  productListFlowPane.getChildren().add(card);
     }
 
+    @FXML
     public void offersPageClick() {
         setPage(offersPage);
     }
 
+    @FXML
     public void helpPageClick() {
         setPage(helpPage);
     }
         
+    @FXML
     public void setPage(AnchorPane page){
         contentAnchorPane.getChildren().clear();
         contentAnchorPane.getChildren().add(page);
     }
 
+    @FXML
     public void openHamburgerMenu() {
         hamburgerMenuBackground.toFront();
     }
 
+    @FXML
     public void closeHamburgerMenu() {
         hamburgerMenuBackground.toBack();
+    }
+
+    @FXML
+    public void mouseTrap(Event event) {
+        event.consume();
     }
 }

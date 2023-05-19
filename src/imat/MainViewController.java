@@ -31,6 +31,7 @@ public class MainViewController implements Initializable {
     private AnchorPane hamburgerMenu;
     @FXML
     private AnchorPane hamburgerMenuBackground;
+
     @FXML
     private AnchorPane productDescription;
     @FXML
@@ -39,10 +40,19 @@ public class MainViewController implements Initializable {
     private FlowPane productListFlowPane;
     @FXML 
     private AnchorPane productCard;
+    
     @FXML
     private AnchorPane offersPage;
     @FXML
     private AnchorPane helpPage;
+    @FXML 
+    private AnchorPane favouritesPage;
+    @FXML
+    private AnchorPane categoryPage;
+    @FXML
+    private AnchorPane homePage;
+    @FXML
+    private AnchorPane userPage;
 
 
     IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
@@ -50,9 +60,13 @@ public class MainViewController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         
         AnchorPane deliveryPage = new leverans(this);
-        offersPage = new OffersSite(this);
+        offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
-
+        favouritesPage = new SitePane(this, new FXMLLoader(getClass().getResource("favoriter.fxml")));
+        categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
+        homePage = new SitePane(this, new FXMLLoader(getClass().getResource("sökSida.fxml")));
+        userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
+        
 
         String iMatDirectory = iMatDataHandler.imatDirectory();
 
@@ -75,12 +89,34 @@ public class MainViewController implements Initializable {
     public void helpPageClick() {
         setPage(helpPage);
     }
+
+    @FXML
+    public void favouritesPageClick() {
+        setPage(favouritesPage);
+    }
+
+    @FXML
+    public void categoryPageClick() {
+        setPage(categoryPage);
+    }
+
+    @FXML
+    public void homePageClick() {
+        setPage(homePage);
+    }
+
+    @FXML
+    public void userPageClick() {
+        setPage(userPage);
+    }
+
         
     @FXML
-    public void setPage(AnchorPane page){
+    private void setPage(AnchorPane page){
         contentAnchorPane.getChildren().clear();
         contentAnchorPane.getChildren().add(page);
     }
+
 
     @FXML
     public void openHamburgerMenu() {

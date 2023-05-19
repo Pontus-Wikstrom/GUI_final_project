@@ -86,8 +86,20 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
+    public void hamburgerOffersPageClick() {
+        closeHamburgerMenu();
+        offersPageClick();
+    }
+
+    @FXML
     public void helpPageClick() {
         setPage(helpPage);
+    }
+
+    @FXML
+    public void hamburgerHelpPageClick() {
+        closeHamburgerMenu();
+        helpPageClick();
     }
 
     @FXML
@@ -96,13 +108,31 @@ public class MainViewController implements Initializable {
     }
 
     @FXML
+    public void hamburgerFavouritesPageClick() {
+        closeHamburgerMenu();
+        favouritesPageClick();
+    }
+
+    @FXML
     public void categoryPageClick() {
         setPage(categoryPage);
     }
 
     @FXML
+    public void hamburgerCategoryPageClick() {
+        closeHamburgerMenu();
+        categoryPageClick();
+    }
+
+    @FXML
     public void homePageClick() {
         setPage(homePage);
+    }
+
+    @FXML
+    public void hamburgerHomePageClick() {
+        closeHamburgerMenu();
+        homePageClick();
     }
 
     @FXML

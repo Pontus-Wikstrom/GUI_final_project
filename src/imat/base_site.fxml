@@ -18,7 +18,7 @@
                   <AnchorPane fx:id="hamburgerMenu" onMouseClicked="#mouseTrap" prefHeight="1080.0" prefWidth="365.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1080.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="365.0" />
-                        <AnchorPane layoutX="80.0" layoutY="20.0" prefHeight="173.0" prefWidth="173.0">
+                        <AnchorPane layoutX="80.0" layoutY="20.0" onMouseClicked="#hamburgerHomePageClick" prefHeight="173.0" prefWidth="173.0">
                            <children>
                               <ImageView fitHeight="173.0" fitWidth="173.0" layoutX="16.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -27,17 +27,17 @@
                               </ImageView>
                            </children>
                         </AnchorPane>
-                        <Text layoutX="40.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favoriter">
+                        <Text layoutX="40.0" layoutY="253.0" onMouseClicked="#hamburgerFavouritesPageClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Favoriter">
                            <font>
                               <Font size="55.0" />
                            </font>
                         </Text>
-                        <Text layoutX="40.0" layoutY="319.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erbjudanden">
+                        <Text layoutX="40.0" layoutY="319.0" onMouseClicked="#hamburgerOffersPageClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Erbjudanden">
                            <font>
                               <Font size="55.0" />
                            </font>
                         </Text>
-                        <Text layoutX="40.0" layoutY="389.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier">
+                        <Text layoutX="40.0" layoutY="389.0" onMouseClicked="#hamburgerCategoryPageClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier">
                            <font>
                               <Font size="55.0" />
                            </font>
@@ -72,7 +72,7 @@
                               <Image url="@resources/divier.png" />
                            </image>
                         </ImageView>
-                        <Text layoutX="40.0" layoutY="840.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hjälp">
+                        <Text layoutX="40.0" layoutY="840.0" onMouseClicked="#hamburgerHelpPageClick" strokeType="OUTSIDE" strokeWidth="0.0" text="Hjälp">
                            <font>
                               <Font size="55.0" />
                            </font>

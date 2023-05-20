@@ -25,7 +25,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     private ShoppingItem shoppingItem;
     private Model model = Model.getInstance();
 
-    public ProductCardController(Product product, iMatController parentController) {
+    public ProductCardController(Product product, IMatController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -48,7 +48,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         model.getShoppingCart().addShoppingCartListener(this);
     }
 
-    
+
 
 
     @Override

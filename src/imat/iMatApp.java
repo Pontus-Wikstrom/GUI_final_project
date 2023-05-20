@@ -18,8 +18,6 @@ import javafx.stage.PopupWindow.AnchorLocation;
  */
 public class iMatApp extends Application {
 
-   
-    
     @Override
     public void start(Stage stage) throws Exception {
         

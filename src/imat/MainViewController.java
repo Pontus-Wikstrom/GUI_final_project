@@ -9,13 +9,11 @@ import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.FlowPane;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
+
 
 public class MainViewController implements Initializable {
 
-    // @FXML
-    // Label pathLabel;
+    
     @FXML
     private AnchorPane categoryButton;
     @FXML 
@@ -34,8 +32,9 @@ public class MainViewController implements Initializable {
     private AnchorPane productDescription;
     @FXML
     private AnchorPane baseSite;
-    @FXML
-    private FlowPane productListFlowPane;
+    
+
+
     @FXML 
     private AnchorPane productCard;
     
@@ -53,10 +52,10 @@ public class MainViewController implements Initializable {
     private AnchorPane userPage;
 
 
-    IMatDataHandler iMatDataHandler = IMatDataHandler.getInstance();
+    private IMatController testController;
 
     public void initialize(URL url, ResourceBundle rb) {
-        
+
         AnchorPane deliveryPage = new leverans(this);
         offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
@@ -64,19 +63,23 @@ public class MainViewController implements Initializable {
         categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
         homePage = new SitePane(this, new FXMLLoader(getClass().getResource("sökSida.fxml")));
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
-        
 
-        String iMatDirectory = iMatDataHandler.imatDirectory();
-
-        // pathLabel.setText(iMatDirectory);
         fillProductListFlowPane(productCard);
         setPage(deliveryPage);
+
+        //testController = new IMatController();
+        //testController.initialize();
     }
+
 
     public void fillProductListFlowPane(AnchorPane card){
         
       //  productListFlowPane.getChildren().add(card);
     }
+
+
+
+    // ---------------- GO TO DIFFERENT PAGES ------------------------------------
 
     @FXML
     public void offersPageClick() {

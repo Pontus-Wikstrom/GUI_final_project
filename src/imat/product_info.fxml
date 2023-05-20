@@ -95,6 +95,7 @@
                         <Font size="25.0" />
                      </font>
                   </Text>
+                  <AnchorPane layoutX="643.0" layoutY="279.0" prefHeight="60.0" prefWidth="60.0" styleClass="star" AnchorPane.leftAnchor="640.0" />
                </children>
             </AnchorPane>
         </items>

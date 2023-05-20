@@ -46,7 +46,7 @@
 }
 
 .star:hover{
-    -fx-background-color: yellow;
+    -fx-background-color: #FCAB10;
 }
 
 .prototype_image_background{

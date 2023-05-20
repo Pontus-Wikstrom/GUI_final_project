@@ -12,8 +12,6 @@ import javafx.scene.layout.AnchorPane;
 
 
 public class MainViewController implements Initializable {
-
-    
     @FXML
     private AnchorPane categoryButton;
     @FXML 
@@ -33,8 +31,6 @@ public class MainViewController implements Initializable {
     @FXML
     private AnchorPane baseSite;
     
-
-
     @FXML 
     private AnchorPane productCard;
     
@@ -51,9 +47,6 @@ public class MainViewController implements Initializable {
     @FXML
     private AnchorPane userPage;
 
-
-    private IMatController testController;
-
     public void initialize(URL url, ResourceBundle rb) {
 
         AnchorPane deliveryPage = new leverans(this);
@@ -64,22 +57,18 @@ public class MainViewController implements Initializable {
         homePage = new SitePane(this, new FXMLLoader(getClass().getResource("sökSida.fxml")));
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
-        fillProductListFlowPane(productCard);
-        setPage(deliveryPage);
+        setPage(homePage);
 
-        //testController = new IMatController();
-        //testController.initialize();
     }
-
-
-    public void fillProductListFlowPane(AnchorPane card){
-        
-      //  productListFlowPane.getChildren().add(card);
-    }
-
 
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
+
+    @FXML
+    private void setPage(AnchorPane page){
+        contentAnchorPane.getChildren().clear();
+        contentAnchorPane.getChildren().add(page);
+    }
 
     @FXML
     public void offersPageClick() {
@@ -139,13 +128,6 @@ public class MainViewController implements Initializable {
     @FXML
     public void userPageClick() {
         setPage(userPage);
-    }
-
-        
-    @FXML
-    private void setPage(AnchorPane page){
-        contentAnchorPane.getChildren().clear();
-        contentAnchorPane.getChildren().add(page);
     }
 
 

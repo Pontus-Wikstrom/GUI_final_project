@@ -1,14 +1,18 @@
 package imat;
 
 import java.util.HashMap;
+import java.util.ResourceBundle;
+
 import se.chalmers.cse.dat216.project.*;
 import javafx.fxml.FXML;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.AnchorPane;
+import javafx.fxml.Initializable;
+import java.net.URL;
 
 
 
-public class IMatController implements ShoppingCartListener {
+public class IMatController implements Initializable, ShoppingCartListener {
     
     @FXML
     private FlowPane productListFlowPane;
@@ -17,11 +21,8 @@ public class IMatController implements ShoppingCartListener {
 
 
     private final Model model = Model.getInstance();
-
-    public IMatController() {
-        
-    }
-    public void initialize() {
+    
+    public void initialize(URL url, ResourceBundle rb) {
         initProducts();
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);

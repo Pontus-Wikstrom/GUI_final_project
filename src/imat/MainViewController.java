@@ -8,8 +8,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
-import javafx.scene.Group;
-import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.IMatDataHandler;

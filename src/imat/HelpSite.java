@@ -3,7 +3,6 @@ package imat;
 import javafx.scene.layout.AnchorPane;
 import java.io.IOException;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.layout.AnchorPane;
 
 public class HelpSite extends AnchorPane {
     MainViewController controller;

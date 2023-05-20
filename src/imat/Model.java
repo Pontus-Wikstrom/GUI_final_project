@@ -51,5 +51,22 @@ public class Model {
     public Image getImage(Product p, double width, double height) {
         return iMatDataHandler.getFXImage(p, width, height);
     }
+
+
+
+
+    public ShoppingCart getShoppingCart() {
+        return iMatDataHandler.getShoppingCart();
+    }
+
+    public void addToShoppingCart(Product product) {
+        ShoppingItem shoppingItem = new ShoppingItem(product);
+        getShoppingCart().addItem(shoppingItem);
+    }
+
+    public void clearShoppingCart() {
+        iMatDataHandler.getShoppingCart().clear();
+    }
+
 }
 

@@ -1,6 +1,7 @@
 package imat;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import se.chalmers.cse.dat216.project.*;
@@ -19,16 +20,20 @@ public class IMatController implements Initializable, ShoppingCartListener {
 
     HashMap<String, ProductCardController> productCardController = new HashMap<>();
 
-
     private final Model model = Model.getInstance();
+    private MainViewController mainViewController = new MainViewController();
+
+    public IMatController() {
+
+    }
     
     public void initialize(URL url, ResourceBundle rb) {
-        initProducts();
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
+        initProducts();
     }
 
-    private void initProducts() {
+    public void initProducts() {
         productListFlowPane.getChildren().clear();
         productListFlowPane.setHgap(20);
         productListFlowPane.setVgap(20);
@@ -40,13 +45,18 @@ public class IMatController implements Initializable, ShoppingCartListener {
         }
     }
 
+
     @Override
     public void shoppingCartChanged(CartEvent event) {
 
     }
 
-    public void fillProductListFlowPane(AnchorPane card){
-        
-      //  productListFlowPane.getChildren().add(card);
+    public void updateProductList(List<Product> products){
+        productListFlowPane.getChildren().clear();
+        for (Product product : products) {
+            if(productCardController.containsKey(product.getName())){
+                productListFlowPane.getChildren().add(productCardController.get(product.getName()));
+            }
+        }
     }
 }

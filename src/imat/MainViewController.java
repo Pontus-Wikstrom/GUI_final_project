@@ -11,7 +11,7 @@ import javafx.event.Event;
 import javafx.scene.layout.AnchorPane;
 
 
-public class MainViewController implements Initializable {
+public class MainViewController {
     @FXML
     private AnchorPane categoryButton;
     @FXML 
@@ -60,6 +60,17 @@ public class MainViewController implements Initializable {
         setPage(homePage);
 
     }
+
+    /*public void init() {
+        offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));
+        helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
+        favouritesPage = new SitePane(this, new FXMLLoader(getClass().getResource("favoriter.fxml")));
+        categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
+        homePage = new SitePane(this, new FXMLLoader(getClass().getResource("sökSida.fxml")));
+        userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
+
+        setPage(homePage);
+    }*/
 
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
@@ -116,6 +127,7 @@ public class MainViewController implements Initializable {
 
     @FXML
     public void homePageClick() {
+        //iMatController.updateProductList(model.getProducts());
         setPage(homePage);
     }
 

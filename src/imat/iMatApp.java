@@ -29,6 +29,8 @@ public class iMatApp extends Application {
         
         stage.setTitle(bundle.getString("application.name"));
         stage.setScene(scene);
+        //stage.setFullScreen(true);
+        stage.setMaximized(true);
         stage.show();
 
     }

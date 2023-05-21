@@ -64,6 +64,8 @@ public class Model {
         getShoppingCart().addItem(shoppingItem);
     }
 
+
+
     public void clearShoppingCart() {
         iMatDataHandler.getShoppingCart().clear();
     }

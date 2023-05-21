@@ -4,23 +4,34 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="" />
-=======
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="moved fxml to resources">
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="added payment photos">
-
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="">
-
-      <change afterPath="$PROJECT_DIR$/src/imat/product_info.css" afterDir="false" />
+    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="Fixade till i wizarden">
+      <change afterPath="$PROJECT_DIR$/src/imat/rec_datum_tid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imat/shoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iMatApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/iMatApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/MainViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/MainViewController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/iMatApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/iMatApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/product_card.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/product_card.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/product_card.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/product_card.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Model.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/iMatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/iMatController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/leverans.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/leverans.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/leverans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/leverans.java" afterDir="false" />
     </list>
->>>>>>> main
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,42 +40,21 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="1qGZXVxTIB5kY4uHcX0VY6ckRCz" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "last_opened_file_path": "C:/Users/kalle/Documents/Bibliotek/openjfx-17.0.6_windows-x64_bin-sdk/javafx-sdk-17.0.6/lib/javafx.properties",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "configurable.group.editor",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
-  }
-}]]></component>
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/amandalindell/GUI_final_project/src/imat&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;
   }
 }</component>
@@ -78,18 +68,13 @@
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
->>>>>>> main
   <component name="RunManager">
     <configuration name="iMatApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="imat.iMatApp" />
       <module name="iMatApp" />
-<<<<<<< HEAD
-      <option name="VM_PARAMETERS" value="--module-path \Users\kalle\Documents\Bibliotek\openjfx-17.0.6_windows-x64_bin-sdk\javafx-sdk-17.0.6\lib --add-modules javafx.controls,javafx.fxml" />
-=======
       <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../Downloads/javafx-sdk-17.0.6/lib/ --add-modules javafx.controls,javafx.fxml" />
->>>>>>> main
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="imat.*" />
@@ -128,10 +113,6 @@
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
-<<<<<<< HEAD
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-=======
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -144,9 +125,12 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="moved fxml to resources" />
     <MESSAGE value="added payment photos" />
-    <option name="LAST_COMMIT_MESSAGE" value="added payment photos" />
->>>>>>> main
+    <MESSAGE value="Fixade till i wizarden" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixade till i wizarden" />
   </component>
 </project>

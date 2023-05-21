@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2100.0" prefWidth="1920.0" stylesheets="@leverans.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2100.0" prefWidth="1920.0" stylesheets="@leverans.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.leverans">
    <children>
       <ScrollPane prefHeight="907.0" prefWidth="1920.0">
         <content>
@@ -141,30 +141,30 @@
                            <items>
                               <AnchorPane maxHeight="157.0" maxWidth="1144.0" minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="1144.0">
                                  <children>
-                                    <AnchorPane layoutX="77.0" layoutY="14.0" maxWidth="990.0" prefHeight="120.0" prefWidth="990.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="17.0">
+                                    <AnchorPane onMouseClicked="#clicked1" layoutX="77.0" layoutY="14.0" maxWidth="990.0" prefHeight="120.0" prefWidth="990.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="17.0">
                                        <children>
                                           <AnchorPane maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="dag1" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                <Text fx:id="datum1" layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="361.0" layoutY="1.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane onMouseClicked="#clicked2" layoutX="361.0" layoutY="1.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="dag2" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                <Text fx:id="datum2" layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -175,28 +175,28 @@
                                                 <String fx:value="buttons" />
                                              </styleClass>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="495.0" layoutY="-3.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane onMouseClicked="#clicked3" layoutX="495.0" layoutY="-3.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="dag3" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                <Text fx:id="datum3" layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="683.0" layoutY="-15.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane onMouseClicked="#clicked4" layoutX="683.0" layoutY="-15.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="dag4" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                <Text fx:id="datum4" layoutX="109.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_datum_information" text="Datum" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -207,7 +207,7 @@
                                     </AnchorPane>
                                     <AnchorPane layoutX="37.0" layoutY="56.0" prefHeight="50.0" prefWidth="50.0" styleClass="black_button" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="49.0">
                                        <children>
-                                          <Label layoutX="14.0" layoutY="1.0" text="&lt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                          <Label onMouseClicked="#earlier" layoutX="14.0" layoutY="1.0" text="&lt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
                                              <font>
                                                 <Font size="30.0" />
                                              </font>
@@ -216,7 +216,7 @@
                                     </AnchorPane>
                                     <AnchorPane layoutX="1063.0" layoutY="66.0" prefHeight="50.0" prefWidth="50.0" styleClass="black_button" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="49.0">
                                        <children>
-                                          <Label alignment="CENTER" layoutX="16.0" layoutY="2.0" text="&gt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.0">
+                                          <Label onMouseClicked="#later" alignment="CENTER" layoutX="16.0" layoutY="2.0" text="&gt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.0">
                                              <font>
                                                 <Font size="30.0" />
                                              </font>
@@ -231,12 +231,12 @@
                                        <children>
                                           <AnchorPane prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t1" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b1" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -245,12 +245,12 @@
                                           </AnchorPane>
                                           <AnchorPane layoutX="443.0" layoutY="-4.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t4" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b4" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -259,12 +259,12 @@
                                           </AnchorPane>
                                           <AnchorPane layoutX="804.0" layoutY="-9.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t7" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b7" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -277,12 +277,12 @@
                                        <children>
                                           <AnchorPane prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t2" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b2" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -291,12 +291,12 @@
                                           </AnchorPane>
                                           <AnchorPane layoutX="443.0" layoutY="-4.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t5" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b5" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -305,12 +305,12 @@
                                           </AnchorPane>
                                           <AnchorPane layoutX="804.0" layoutY="-9.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t8" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b8" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -323,12 +323,12 @@
                                        <children>
                                           <AnchorPane prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t3" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b3" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -337,12 +337,12 @@
                                           </AnchorPane>
                                           <AnchorPane layoutX="443.0" layoutY="-4.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t6" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b6" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>
@@ -351,12 +351,12 @@
                                           </AnchorPane>
                                           <AnchorPane layoutX="804.0" layoutY="-9.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                <Text fx:id="t9" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
                                                       <Font name="System Bold" size="40.0" />
                                                    </font>
                                                 </Text>
-                                                <Text layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
+                                                <Text fx:id="b9" layoutX="169.0" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_bokning_information" text="Bokning" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0">
                                                    <font>
                                                       <Font size="35.0" />
                                                    </font>

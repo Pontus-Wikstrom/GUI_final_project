@@ -59,7 +59,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private final Model model = Model.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
-        initProducts();
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
 
@@ -76,17 +75,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     }
 
-    private void initProducts() {
-        productListFlowPane.getChildren().clear();
-        productListFlowPane.setHgap(20);
-        productListFlowPane.setVgap(20);
-        
-        for (Product product : model.getProducts()){
-            ProductCardController productCardController1 = new ProductCardController(product, this);
-            productCardController.put(product.getName(), productCardController1);
-            productListFlowPane.getChildren().add(productCardController1);
-        }
-    }
+
 
 
     public void fillProductListFlowPane(AnchorPane card){

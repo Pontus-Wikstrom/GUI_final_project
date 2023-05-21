@@ -8,7 +8,7 @@ import javafx.scene.layout.AnchorPane;
 
 
 
-public class IMatController implements ShoppingCartListener {
+public class iMatController implements ShoppingCartListener {
     
     
 

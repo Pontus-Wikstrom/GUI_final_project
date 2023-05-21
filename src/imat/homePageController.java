@@ -25,23 +25,23 @@ public class HomePageController extends AnchorPane{
     private final Model model = Model.getInstance();
 
     public HomePageController(HashMap<String, ProductCardController> productCardController) {
-        /*FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sökSida.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sökSida.fxml"));
         fxmlLoader.setRoot(this);
-        //fxmlLoader.setController(this);
+        fxmlLoader.setController(this);
 
         try {
             fxmlLoader.load();
         } catch (IOException exception) {
             throw new RuntimeException(exception);
-        }*/
+        }
 
         this.productCardController = productCardController;
-        
-    }
-
-    public void initialize(URL url, ResourceBundle rb) {
         initProducts();
     }
+
+    /*public void initialize(URL url, ResourceBundle rb) {
+        initProducts();
+    }*/
 
     @FXML
     public void mouseClickTest() {

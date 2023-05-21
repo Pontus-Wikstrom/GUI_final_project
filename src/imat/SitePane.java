@@ -11,7 +11,7 @@ public class SitePane extends AnchorPane{
 
     public SitePane(MainViewController controller, FXMLLoader fxmlLoader) {
         this.fxmlLoader = fxmlLoader;
-        fxmlLoader.setRoot(this);
+        this.fxmlLoader.setRoot(this);
         this.fxmlLoader.setController(this);
 
         try {
@@ -20,6 +20,6 @@ public class SitePane extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
-        this.controller = controller;
+        //this.controller = controller;
     }
 }

@@ -59,7 +59,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private final Model model = Model.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
-        homePageController = new HomePageController(productCardController);
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
 
@@ -71,16 +70,19 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         homePage = new HomePageController(productCardController);
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
-        fillProductListFlowPane(productCard);
         setPage(deliveryPage);
 
-        for (Product product : model.getProducts()) {
-            ProductCardController productCardController1 = new ProductCardController(product);
-            productCardController.put(product.getName(), productCardController1);
-        }
+        initProductCardController();
+        homePageController = new HomePageController(this.productCardController);
 
     } 
 
+    private void initProductCardController() {
+        for (Product product : model.getProducts()) {
+            ProductCardController productCardController1 = new ProductCardController(product);
+            this.productCardController.put(product.getName(), productCardController1);
+        }
+    }
 
 
 
@@ -146,7 +148,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void homePageClick() {
         setPage(homePage);
-        homePageController.updateProductListFlowPane(model.getProducts());
+        homePageController.updateProductListFlowPane();
+        //homePageController.updateProductListFlowPane(model.getProducts(), productCardController);
     }
 
     @FXML

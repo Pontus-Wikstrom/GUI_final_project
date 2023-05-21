@@ -58,13 +58,10 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     private final Model model = Model.getInstance();
 
-    private List<Product> testList;
-
     public void initialize(URL url, ResourceBundle rb) {
         homePageController = new HomePageController(productCardController);
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
-        testList = model.getProducts();
 
         AnchorPane deliveryPage = new leverans(this);
         offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));
@@ -144,6 +141,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void homePageClick() {
         setPage(homePage);
+        homePageController.fillProductListFlowPane();
     }
 
     @FXML

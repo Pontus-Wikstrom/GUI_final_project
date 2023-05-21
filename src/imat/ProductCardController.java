@@ -53,7 +53,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
     @Override
     public void shoppingCartChanged(CartEvent event) {
-        productCardAmountOfItems.setText((int) shoppingItem.getAmount() + "");
+        productCardAmountOfItems.setText((int) this.shoppingItem.getAmount() + "");
     }
 
 

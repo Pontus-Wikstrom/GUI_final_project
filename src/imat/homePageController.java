@@ -25,8 +25,10 @@ public class HomePageController extends AnchorPane{
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
-        System.out.println("/////");
-        System.out.println(menuBar.getSelectedToggle());
+    }
+
+    public void fillProductListFlowPane() {
+        
     }
 
 }

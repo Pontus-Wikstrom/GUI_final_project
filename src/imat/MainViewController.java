@@ -4,6 +4,7 @@ package imat;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.HashMap;
+import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -51,15 +52,14 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private AnchorPane userPage;
 
 
-    @FXML
-    private FlowPane productListFlowPane;
+    private HomePageController homePageController;
 
     HashMap<String, ProductCardController> productCardController = new HashMap<>();
 
     private final Model model = Model.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
-        initProducts();
+        homePageController = new HomePageController(productCardController);
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
 
@@ -74,19 +74,9 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         fillProductListFlowPane(productCard);
         setPage(deliveryPage);
 
-    }
+    } 
 
-    private void initProducts() {
-        productListFlowPane.getChildren().clear();
-        productListFlowPane.setHgap(20);
-        productListFlowPane.setVgap(20);
-        
-        for (Product product : model.getProducts()){
-            ProductCardController productCardController1 = new ProductCardController(product, this);
-            productCardController.put(product.getName(), productCardController1);
-            productListFlowPane.getChildren().add(productCardController1);
-        }
-    }
+
 
 
     public void fillProductListFlowPane(AnchorPane card){
@@ -151,6 +141,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void homePageClick() {
         setPage(homePage);
+        homePageController.fillProductListFlowPane();
     }
 
     @FXML

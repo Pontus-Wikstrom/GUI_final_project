@@ -7,6 +7,7 @@ import javafx.scene.layout.FlowPane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
 import javafx.fxml.FXML;
@@ -39,34 +40,26 @@ public class HomePageController extends AnchorPane{
         initProducts();
     }
 
-    /*public void initialize(URL url, ResourceBundle rb) {
-        initProducts();
-    }*/
-
-    @FXML
-    public void mouseClickTest() {
-        System.out.println("Clicked successfully");
-    }
 
     private void initProducts() {
         productListFlowPane.getChildren().clear();
         productListFlowPane.setHgap(20);
         productListFlowPane.setVgap(20);
         
-        for (Product product : model.getProducts()){
+        /*for (Product product : model.getProducts()){
             ProductCardController productCardController1 = new ProductCardController(product);
             productCardController.put(product.getName(), productCardController1);
             productListFlowPane.getChildren().add(productCardController1);
-        }
+        }*/
     }
 
-    public void fillProductListFlowPane() {
+    public void updateProductListFlowPane(List<Product> products) {
         productListFlowPane.getChildren().clear();
         
-        for (Product product : model.getProducts()){
-            //productListFlowPane.getChildren().add(new ProductCardController(product));
-            ProductCardController productCardController1 = new ProductCardController(product);
-            productListFlowPane.getChildren().add(productCardController1);
+        for (Product product : products) {
+            if(productCardController.containsKey(product.getName())){
+                productListFlowPane.getChildren().add(productCardController.get(product.getName()));
+            }
         }
     }
 

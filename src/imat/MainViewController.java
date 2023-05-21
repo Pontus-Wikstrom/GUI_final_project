@@ -74,6 +74,11 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         fillProductListFlowPane(productCard);
         setPage(deliveryPage);
 
+        for (Product product : model.getProducts()) {
+            ProductCardController productCardController1 = new ProductCardController(product);
+            productCardController.put(product.getName(), productCardController1);
+        }
+
     } 
 
 
@@ -141,7 +146,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void homePageClick() {
         setPage(homePage);
-        homePageController.fillProductListFlowPane();
+        homePageController.updateProductListFlowPane(model.getProducts());
     }
 
     @FXML

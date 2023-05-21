@@ -3,24 +3,25 @@ package imat;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.HashMap;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.FlowPane;
+
+import se.chalmers.cse.dat216.project.*;
 
 
-public class MainViewController implements Initializable {
-
-    
+public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane categoryButton;
     @FXML 
     private AnchorPane helpButton;
     @FXML
     private AnchorPane hamburgerMenuButton;
-
     @FXML 
     private AnchorPane contentAnchorPane;
     @FXML
@@ -28,13 +29,11 @@ public class MainViewController implements Initializable {
     @FXML
     private AnchorPane hamburgerMenuBackground;
 
+
     @FXML
     private AnchorPane productDescription;
     @FXML
     private AnchorPane baseSite;
-    
-
-
     @FXML 
     private AnchorPane productCard;
     
@@ -52,9 +51,17 @@ public class MainViewController implements Initializable {
     private AnchorPane userPage;
 
 
-    private IMatController testController;
+    @FXML
+    private FlowPane productListFlowPane;
+
+    HashMap<String, ProductCardController> productCardController = new HashMap<>();
+
+    private final Model model = Model.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
+        initProducts();
+        model.clearShoppingCart();
+        model.getShoppingCart().addShoppingCartListener(this);
 
         AnchorPane deliveryPage = new leverans(this);
         offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));
@@ -67,14 +74,30 @@ public class MainViewController implements Initializable {
         fillProductListFlowPane(productCard);
         setPage(deliveryPage);
 
-        //testController = new IMatController();
-        //testController.initialize();
+    }
+
+    private void initProducts() {
+        productListFlowPane.getChildren().clear();
+        productListFlowPane.setHgap(20);
+        productListFlowPane.setVgap(20);
+        
+        for (Product product : model.getProducts()){
+            ProductCardController productCardController1 = new ProductCardController(product, this);
+            productCardController.put(product.getName(), productCardController1);
+            productListFlowPane.getChildren().add(productCardController1);
+        }
     }
 
 
     public void fillProductListFlowPane(AnchorPane card){
         
       //  productListFlowPane.getChildren().add(card);
+    }
+
+    @Override
+    public void shoppingCartChanged(CartEvent arg0) {
+        // TODO Auto-generated method stub
+        
     }
 
 

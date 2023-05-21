@@ -4,6 +4,7 @@ package imat;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.HashMap;
+import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -57,10 +58,13 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     private final Model model = Model.getInstance();
 
+    private List<Product> testList;
+
     public void initialize(URL url, ResourceBundle rb) {
         homePageController = new HomePageController(productCardController);
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
+        testList = model.getProducts();
 
         AnchorPane deliveryPage = new leverans(this);
         offersPage = new SitePane(this, new FXMLLoader(getClass().getResource("erbjudanden.fxml")));

@@ -56,11 +56,15 @@ public class HomePageController extends AnchorPane{
         for (Product product : model.getProducts()){
             ProductCardController productCardController1 = new ProductCardController(product);
             productCardController.put(product.getName(), productCardController1);
-            productListFlowPane.getChildren().add(productCardController1);
+            //productListFlowPane.getChildren().add(productCardController1);
         }
     }
 
-    public void fillProductListFlowPane() {
+    public void test() {
+        fillProductListFlowPane();
+    }
+
+    private void fillProductListFlowPane() {
         productListFlowPane.getChildren().clear();
         
         /*for (Product product : model.getProducts()){

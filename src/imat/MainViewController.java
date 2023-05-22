@@ -141,7 +141,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void homePageClick() {
         setPage(homePage);
-        homePageController.fillProductListFlowPane();
+        homePageController.test();
     }
 
     @FXML

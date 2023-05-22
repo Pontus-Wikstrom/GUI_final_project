@@ -86,6 +86,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
         fillProductListFlowPane(productCard);
         setPage(deliveryPage);
+        model
 
     } 
 

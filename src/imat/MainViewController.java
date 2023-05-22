@@ -110,6 +110,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     favourite_marker.setVisible(false);
     cart_marker.setVisible(false);
     offer_marker.setVisible(false);
+    
 
     }
 

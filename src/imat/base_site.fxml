@@ -11,7 +11,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1080.0" prefWidth="1920.0" stylesheets="@base_site.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.MainViewController">
    <children>
-      <StackPane prefHeight="150.0" prefWidth="200.0">
+      <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
             <AnchorPane fx:id="hamburgerMenuBackground" onMouseClicked="#closeHamburgerMenu" prefHeight="200.0" prefWidth="200.0">
                <children>
@@ -201,7 +201,7 @@
             </AnchorPane>
             <AnchorPane fx:id="baseSite" prefHeight="173.0" prefWidth="1920.0" stylesheets="@base_site.css">
                <children>
-                  <AnchorPane fx:id="contentAnchorPane" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="906.0" prefWidth="1920.0" />
+                  <AnchorPane fx:id="contentAnchorPane" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="906.0" prefWidth="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="173.0" stroke="#ebae07" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
                   <AnchorPane fx:id="hamburgerMenuButton" onMouseClicked="#openHamburgerMenu" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
                      <children>

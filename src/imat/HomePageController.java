@@ -20,7 +20,7 @@ public class HomePageController extends AnchorPane{
     @FXML
     private FlowPane productListFlowPane;
 
-    HashMap<String, ProductCardController> productCardController;
+    private HashMap<String, ProductCardController> productCardController;
 
     private final Model model = Model.getInstance();
 
@@ -56,22 +56,22 @@ public class HomePageController extends AnchorPane{
         for (Product product : model.getProducts()){
             ProductCardController productCardController1 = new ProductCardController(product);
             productCardController.put(product.getName(), productCardController1);
-            productListFlowPane.getChildren().add(productCardController1);
+            // productListFlowPane.getChildren().add(productCardController1);
         }
+        System.out.println("in init");
+        System.out.println(productListFlowPane);
+        productListFlowPane.getChildren().addAll(productCardController.values());
+        
     }
 
     public void fillProductListFlowPane() {
-        productListFlowPane.getChildren().clear();
-        
-        for (Product product : model.getProducts()){
-            //productListFlowPane.getChildren().add(new ProductCardController(product));
-            ProductCardController productCardController1 = new ProductCardController(product);
-            productListFlowPane.getChildren().add(productCardController1);
-        }
+        System.out.println("in fillproducts");
+        System.out.println(productListFlowPane);
 
-        /*for (Product product: model.getProducts()) {
-            productListFlowPane.getChildren().add(productCardController.get(product.getName()));
-        }*/
+        productListFlowPane.getChildren().clear();
+        //productListFlowPane.getChildren().add(new ProductCardController(model.getProducts().get(0)));
+        productListFlowPane.getChildren().addAll(productCardController.values());
+        
     }
 
 }

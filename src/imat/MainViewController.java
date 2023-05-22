@@ -68,7 +68,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
         favouritesPage = new SitePane(this, new FXMLLoader(getClass().getResource("favoriter.fxml")));
         categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
-        homePage = new HomePageController(productCardController);
+        homePage = homePageController;
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
         fillProductListFlowPane(productCard);

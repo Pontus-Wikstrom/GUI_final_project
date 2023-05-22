@@ -13,7 +13,7 @@
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0">
                <children>
-                  <FlowPane fx:id="productListFlowPane" layoutX="388.0" layoutY="312.0" prefHeight="210.0" prefWidth="1214.0" />
+                  <FlowPane fx:id="productListFlowPane" layoutX="388.0" layoutY="312.0" prefHeight="210.0" prefWidth="1214.0" style="-fx-background-color: red;" />
                </children>
             </AnchorPane>
         </content>

@@ -71,18 +71,10 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         homePage = homePageController;
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
-        fillProductListFlowPane(productCard);
         setPage(deliveryPage);
 
     } 
 
-
-
-
-    public void fillProductListFlowPane(AnchorPane card){
-        
-      //  productListFlowPane.getChildren().add(card);
-    }
 
     @Override
     public void shoppingCartChanged(CartEvent arg0) {
@@ -141,7 +133,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void homePageClick() {
         setPage(homePage);
-        homePageController.test();
+        homePageController.fillProductListFlowPane();
     }
 
     @FXML

@@ -54,7 +54,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     private HomePageController homePageController;
 
-    HashMap<String, ProductCardController> productCardController = new HashMap<>();
+    HashMap<String, ProductCardController> productCardHash = new HashMap<>();
 
     private final Model model = Model.getInstance();
 
@@ -67,20 +67,20 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
         favouritesPage = new SitePane(this, new FXMLLoader(getClass().getResource("favoriter.fxml")));
         categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
-        homePage = new HomePageController(productCardController);
+        homePage = new HomePageController(productCardHash);
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
         setPage(deliveryPage);
 
         initProductCardController();
-        homePageController = new HomePageController(this.productCardController);
+        homePageController = new HomePageController(this.productCardHash);
 
     } 
 
     private void initProductCardController() {
         for (Product product : model.getProducts()) {
             ProductCardController productCardController1 = new ProductCardController(product);
-            this.productCardController.put(product.getName(), productCardController1);
+            this.productCardHash.put(product.getName(), productCardController1);
         }
     }
 

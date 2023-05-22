@@ -16,7 +16,7 @@ import javafx.stage.PopupWindow.AnchorLocation;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-public class iMatApp extends Application {
+public class IMatApp extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {

@@ -12,3 +12,7 @@
     -fx-background-color: #bad5e9;
     
 }
+
+.burgirbutton:hover{
+    -fx-cursor:hand;
+}

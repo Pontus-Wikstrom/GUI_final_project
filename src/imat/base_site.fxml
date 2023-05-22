@@ -18,7 +18,7 @@
                   <AnchorPane fx:id="hamburgerMenu" onMouseClicked="#mouseTrap" prefHeight="1080.0" prefWidth="365.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="1080.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="365.0" />
-                        <AnchorPane layoutX="80.0" layoutY="20.0" onMouseClicked="#hamburgerHomePageClick" prefHeight="173.0" prefWidth="173.0">
+                        <AnchorPane layoutX="80.0" layoutY="20.0" onMouseClicked="#hamburgerHomePageClick" prefHeight="173.0" prefWidth="173.0" styleClass="burgirbutton">
                            <children>
                               <ImageView fitHeight="173.0" fitWidth="173.0" layoutX="16.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                                  <image>

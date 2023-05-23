@@ -4,7 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="Fixade till i wizarden" />
+    <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="Fixade till i wizarden">
+      <change afterPath="$PROJECT_DIR$/src/imat/Betalning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/MainViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/MainViewController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/iMatApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/iMatApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/Betalning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Betalning.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/iMatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/iMatApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/leverans.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/leverans.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/leverans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/leverans.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/shoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/shoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/wizardVarukorg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/wizardVarukorg.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />

@@ -2,6 +2,10 @@
 -fx-background-color: #ffffff;
 -fx-background-radius: 40px;
 }
+
+.button_login{
+    -fx-background-color: #2B9EB3;
+}
 .buttons:hover{
     -fx-background-color: #bad5e9;
 

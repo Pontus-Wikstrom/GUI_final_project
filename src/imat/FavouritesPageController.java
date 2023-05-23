@@ -45,4 +45,9 @@ public class FavouritesPageController extends AnchorPane{
             favouritesPageFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
         }
     }
+
+    @FXML
+    public void testUpdate() {
+        fillProductListFlowPane();
+    }
 }

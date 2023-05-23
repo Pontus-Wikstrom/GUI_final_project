@@ -39,7 +39,6 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         this.shoppingItem = new ShoppingItem(product, 0);
         productCardProductName.setText(product.getName());
         productCardPrice.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
-        //itemCardReferencePriceLabel.setText(product.getUnit()); //TODO Lägg till så att man kan se kg/pris och sånt?
         productCardImage.setImage(model.getImage(product));
         productCardAmountOfItems.setText("0");
         /*if (!product.isEcological()) { //TODO Fixa eko-möjligheter?

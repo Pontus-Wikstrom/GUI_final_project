@@ -27,7 +27,7 @@
                         <AnchorPane layoutX="5.0" layoutY="27.0" prefHeight="7.0" prefWidth="50.0" styleClass="rec_in_circle_test" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="110.0" layoutY="1.0" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane layoutX="110.0" layoutY="1.0" onMouseClicked="#increaseProductClick" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <AnchorPane layoutX="5.0" layoutY="27.0" prefHeight="7.0" prefWidth="50.0" styleClass="rec_in_circle_test" />
                         <AnchorPane layoutX="27.0" layoutY="5.0" prefHeight="50.0" prefWidth="7.0" styleClass="rec_in_circle_test" />

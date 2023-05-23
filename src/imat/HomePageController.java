@@ -49,6 +49,14 @@ public class HomePageController extends AnchorPane{
     public void fillProductListFlowPane() {
         productListFlowPane.getChildren().clear();
 
-        productListFlowPane.getChildren().addAll(this.productCardHashMap.values());
+        int i = 0;
+        for (Product product : model.getProducts()) {
+            if (i<20) {
+                productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
+            }
+            i++;
+        }
+
+        //productListFlowPane.getChildren().addAll(this.productCardHashMap.values());
     }
 }

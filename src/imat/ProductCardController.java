@@ -41,19 +41,40 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         productCardPrice.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
         //itemCardReferencePriceLabel.setText(product.getUnit()); //TODO Lägg till så att man kan se kg/pris och sånt?
         productCardImage.setImage(model.getImage(product));
+        productCardAmountOfItems.setText("0");
         /*if (!product.isEcological()) { //TODO Fixa eko-möjligheter?
             itemCardBrandLabel.setText("");
         }*/ 
 
+
         model.getShoppingCart().addShoppingCartListener(this);
     }
 
+    @FXML
+    public void setAmountOfItemsText() {
+        productCardAmountOfItems.setText((int) shoppingItem.getAmount() + "");
+    }
 
+    @FXML
+    public void increaseAmountOfProducts() {
+        shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
+        setAmountOfItemsText();
+
+        model.addToShoppingCart(product);
+        
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+    }
 
 
     @Override
     public void shoppingCartChanged(CartEvent event) {
         productCardAmountOfItems.setText((int) this.shoppingItem.getAmount() + "");
+    }
+
+    @FXML
+    public void increaseProductClick() {
+        increaseAmountOfProducts();
+        setAmountOfItemsText();
     }
 
 

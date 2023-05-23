@@ -100,6 +100,11 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
 
     @FXML
+    public void shoppingCartPageClick() {
+
+    }
+
+    @FXML
     public void offersPageClick() {
         setPage(offersPage);
         offersPageController.fillProductListFlowPane();
@@ -165,7 +170,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         setPage(userPage);
     }
 
-        
+
     @FXML
     private void setPage(AnchorPane page){
         contentAnchorPane.getChildren().clear();

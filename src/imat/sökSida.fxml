@@ -18,7 +18,7 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <TextField fx:id="searchBar" layoutX="432.0" layoutY="38.0" prefHeight="100.0" prefWidth="1126.0" promptText="Sök efter produkter här...">
+      <TextField fx:id="searchBar" layoutX="432.0" layoutY="38.0" onKeyPressed="#displaySearchResults" prefHeight="100.0" prefWidth="1126.0" promptText="Sök efter produkter här...">
          <font>
             <Font size="55.0" />
          </font>

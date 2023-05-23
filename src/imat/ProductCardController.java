@@ -75,8 +75,9 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
         shoppingItem.setAmount((int) shoppingItem.getAmount() - 1);
         model.removeFromShoppingCart(product);
-        model.addToShoppingCart(shoppingItem);
-        
+
+        if (shoppingItem.getAmount() > 0) model.addToShoppingCart(shoppingItem);
+
 
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         

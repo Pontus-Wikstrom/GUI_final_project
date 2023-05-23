@@ -84,12 +84,12 @@
                                     <Image url="@resources/varukorgsak.png" />
                                  </image>
                               </ImageView>
-                              <Text fx:id="shoppingCartItemAmount" layoutX="128.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                              <Text fx:id="hamburgerCartItemAmount" layoutX="128.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
                                  <font>
                                     <Font size="37.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="shoppingCartCostAmount" layoutX="40.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000 kr">
+                              <Text fx:id="hamburgerCartCostAmount" layoutX="40.0" layoutY="164.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000 kr">
                                  <font>
                                     <Font size="30.0" />
                                  </font>

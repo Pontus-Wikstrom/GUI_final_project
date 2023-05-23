@@ -55,6 +55,10 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Text shoppingCartItemAmount;
     @FXML
     private Text shoppingCartCostAmount;
+    @FXML
+    private Text hamburgerCartItemAmount;
+    @FXML
+    private Text hamburgerCartCostAmount;
 
 
     private HomePageController homePageController;
@@ -96,10 +100,14 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent arg0) {
-        shoppingCartCostAmount.setText(model.getShoppingCart().getTotal() + "");
+        String totalCost = String.format("%.2f" ,model.getShoppingCart().getTotal());
         int amountOfItems = model.getShoppingCart().getItems().size();
+
+        shoppingCartCostAmount.setText(totalCost);
         shoppingCartItemAmount.setText(amountOfItems + "");
-        
+
+        hamburgerCartCostAmount.setText(totalCost);
+        hamburgerCartItemAmount.setText(amountOfItems + "");
     }
 
 

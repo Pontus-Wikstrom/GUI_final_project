@@ -38,26 +38,6 @@
                            </font>
                         </Label>
                         <Line endX="1920.0" layoutY="400.0" strokeWidth="6.0" />
-                        <Text layoutX="1150.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningssätt:">
-                           <font>
-                              <Font size="50.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="1100.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="1100.0" layoutY="855.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bank">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <TextField layoutX="1100.0" layoutY="740.0" prefHeight="65.0" prefWidth="430.0" text="pettersson">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </TextField>
                         <TextField layoutX="284.0" layoutY="611.0" prefHeight="65.0" prefWidth="400.0" promptText="randommelj@mejl.com" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="610.0">
                            <font>
                               <Font size="30.0" />
@@ -68,19 +48,14 @@
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField fx:id="bank" layoutX="1100.0" layoutY="870.0" prefHeight="65.0" prefWidth="430.0" text="0730212943">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </TextField>
                         <Button fx:id="savePaymentOptionButton" layoutX="1100.0" layoutY="1000.0" mnemonicParsing="false" styleClass="buttons" text="Spara betalningssätt">
                            <font>
                               <Font size="45.0" />
                            </font>
                         </Button>
-                        <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="1100.0" layoutY="509.0" prefHeight="200.0" prefWidth="616.0" rowValignment="TOP">
+                        <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="1100.0" layoutY="509.0" prefHeight="200.0" prefWidth="700.0" rowValignment="TOP" AnchorPane.leftAnchor="1090.0" AnchorPane.rightAnchor="130.0">
                            <children>
-                              <AnchorPane fx:id="paypal_button" prefHeight="141.0" prefWidth="137.0" styleClass="buttons">
+                              <AnchorPane fx:id="paypal_button" prefHeight="141.0" prefWidth="150.0" styleClass="buttons">
                                  <children>
                                     <ImageView fitHeight="115.0" fitWidth="106.0" layoutX="25.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -98,7 +73,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="card_button" prefHeight="143.0" prefWidth="139.0" styleClass="buttons">
+                              <AnchorPane fx:id="card_button" prefHeight="143.0" prefWidth="150.0" styleClass="buttons">
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -107,7 +82,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="swish_button" prefHeight="130.0" prefWidth="127.0" styleClass="buttons">
+                              <AnchorPane fx:id="swish_button" prefHeight="130.0" prefWidth="150.0" styleClass="buttons">
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -118,7 +93,7 @@
                               </AnchorPane>
                            </children>
                         </FlowPane>
-                        <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" styleClass="buttons" text="Spara information">
+                        <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" prefWidth="420.0" styleClass="buttons" text="Spara information" AnchorPane.leftAnchor="360.0">
                            <font>
                               <Font size="45.0" />
                            </font>
@@ -135,7 +110,7 @@
                               <Font size="35.0" />
                            </font>
                         </Label>
-                        <Label layoutX="585.0" layoutY="471.0" text="Användarinformation" AnchorPane.leftAnchor="430.0" AnchorPane.topAnchor="450.0">
+                        <Label layoutX="585.0" layoutY="471.0" maxWidth="470.0" prefWidth="470.0" text="Användarinformation" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="450.0">
                            <font>
                               <Font size="50.0" />
                            </font>
@@ -175,6 +150,26 @@
                               <Font size="35.0" />
                            </font>
                         </Label>
+                        <Label layoutX="1297.0" layoutY="457.0" text="Betalningssätt" AnchorPane.topAnchor="450.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1116.0" layoutY="743.0" text="Kortinnehavare:" AnchorPane.leftAnchor="1120.0" AnchorPane.topAnchor="700.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="1116.0" layoutY="780.0" prefWidth="300.0" promptText="Förnamn" AnchorPane.leftAnchor="1120.0" AnchorPane.topAnchor="760.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="1452.0" layoutY="780.0" prefWidth="300.0" promptText="Efternamn" AnchorPane.leftAnchor="1470.0" AnchorPane.topAnchor="760.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
                      </children>
                   </AnchorPane>
               </content>

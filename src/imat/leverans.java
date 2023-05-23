@@ -21,6 +21,10 @@ public class leverans extends AnchorPane{
     int datum = 10;
     int month = 5;
     int weekday = 0;
+    String day;
+    String date;
+    String bokningsbar;
+    String timeSpot;
 
     String[] veckodagar = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
 
@@ -141,8 +145,9 @@ public class leverans extends AnchorPane{
         String meddelande = meddelanden.getText();
     }
 
-    public void back(){
+    public void stepBack(){
         getDataFromCustomer();
+
         //Get back to shoppingCart
 
     }
@@ -152,77 +157,80 @@ public class leverans extends AnchorPane{
         //Get back to main
     }
 
-    public void next(){
+    public void nextStep(){
         getDataFromCustomer();
-        //go to pay
+        if (customer.getFirstName() != null & customer.getLastName() != null & customer.getAddress() != null & customer.getEmail() != null & customer.getPhoneNumber() != null & customer.getPostAddress() != null & customer.getPostCode() != null & bokningsbar != "Fullbokad") {
+            //go to pay
+        }
+
     }
 
     public void clicked1() {
-        String date = datum1.getText();
-        String day = dag1.getText();
+        date = datum1.getText();
+        day = dag1.getText();
         setBokningsbar();
     }
 
     public void clicked2() {
-        String date = datum2.getText();
-        String day = dag2.getText();
+        date = datum2.getText();
+        day = dag2.getText();
         setBokningsbar();
     }
     public void clicked3() {
-        String date = datum3.getText();
-        String day = dag3.getText();
+        date = datum3.getText();
+        day = dag3.getText();
         setBokningsbar();
     }
 
     public void clicked4() {
-        String date = datum4.getText();
-        String day = dag4.getText();
+        date = datum4.getText();
+        day = dag4.getText();
         setBokningsbar();
     }
 
     public void time1() {
-        String timeSpot = t1.getText();
-        String bokningsbar = b1.getText();
+        timeSpot = t1.getText();
+        bokningsbar = b1.getText();
     }
 
     public void time2() {
-        String timeSpot = t2.getText();
-        String bokningsbar = b2.getText();
+        timeSpot = t2.getText();
+        bokningsbar = b2.getText();
     }
 
     public void time3() {
-        String timeSpot = t3.getText();
-        String bokningsbar = b3.getText();
+        timeSpot = t3.getText();
+        bokningsbar = b3.getText();
     }
 
     public void time4() {
-        String timeSpot = t4.getText();
-        String bokningsbar = b4.getText();
+        timeSpot = t4.getText();
+        bokningsbar = b4.getText();
     }
 
     public void time5() {
-        String timeSpot = t5.getText();
-        String bokningsbar = b5.getText();
+        timeSpot = t5.getText();
+        bokningsbar = b5.getText();
     }
 
     public void time6() {
-        String timeSpot = t6.getText();
-        String bokningsbar = b6.getText();
+        timeSpot = t6.getText();
+        bokningsbar = b6.getText();
     }
 
     public void time7() {
-        String timeSpot = t7.getText();
-        String bokningsbar = b7.getText();
+        timeSpot = t7.getText();
+        bokningsbar = b7.getText();
     }
 
     public void time8() {
-        String timeSpot = t8.getText();
-        String bokningsbar = b8.getText();
+        timeSpot = t8.getText();
+        bokningsbar = b8.getText();
     }
 
     public void time9() {
-        String timeSpot = t9.getText();
-        String bokningsbar = b9.getText();
+        timeSpot = t9.getText();
+        bokningsbar = b9.getText();
     }
 
     public void setTimes() {

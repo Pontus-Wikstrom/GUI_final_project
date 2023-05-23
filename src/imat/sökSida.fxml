@@ -11,9 +11,9 @@
    <children>
       <ScrollPane prefHeight="907.0" prefWidth="1920.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="10000.0" prefWidth="1920.0">
                <children>
-                  <FlowPane fx:id="productListFlowPane" layoutX="388.0" layoutY="312.0" prefHeight="210.0" prefWidth="1214.0" />
+                  <FlowPane fx:id="productListFlowPane" layoutX="169.0" layoutY="272.0" prefHeight="210.0" prefWidth="1588.0" />
                </children>
             </AnchorPane>
         </content>

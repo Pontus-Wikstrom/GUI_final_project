@@ -22,6 +22,9 @@ public class shoppingCart extends AnchorPane {
     @FXML
     private FlowPane varukorgWizardLista;
 
+    @FXML
+    private Label totalpris;
+
 
     public shoppingCart(MainViewController controller){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("wizardVarukorg.fxml"));
@@ -37,13 +40,24 @@ public class shoppingCart extends AnchorPane {
 
         this.controller = controller;
 
+        addVara();
+        setPrice();
+
     }
 
     public void addVara(){
-        varukorgWizardLista.getChildren().clear();
-        for (ShoppingItem item : model.getShoppingCart().getItems()) {
-            ProductCardController card = new ProductCardController(item.getProduct(), this.controller);
-            varukorgWizardLista.getChildren().add(card);
-        }
+
+    }
+
+    public void back() {
+        //back to main
+    }
+
+    public void nextStep() {
+        //go to leverans
+    }
+
+    public void setPrice() {
+
     }
 }

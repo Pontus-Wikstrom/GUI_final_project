@@ -12,7 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-
+import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
 
@@ -50,6 +50,11 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private AnchorPane homePage;
     @FXML
     private AnchorPane userPage;
+
+    @FXML
+    private Text shoppingCartItemAmount;
+    @FXML
+    private Text shoppingCartCostAmount;
 
 
     private HomePageController homePageController;
@@ -91,7 +96,9 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent arg0) {
-        // TODO Auto-generated method stub
+        shoppingCartCostAmount.setText(model.getShoppingCart().getTotal() + "");
+        int amountOfItems = model.getShoppingCart().getItems().size();
+        shoppingCartItemAmount.setText(amountOfItems + "");
         
     }
 

@@ -91,9 +91,9 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
-        fillProductListFlowPane(productCard);
+        //fillProductListFlowPane(productCard);
         setPage(deliveryPage);
-        model
+        
 
     } 
 

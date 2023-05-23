@@ -41,12 +41,8 @@ public class FavouritesPageController extends AnchorPane{
     public void fillProductListFlowPane() {
         favouritesPageFlowPane.getChildren().clear();
 
-        int i = 0;
-        for (Product product : model.getProducts()) {
-            if (i<20) {
-                favouritesPageFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
-            }
-            i++;
+        for (Product product : model.getFavourites()) {
+            favouritesPageFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
         }
     }
 }

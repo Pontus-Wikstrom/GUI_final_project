@@ -104,5 +104,18 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         setAmountOfItemsText();
     }
 
+    @FXML
+    public void favouriteButtonClick() {
+        if (!model.isFavourite(product)) {
+            model.setFavourite(product);
+        } else {
+            model.removeFavourite(product);
+        }
+
+        // TODO fixa ikonen så att den ändras
+
+    
+    }
+
 
 }

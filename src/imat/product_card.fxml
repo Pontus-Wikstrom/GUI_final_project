@@ -37,7 +37,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="50.0" prefWidth="50.0" styleClass="star" />
+      <AnchorPane layoutX="13.0" layoutY="14.0" onMouseClicked="#favouriteButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="star" />
       <ImageView fx:id="productCardImage" fitHeight="210.0" fitWidth="210.0" layoutX="146.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" styleClass="prototype_image_background">
          <image>
             <Image url="@../../../../../Pictures/plus_trans_new.png" />

@@ -50,19 +50,36 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         model.getShoppingCart().addShoppingCartListener(this);
     }
 
-    @FXML
-    public void setAmountOfItemsText() {
+
+    private void setAmountOfItemsText() {
         productCardAmountOfItems.setText((int) shoppingItem.getAmount() + "");
     }
 
-    @FXML
-    public void increaseAmountOfProducts() {
+
+    private void increaseAmountOfProducts() {
         shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
         setAmountOfItemsText();
 
         model.addToShoppingCart(product);
         
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+
+        System.out.println("in increase");
+        System.out.println(model.getShoppingCart().getItems());
+        System.out.println(model.getShoppingCart().getTotal());
+    }
+
+    private void decreaseAmountOfProducts() {
+        if (shoppingItem.getAmount() < 1) return;
+
+        shoppingItem.setAmount((int) shoppingItem.getAmount() - 1);
+        model.removeFromShoppingCart(product);
+
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
+        
+        System.out.println("in decrease");
+        System.out.println(model.getShoppingCart().getItems());
+        System.out.println(model.getShoppingCart().getTotal());
     }
 
 
@@ -74,6 +91,12 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     @FXML
     public void increaseProductClick() {
         increaseAmountOfProducts();
+        setAmountOfItemsText();
+    }
+
+    @FXML
+    public void decreaseProductClick() {
+        decreaseAmountOfProducts();
         setAmountOfItemsText();
     }
 

@@ -22,7 +22,7 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <AnchorPane layoutY="1.0" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-30.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane layoutY="1.0" onMouseClicked="#decreaseProductClick" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-30.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <AnchorPane layoutX="5.0" layoutY="27.0" prefHeight="7.0" prefWidth="50.0" styleClass="rec_in_circle_test" />
                      </children>

@@ -10,7 +10,7 @@
 
 <fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane prefHeight="907.0" prefWidth="1920.0">
+      <ScrollPane prefHeight="907.0" prefWidth="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1907.0" styleClass="background" stylesheets="@generall.css">
                <children>
@@ -25,7 +25,7 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <AnchorPane layoutX="1454.0" layoutY="731.0" prefHeight="122.0" prefWidth="386.0" styleClass="tillkassan" stylesheets="@generall.css">
+      <AnchorPane layoutX="1450.0" layoutY="720.0" prefHeight="122.0" prefWidth="386.0" styleClass="tillkassan" stylesheets="@generall.css">
          <children>
             <Text fill="WHITE" layoutX="63.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Kassan">
                <font>

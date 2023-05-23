@@ -12,7 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-
+import javafx.scene.shape.Rectangle;
 import se.chalmers.cse.dat216.project.*;
 
 
@@ -51,6 +51,19 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane userPage;
 
+    @FXML
+    private Rectangle category_marker;
+    @FXML
+    private Rectangle favourite_marker;
+    @FXML
+    private Rectangle offer_marker;
+    @FXML
+    private Rectangle help_marker;
+    @FXML
+    private Rectangle cart_marker;
+    @FXML
+    private Rectangle profile_marker;
+    
 
     private HomePageController homePageController;
     private OffersPageController offersPageController;
@@ -78,7 +91,9 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
-        setPage(homePage);
+        fillProductListFlowPane(productCard);
+        setPage(deliveryPage);
+        model
 
     } 
 
@@ -95,7 +110,16 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         
     }
 
+    public void clear_marked_sites(){
+    category_marker.setVisible(false);
+    profile_marker.setVisible(false);
+    help_marker.setVisible(false);
+    favourite_marker.setVisible(false);
+    cart_marker.setVisible(false);
+    offer_marker.setVisible(false);
+    
 
+    }
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
 
@@ -103,6 +127,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void offersPageClick() {
         setPage(offersPage);
         offersPageController.fillProductListFlowPane();
+        offer_marker.setVisible(true);;
     }
 
     @FXML
@@ -115,6 +140,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void helpPageClick() {
         setPage(helpPage);
+        help_marker.setVisible(true);
     }
 
     @FXML
@@ -127,6 +153,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void favouritesPageClick() {
         setPage(favouritesPage);
         favouritesPageController.fillProductListFlowPane();
+        favourite_marker.setVisible(true);
     }
 
     @FXML
@@ -139,6 +166,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void categoryPageClick() {
         setPage(categoryPage);
+        category_marker.setVisible(true);
     }
 
     @FXML
@@ -163,11 +191,13 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void userPageClick() {
         setPage(userPage);
+        profile_marker.setVisible(true);
     }
 
         
     @FXML
     private void setPage(AnchorPane page){
+        clear_marked_sites();
         contentAnchorPane.getChildren().clear();
         contentAnchorPane.getChildren().add(page);
     }

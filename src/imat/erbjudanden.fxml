@@ -27,7 +27,8 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <AnchorPane layoutX="1444.0" layoutY="721.0" prefHeight="122.0" prefWidth="386.0" styleClass="tillkassan">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+            <AnchorPane layoutX="1450.0" layoutY="720.0" prefHeight="122.0" prefWidth="386.0" styleClass="tillkassan">
                <children>
                   <Text fill="WHITE" layoutX="63.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Kassan">
                      <font>

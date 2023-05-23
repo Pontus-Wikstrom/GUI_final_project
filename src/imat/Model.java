@@ -64,6 +64,10 @@ public class Model {
         getShoppingCart().addItem(shoppingItem);
     }
 
+    public void addToShoppingCart(ShoppingItem shoppingItem) {
+        getShoppingCart().addItem(shoppingItem);
+    }
+
     public void removeFromShoppingCart(Product product) {
         ShoppingItem shoppingItem = new ShoppingItem(product);
         getShoppingCart().removeItem(shoppingItem);

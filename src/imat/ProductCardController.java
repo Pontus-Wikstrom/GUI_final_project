@@ -60,6 +60,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
         setAmountOfItemsText();
 
+
         model.addToShoppingCart(product);
         
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
@@ -74,6 +75,8 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
         shoppingItem.setAmount((int) shoppingItem.getAmount() - 1);
         model.removeFromShoppingCart(product);
+        model.addToShoppingCart(shoppingItem);
+        
 
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         

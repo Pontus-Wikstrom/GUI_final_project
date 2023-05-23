@@ -20,11 +20,11 @@ public class HomePageController extends AnchorPane{
     @FXML
     private FlowPane productListFlowPane;
 
-    private HashMap<String, ProductCardController> productCardController;
+    private HashMap<String, ProductCardController> productCardHashMap;
 
     private final Model model = Model.getInstance();
 
-    public HomePageController(HashMap<String, ProductCardController> productCardController) {
+    public HomePageController(HashMap<String, ProductCardController> productCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sökSida.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -35,34 +35,20 @@ public class HomePageController extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
-        this.productCardController = productCardController;
-        initProducts();
+        this.productCardHashMap = productCardHashMap;
+        initFlowPane();
     }
 
-    /*public void initialize(URL url, ResourceBundle rb) {
-        initProducts();
-    }*/
 
-    @FXML
-    public void mouseClickTest() {
-        System.out.println("Clicked successfully");
-    }
-
-    private void initProducts() {
+    private void initFlowPane() {
         productListFlowPane.getChildren().clear();
         productListFlowPane.setHgap(20);
-        productListFlowPane.setVgap(20);
-        
-        for (Product product : model.getProducts()){
-            ProductCardController productCardController1 = new ProductCardController(product);
-            productCardController.put(product.getName(), productCardController1);
-        }
-        
+        productListFlowPane.setVgap(20);        
     }
 
     public void fillProductListFlowPane() {
         productListFlowPane.getChildren().clear();
 
-        productListFlowPane.getChildren().addAll(productCardController.values());
+        productListFlowPane.getChildren().addAll(this.productCardHashMap.values());
     }
 }

@@ -48,7 +48,7 @@
                                     <Font name="System Bold" size="40.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getRoot_veg" strokeType="OUTSIDE" strokeWidth="0.0" text="Rotfrukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
+                              <Text onMouseClicked="#getRootVeg" strokeType="OUTSIDE" strokeWidth="0.0" text="Rotfrukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -58,7 +58,7 @@
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getExotic_fruit" strokeType="OUTSIDE" strokeWidth="0.0" text="Exotiska frukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text onMouseClicked="#getExcoticFruit" strokeType="OUTSIDE" strokeWidth="0.0" text="Exotiska frukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -68,7 +68,7 @@
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getVeg_fruit" strokeType="OUTSIDE" strokeWidth="0.0" text="Grönsaker och Frukt" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
+                              <Text onMouseClicked="#getVegFruit" strokeType="OUTSIDE" strokeWidth="0.0" text="Grönsaker och Frukt" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -97,12 +97,12 @@
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getCold_drinks" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalla drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text onMouseClicked="#getColdDrinks" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalla drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getHot_drinks" strokeType="OUTSIDE" strokeWidth="0.0" text="Varma drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
+                              <Text onMouseClicked="#getHotDrinks" strokeType="OUTSIDE" strokeWidth="0.0" text="Varma drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -175,7 +175,7 @@
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getPotato_rice" strokeType="OUTSIDE" strokeWidth="0.0" text="Potatis och Ris" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text onMouseClicked="#getPotatoRice" strokeType="OUTSIDE" strokeWidth="0.0" text="Potatis och Ris" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>

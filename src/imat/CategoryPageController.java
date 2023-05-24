@@ -97,7 +97,7 @@ public void getCitrus() {
     populateProductsByCategory(ProductCategory.CITRUS_FRUIT);
 }
 @FXML
-public void getCold_drinks() {
+public void getColdDrinks() {
     category1ScrollPane.toFront();
     valdKategori.setText("Kalla drycker");
     populateProductsByCategory(ProductCategory.COLD_DRINKS);
@@ -109,7 +109,7 @@ public void getDairies() {
     populateProductsByCategory(ProductCategory.DAIRIES);
 }
 @FXML
-public void getExotic_fruit() {
+public void getExcoticFruit() {
     category1ScrollPane.toFront();
     valdKategori.setText("Exotisk Frukt");
     populateProductsByCategory(ProductCategory.EXOTIC_FRUIT);
@@ -139,7 +139,7 @@ public void getHerb() {
     populateProductsByCategory(ProductCategory.HERB);
 }
 @FXML
-public void getHot_drinks() {
+public void getHotDrinks() {
     category1ScrollPane.toFront();
     valdKategori.setText("Varma drycker");
     populateProductsByCategory(ProductCategory.HOT_DRINKS);
@@ -169,13 +169,13 @@ public void getPod() {
     populateProductsByCategory(ProductCategory.POD);
 }
 @FXML
-public void getPotato_rice() {
+public void getPotatoRice() {
     category1ScrollPane.toFront();
     valdKategori.setText("Potatis&Ris");
     populateProductsByCategory(ProductCategory.POTATO_RICE);
 }
 @FXML
-public void getRoot_veg() {
+public void getRootVeg() {
     category1ScrollPane.toFront();
     valdKategori.setText("Rotfrukter");
     populateProductsByCategory(ProductCategory.ROOT_VEGETABLE);
@@ -187,7 +187,7 @@ public void getSweet() {
     populateProductsByCategory(ProductCategory.SWEET);
 }
 @FXML
-public void getVeg_fruit() {
+public void getVegFruit() {
     category1ScrollPane.toFront();
     valdKategori.setText("Grönsaker&Frukt");
     populateProductsByCategory(ProductCategory.VEGETABLE_FRUIT);

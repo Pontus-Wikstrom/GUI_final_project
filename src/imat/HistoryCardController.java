@@ -95,25 +95,12 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
     @FXML
     public void increaseProductClick() {
         increaseAmountOfProducts();
-        setAmountOfItemsText();
     }
 
     @FXML
     public void decreaseProductClick() {
         decreaseAmountOfProducts();
-        setAmountOfItemsText();
     }
 
-    @FXML
-    public void favouriteButtonClick() {
-        if (!model.isFavourite(product)) {
-            model.setFavourite(product);
-        } else {
-            model.removeFavourite(product);
-        }
-
-        // TODO fixa ikonen så att den ändras
-
-    
-    }
+    //TODO Lägg till metod för att ta bort vara helt och hållet
 }

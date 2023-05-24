@@ -99,7 +99,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         deliveryPage = new fullWizardController(this);
-        shoppingCartPage = new shoppingCart(this);
+        shoppingCartPage = new shoppingCart(this, historyCardHashMap);
         homePage = homePageController;
         offersPage = offersPageController;
         favouritesPage = favouritesPageController;

@@ -1,5 +1,6 @@
 package imat;
 
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -21,6 +22,10 @@ public class HomePageController extends AnchorPane{
     private TextField searchBar;
     @FXML
     private FlowPane productListFlowPane;
+    @FXML
+    private AnchorPane flowPaneAnchorPane;
+    @FXML
+    private ScrollPane homePageScrollPane;
 
     private HashMap<String, ProductCardController> productCardHashMap;
 
@@ -39,7 +44,9 @@ public class HomePageController extends AnchorPane{
 
         this.productCardHashMap = productCardHashMap;
         initFlowPane();
+        searchBar.setFocusTraversable(false);
 
+        homePageScrollPane.setFitToWidth(true);
         //searchBar.textProperty().addListener(null);
     }
 
@@ -47,7 +54,7 @@ public class HomePageController extends AnchorPane{
     private void initFlowPane() {
         productListFlowPane.getChildren().clear();
         productListFlowPane.setHgap(20);
-        productListFlowPane.setVgap(20);        
+        productListFlowPane.setVgap(20);
     }
 
     public void fillProductListFlowPane() {
@@ -55,11 +62,15 @@ public class HomePageController extends AnchorPane{
 
         int i = 0;
         for (Product product : model.getProducts()) {
-            if (i<20) {
-                productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
-            }
+            if (i>20) break;
+            
+            productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
+            
             i++;
         }
+
+        // flowPaneAnchorPane.setMaxHeight(productListFlowPane.getHeight());
+        // flowPaneAnchorPane.setPrefHeight(productListFlowPane.getHeight());
 
         //productListFlowPane.getChildren().addAll(this.productCardHashMap.values());
     }
@@ -70,11 +81,17 @@ public class HomePageController extends AnchorPane{
         for (Product product : products) {
             productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
         }
+
+        flowPaneAnchorPane.setMaxHeight(productListFlowPane.getHeight());
+        flowPaneAnchorPane.setPrefHeight(productListFlowPane.getHeight());
     }
 
     @FXML
     public void displaySearchResults() {
-        //if (searchBar.getText() == "") fillProductListFlowPane();
+        if (searchBar.getText() == "") {
+            fillProductListFlowPane();
+            return;
+        }
 
         List<Product> products = model.findProducts(searchBar.getText());
         fillProductListFlowPane(products);

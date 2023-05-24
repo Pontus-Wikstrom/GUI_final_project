@@ -27,7 +27,7 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="KassaKnapp" alignment="CENTER" prefHeight="92.0" prefWidth="785.0" style="-fx-background-color: #2B9EB3;" text="Gå till kassan" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="567.5" AnchorPane.rightAnchor="567.5" AnchorPane.topAnchor="811.0">
+      <Label fx:id="KassaKnapp" alignment="CENTER" onMouseClicked="#toPayment" prefHeight="92.0" prefWidth="785.0" style="-fx-background-color: #2B9EB3;" text="Gå till kassan" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="567.5" AnchorPane.rightAnchor="567.5" AnchorPane.topAnchor="811.0">
          <font>
             <Font size="48.0" />
          </font>

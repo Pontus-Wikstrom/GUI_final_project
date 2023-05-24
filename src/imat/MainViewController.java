@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Text;
 import javafx.scene.shape.Rectangle;
 import se.chalmers.cse.dat216.project.*;
 
@@ -50,6 +51,15 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private AnchorPane homePage;
     @FXML
     private AnchorPane userPage;
+
+    @FXML
+    private Text shoppingCartItemAmount;
+    @FXML
+    private Text shoppingCartCostAmount;
+    @FXML
+    private Text hamburgerCartItemAmount;
+    @FXML
+    private Text hamburgerCartCostAmount;
 
     @FXML
     private Rectangle category_marker;
@@ -106,8 +116,14 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent arg0) {
-        // TODO Auto-generated method stub
-        
+        String totalCost = String.format("%.2f" ,model.getShoppingCart().getTotal());
+        int amountOfItems = model.getShoppingCart().getItems().size();
+
+        shoppingCartCostAmount.setText(totalCost);
+        shoppingCartItemAmount.setText(amountOfItems + "");
+
+        hamburgerCartCostAmount.setText(totalCost);
+        hamburgerCartItemAmount.setText(amountOfItems + "");
     }
 
     public void clear_marked_sites(){
@@ -122,6 +138,11 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     }
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
+
+    @FXML
+    public void shoppingCartPageClick() {
+
+    }
 
     @FXML
     public void offersPageClick() {
@@ -194,7 +215,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         profile_marker.setVisible(true);
     }
 
-        
+
     @FXML
     private void setPage(AnchorPane page){
         clear_marked_sites();

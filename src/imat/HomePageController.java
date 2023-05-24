@@ -7,8 +7,10 @@ import javafx.scene.layout.FlowPane;
 import java.io.IOException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
 
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
@@ -37,6 +39,8 @@ public class HomePageController extends AnchorPane{
 
         this.productCardHashMap = productCardHashMap;
         initFlowPane();
+
+        //searchBar.textProperty().addListener(null);
     }
 
 
@@ -49,6 +53,30 @@ public class HomePageController extends AnchorPane{
     public void fillProductListFlowPane() {
         productListFlowPane.getChildren().clear();
 
-        productListFlowPane.getChildren().addAll(this.productCardHashMap.values());
+        int i = 0;
+        for (Product product : model.getProducts()) {
+            if (i<20) {
+                productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
+            }
+            i++;
+        }
+
+        //productListFlowPane.getChildren().addAll(this.productCardHashMap.values());
+    }
+
+    private void fillProductListFlowPane(List<Product> products) {
+        productListFlowPane.getChildren().clear();
+
+        for (Product product : products) {
+            productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
+        }
+    }
+
+    @FXML
+    public void displaySearchResults() {
+        //if (searchBar.getText() == "") fillProductListFlowPane();
+
+        List<Product> products = model.findProducts(searchBar.getText());
+        fillProductListFlowPane(products);
     }
 }

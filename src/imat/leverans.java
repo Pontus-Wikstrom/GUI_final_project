@@ -104,7 +104,6 @@ public class leverans extends AnchorPane{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("leverans.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
-        System.out.println("hello");
 
         try {
             fxmlLoader.load();

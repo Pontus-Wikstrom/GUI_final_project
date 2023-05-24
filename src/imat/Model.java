@@ -52,7 +52,21 @@ public class Model {
         return iMatDataHandler.getFXImage(p, width, height);
     }
 
+    public void setFavourite(Product product) {
+        iMatDataHandler.addFavorite(product);
+    }
 
+    public void removeFavourite(Product product) {
+        iMatDataHandler.removeFavorite(product);
+    }
+
+    public List<Product> getFavourites() {
+        return iMatDataHandler.favorites();
+    }
+
+    public boolean isFavourite(Product product) {
+        return iMatDataHandler.isFavorite(product);
+    }
 
 
     public ShoppingCart getShoppingCart() {
@@ -64,6 +78,14 @@ public class Model {
         getShoppingCart().addItem(shoppingItem);
     }
 
+    public void addToShoppingCart(ShoppingItem shoppingItem) {
+        getShoppingCart().addItem(shoppingItem);
+    }
+
+    public void removeFromShoppingCart(Product product) {
+        ShoppingItem shoppingItem = new ShoppingItem(product);
+        getShoppingCart().removeItem(shoppingItem);
+    }
 
 
     public void clearShoppingCart() {

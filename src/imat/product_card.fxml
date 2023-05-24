@@ -22,12 +22,12 @@
                         <Font size="20.0" />
                      </font>
                   </Text>
-                  <AnchorPane layoutY="1.0" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-30.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane layoutY="1.0" onMouseClicked="#decreaseProductClick" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-30.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <AnchorPane layoutX="5.0" layoutY="27.0" prefHeight="7.0" prefWidth="50.0" styleClass="rec_in_circle_test" />
                      </children>
                   </AnchorPane>
-                  <AnchorPane layoutX="110.0" layoutY="1.0" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane layoutX="110.0" layoutY="1.0" onMouseClicked="#increaseProductClick" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <AnchorPane layoutX="5.0" layoutY="27.0" prefHeight="7.0" prefWidth="50.0" styleClass="rec_in_circle_test" />
                         <AnchorPane layoutX="27.0" layoutY="5.0" prefHeight="50.0" prefWidth="7.0" styleClass="rec_in_circle_test" />
@@ -37,7 +37,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="13.0" layoutY="14.0" prefHeight="50.0" prefWidth="50.0" styleClass="star" />
+      <AnchorPane layoutX="13.0" layoutY="14.0" onMouseClicked="#favouriteButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="star" />
       <ImageView fx:id="productCardImage" fitHeight="210.0" fitWidth="210.0" layoutX="146.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" styleClass="prototype_image_background">
          <image>
             <Image url="@../../../../../Pictures/plus_trans_new.png" />

@@ -14,17 +14,17 @@
             <Image url="@resources/downarrow.png" />
          </image>
       </ImageView>
-      <Text fx:id="tidigareKöpAntalProdukter" layoutX="287.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00 Produkter" wrappingWidth="250.0">
+      <Text fx:id="previousPurchaseProductAmountText" layoutX="287.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00 Produkter" wrappingWidth="250.0">
          <font>
             <Font size="40.0" />
          </font>
       </Text>
-      <Text fx:id="tidigareKöpDatum" layoutX="16.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15/05-2023" wrappingWidth="250.0" AnchorPane.leftAnchor="16.0">
+      <Text fx:id="previousPurchaseDateText" layoutX="16.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="15/05-2023" wrappingWidth="250.0" AnchorPane.leftAnchor="16.0">
          <font>
             <Font size="40.0" />
          </font>
       </Text>
-      <Text fx:id="tidigareKöpTotalPris" layoutX="612.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0000 kronor" wrappingWidth="250.0">
+      <Text fx:id="previousPurchaseCostAmountText" layoutX="612.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0000 kronor" wrappingWidth="250.0">
          <font>
             <Font size="40.0" />
          </font>

@@ -87,9 +87,14 @@ public class Model {
         getShoppingCart().removeItem(shoppingItem);
     }
 
-
     public void clearShoppingCart() {
         iMatDataHandler.getShoppingCart().clear();
+    }
+
+    public void getAmountOfProductsInShoppingCart(Product product) {
+        ShoppingItem findItem = new ShoppingItem(product);
+        getShoppingCart().getItems();
+        //iMatDataHandler
     }
 
 }

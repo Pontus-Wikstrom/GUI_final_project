@@ -82,8 +82,8 @@ public class HomePageController extends AnchorPane{
             productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
         }
 
-        flowPaneAnchorPane.setMaxHeight(productListFlowPane.getHeight());
-        flowPaneAnchorPane.setPrefHeight(productListFlowPane.getHeight());
+        // flowPaneAnchorPane.setMaxHeight(productListFlowPane.getHeight());
+        // flowPaneAnchorPane.setPrefHeight(productListFlowPane.getHeight());
     }
 
     @FXML

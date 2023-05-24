@@ -84,6 +84,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private FavouritesPageController favouritesPageController;
 
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
+    //HashMap<String, >
 
     private final Model model = Model.getInstance();
 

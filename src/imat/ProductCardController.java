@@ -86,7 +86,6 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         System.out.println("in decrease");
         System.out.println(model.getShoppingCart().getItems());
         System.out.println(model.getShoppingCart().getTotal());
-        System.out.println(model.getAmountOfProductsInShoppingCart(shoppingItem));
 
         System.out.println("----------------------");
     }

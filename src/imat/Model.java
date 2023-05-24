@@ -92,8 +92,12 @@ public class Model {
         iMatDataHandler.getShoppingCart().clear();
     }
 
+    public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
+        List<ShoppingItem> itemList = getShoppingCart().getItems();
+    }
 
-    // these two dont work :(
+    /*
+    // these two dont work    // actually they probably do at least the second one
     public int getAmountOfProductsInShoppingCart(Product product) {
         ShoppingItem findItem = new ShoppingItem(product);
 
@@ -110,7 +114,7 @@ public class Model {
             get(getShoppingCart().getItems().indexOf(sci)).getAmount();
         }
         return 0;
-    }
+    }*/ 
 
 }
 

@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="Fixade till i wizarden">
-      <change afterPath="$PROJECT_DIR$/src/imat/Betalning.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/imat/fullWizardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/iMatApp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/iMatApp.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/MainViewController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/MainViewController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/iMatApp/imat/iMatApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/iMatApp/imat/iMatApp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/Betalning.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Betalning.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/iMatApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/iMatApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/leverans.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/leverans.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/leverans.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/leverans.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/shoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/shoppingCart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/wizardVarukorg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/wizardVarukorg.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/MainViewController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/fullWizard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/fullWizard.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,12 +63,12 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="iMatApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="IMatApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="corretto-17" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="imat.iMatApp" />
+      <option name="MAIN_CLASS_NAME" value="imat.IMatApp" />
       <module name="iMatApp" />
-      <option name="VM_PARAMETERS" value="--module-path $PROJECT_DIR$/../Downloads/javafx-sdk-17.0.6/lib/ --add-modules javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path $USER_HOME$/Downloads/javafx-sdk-17.0.6/lib/ --add-modules javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="imat.*" />
@@ -83,7 +81,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.iMatApp" />
+        <item itemvalue="Application.IMatApp" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +122,36 @@
             <State />
           </value>
         </entry>
+        <entry key="b380e1f8-74e0-4f24-a248-e72873bbc14d">
+          <value>
+            <State>
+              <option name="SHOW_ONLY_AFFECTED_CHANGES" value="true" />
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="HEAD" />
+                      </list>
+                    </value>
+                  </entry>
+                  <entry key="structure">
+                    <value>
+                      <list>
+                        <option value="dir:/Users/amandalindell/IdeaProjects/GUI_final_project2/src/imat" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="b380e1f8-74e0-4f24-a248-e72873bbc14d" value="TOOL_WINDOW" />
       </map>
     </option>
   </component>

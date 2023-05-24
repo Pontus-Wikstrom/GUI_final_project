@@ -83,7 +83,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
 
-        AnchorPane deliveryPage = new leverans(this);
+        AnchorPane deliveryPage = new fullWizardController(this);
         homePage = homePageController;
         offersPage = offersPageController;
         favouritesPage = favouritesPageController;

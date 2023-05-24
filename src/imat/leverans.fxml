@@ -13,124 +13,123 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root  maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2100.0" prefWidth="1920.0" stylesheets="@leverans.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="2100.0" prefWidth="1920.0" stylesheets="@leverans.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ScrollPane prefHeight="907.0" prefWidth="1920.0">
         <content>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2100.0" prefWidth="1920.0">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="1889.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="1889.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" AnchorPane.topAnchor="211.0" />
                   <Label fx:id="tillbaka" alignment="CENTER" layoutX="36.0" layoutY="220.0" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE">
                      <font>
                         <Font size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="payment" alignment="CENTER" layoutX="522.0" layoutY="240.0" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #000000;" text="Betalsätt:" textFill="WHITE">
+                  <Label fx:id="payment" alignment="CENTER" layoutX="522.0" layoutY="240.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="240.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Line endX="870.0" layoutX="36.0" layoutY="274.0" startX="655.0" />
-                  <Label fx:id="delivery" alignment="CENTER" layoutX="909.0" layoutY="240.0" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #000000;" text="Leverans:" textFill="WHITE">
+                  <Line endX="80.0" layoutX="-203.0" layoutY="271.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="274.5" />
+                  <Label fx:id="delivery" alignment="CENTER" layoutX="835.0" layoutY="251.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="240.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Line endX="1258.0" layoutX="36.0" layoutY="274.0" startX="1050.0" />
-                  <Label fx:id="shoppingCart" alignment="CENTER" layoutX="1284.0" layoutY="239.0" prefHeight="70.0" prefWidth="180.0" styleClass="not_achieved_button" text="Varukorg:" textFill="WHITE">
+                  <Line endX="80.0" layoutX="36.0" layoutY="274.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="274.5" />
+                  <Label fx:id="shoppingCart" alignment="CENTER" layoutX="1284.0" layoutY="239.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="240.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Text layoutX="600.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn*">
+                  <Text layoutX="600.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Namn*" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="340.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1100.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn*">
+                  <Text layoutX="1100.0" layoutY="400.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn*" AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="340.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <Text layoutX="600.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail*">
+                  <Text layoutX="600.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail*" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="470.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1100.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer*">
+                  <Text layoutX="1100.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer*" AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="470.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="1100.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" promptText="pettersson">
+                  <TextField layoutX="1100.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" promptText="pettersson" AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="390.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" promptText="Jakob">
+                  <TextField layoutX="600.0" layoutY="410.0" prefHeight="65.0" prefWidth="430.0" promptText="Jakob" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="390.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" promptText="jakob.petterson@gmail.com">
+                  <TextField layoutX="600.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" promptText="jakob.petterson@gmail.com" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="520.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="1100.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" promptText="0730212943">
+                  <TextField layoutX="1100.0" layoutY="540.0" prefHeight="65.0" prefWidth="430.0" promptText="0730212943" AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="520.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutY="1280.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
-                  <Text layoutX="600.0" layoutY="734.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransadress*">
+                  <Text layoutX="600.0" layoutY="734.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransadress*" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="600.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1100.0" layoutY="734.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postort*">
+                  <Text layoutX="1100.0" layoutY="734.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postort*" AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="600.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <Text layoutX="600.0" layoutY="859.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer*">
+                  <Text layoutX="600.0" layoutY="859.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer*" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="730.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <Text layoutX="1100.0" layoutY="859.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portinformation">
+                  <Text layoutX="1100.0" layoutY="859.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Portinformation" AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="730.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <TextField layoutX="1100.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" promptText="Gothenburg">
+                  <TextField layoutX="1100.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" promptText="Gothenburg" AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="650.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" promptText="Vägen 3">
+                  <TextField layoutX="600.0" layoutY="744.0" prefHeight="65.0" prefWidth="430.0" promptText="Vägen 3" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="650.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="600.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" promptText="4124124">
+                  <TextField layoutX="600.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" promptText="4124124" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="780.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <TextField layoutX="1100.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" promptText="Våning 3 gata 4....">
+                  <TextField layoutX="1100.0" layoutY="874.0" prefHeight="65.0" prefWidth="430.0" promptText="Våning 3 gata 4...." AnchorPane.leftAnchor="970.0" AnchorPane.topAnchor="780.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </TextField>
-                  <Text layoutX="600.0" layoutY="998.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meddelanden">
+                  <Text layoutX="600.0" layoutY="998.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meddelanden" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="860.0">
                      <font>
                         <Font size="35.0" />
                      </font>
                   </Text>
-                  <TextArea layoutX="600.0" layoutY="1020.0" prefHeight="200.0" prefWidth="929.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutY="664.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
-                  <Button layoutX="1485.0" layoutY="1978.0" mnemonicParsing="false" styleClass="last_buttons" text="Nästa" textFill="WHITE">
+                  <TextArea layoutX="600.0" layoutY="1020.0" prefHeight="200.0" prefWidth="929.0" AnchorPane.leftAnchor="520.0" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="910.0" />
+                  <Button layoutX="1485.0" layoutY="1978.0" mnemonicParsing="false" styleClass="last_buttons" text="Nästa" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="1150.0">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -141,7 +140,7 @@
                            <items>
                               <AnchorPane maxHeight="157.0" maxWidth="1144.0" minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="1144.0">
                                  <children>
-                                    <AnchorPane onMouseClicked="#clicked1" layoutX="77.0" layoutY="14.0" maxWidth="990.0" prefHeight="120.0" prefWidth="990.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="17.0">
+                                    <AnchorPane layoutX="77.0" layoutY="14.0" maxWidth="990.0" onMouseClicked="#clicked1" prefHeight="120.0" prefWidth="990.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="17.0">
                                        <children>
                                           <AnchorPane maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
@@ -157,7 +156,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane onMouseClicked="#clicked2" layoutX="361.0" layoutY="1.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane layoutX="361.0" layoutY="1.0" maxWidth="240.0" onMouseClicked="#clicked2" prefHeight="120.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="dag2" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -175,7 +174,7 @@
                                                 <String fx:value="buttons" />
                                              </styleClass>
                                           </AnchorPane>
-                                          <AnchorPane onMouseClicked="#clicked3" layoutX="495.0" layoutY="-3.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane layoutX="495.0" layoutY="-3.0" maxWidth="240.0" onMouseClicked="#clicked3" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="dag3" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -189,7 +188,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane onMouseClicked="#clicked4" layoutX="683.0" layoutY="-15.0" maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane layoutX="683.0" layoutY="-15.0" maxWidth="240.0" onMouseClicked="#clicked4" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="dag4" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -207,7 +206,7 @@
                                     </AnchorPane>
                                     <AnchorPane layoutX="37.0" layoutY="56.0" prefHeight="50.0" prefWidth="50.0" styleClass="black_button" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="49.0">
                                        <children>
-                                          <Label onMouseClicked="#earlier" layoutX="14.0" layoutY="1.0" text="&lt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
+                                          <Label layoutX="14.0" layoutY="1.0" onMouseClicked="#earlier" text="&lt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="13.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="0.0">
                                              <font>
                                                 <Font size="30.0" />
                                              </font>
@@ -216,7 +215,7 @@
                                     </AnchorPane>
                                     <AnchorPane layoutX="1063.0" layoutY="66.0" prefHeight="50.0" prefWidth="50.0" styleClass="black_button" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="49.0">
                                        <children>
-                                          <Label onMouseClicked="#later" alignment="CENTER" layoutX="16.0" layoutY="2.0" text="&gt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.0">
+                                          <Label alignment="CENTER" layoutX="16.0" layoutY="2.0" onMouseClicked="#later" text="&gt;" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.0">
                                              <font>
                                                 <Font size="30.0" />
                                              </font>
@@ -371,11 +370,17 @@
                         </SplitPane>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="360.0" layoutY="1978.0" mnemonicParsing="false" styleClass="last_buttons" text="Föregående" textFill="WHITE">
+                  <Button layoutX="360.0" layoutY="1978.0" mnemonicParsing="false" styleClass="last_buttons" text="Föregående" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="1150.0">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Button>
+                  <Line endX="80.0" layoutX="1264.0" layoutY="273.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="274.5" />
+                  <Label alignment="CENTER" layoutX="1389.0" layoutY="266.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalning:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="240.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
         </content>

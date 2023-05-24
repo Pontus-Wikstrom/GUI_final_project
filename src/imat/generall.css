@@ -10,3 +10,10 @@
 .background{
 -fx-background-color: #f5f5f5;
 }
+
+.titledsections{
+-fx-border-color: black;
+-fx-border-radius: 20px;
+-fx-border-width:2px;
+
+}

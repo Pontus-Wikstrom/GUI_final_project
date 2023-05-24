@@ -18,85 +18,34 @@
    <children>
       <StackPane prefHeight="907.0" prefWidth="1920.0">
          <children>
-            <AnchorPane prefHeight="907.0" prefWidth="1920.0" />
-            <ScrollPane prefHeight="907.0" prefWidth="1920.0">
+            <ScrollPane maxHeight="907.0" prefHeight="907.0" prefWidth="1920.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2200.0" prefWidth="1920.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="2200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                        <Label prefHeight="235.0" prefWidth="235.0" style="-fx-border-radius: 120; -fx-border-width: 5; -fx-border-color: #D5F25E;" AnchorPane.leftAnchor="842.5" AnchorPane.topAnchor="50.0">
-                           <graphic>
-                              <ImageView fitHeight="235.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/skepparn.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Label>
-                        <Label alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="287.0">
+                        <Label alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="80.0">
                            <font>
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <Line endX="1920.0" layoutY="400.0" strokeWidth="6.0" />
-                        <Text layoutX="430.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Adress information">
-                           <font>
-                              <Font size="50.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="1150.0" layoutY="500.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Betalningssätt:">
-                           <font>
-                              <Font size="50.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="446.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gatuadress">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="1100.0" layoutY="730.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kortnummer">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="446.0" layoutY="858.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <Text layoutX="1100.0" layoutY="855.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bank">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <TextField layoutX="1100.0" layoutY="740.0" prefHeight="65.0" prefWidth="430.0" text="pettersson">
+                        <TextField layoutX="284.0" layoutY="611.0" prefHeight="65.0" prefWidth="400.0" promptText="randommelj@mejl.com" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="345.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="446.0" layoutY="743.0" prefHeight="65.0" prefWidth="430.0" text="Vägen 3">
+                        <TextField layoutX="570.0" layoutY="617.0" prefHeight="65.0" prefWidth="300.0" promptText="070-XXXXXXX" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="345.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="446.0" layoutY="873.0" prefHeight="65.0" prefWidth="430.0" text="40142">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </TextField>
-                        <TextField fx:id="bank" layoutX="1100.0" layoutY="870.0" prefHeight="65.0" prefWidth="430.0" text="0730212943">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </TextField>
-                        <Button fx:id="savePaymentOptionButton" layoutX="1100.0" layoutY="1000.0" mnemonicParsing="false" styleClass="buttons" text="Spara betalningssätt">
+                        <Button fx:id="savePaymentOptionButton" layoutX="1213.0" layoutY="922.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="470.0" styleClass="buttons" text="Spara betalningssätt" AnchorPane.leftAnchor="1205.0" AnchorPane.topAnchor="820.0">
                            <font>
                               <Font size="45.0" />
                            </font>
                         </Button>
-                        <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="1100.0" layoutY="509.0" prefHeight="200.0" prefWidth="616.0" rowValignment="TOP">
+                        <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="1100.0" layoutY="509.0" prefHeight="175.0" prefWidth="700.0" rowValignment="TOP" AnchorPane.leftAnchor="1090.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="260.0">
                            <children>
-                              <AnchorPane fx:id="paypal_button" prefHeight="141.0" prefWidth="137.0" styleClass="buttons">
+                              <AnchorPane fx:id="paypal_button" prefHeight="141.0" prefWidth="150.0" styleClass="buttons">
                                  <children>
                                     <ImageView fitHeight="115.0" fitWidth="106.0" layoutX="25.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -114,7 +63,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="card_button" prefHeight="143.0" prefWidth="139.0" styleClass="buttons">
+                              <AnchorPane fx:id="card_button" prefHeight="143.0" prefWidth="150.0" styleClass="buttons">
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -123,7 +72,7 @@
                                     </ImageView>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane fx:id="swish_button" prefHeight="130.0" prefWidth="127.0" styleClass="buttons">
+                              <AnchorPane fx:id="swish_button" prefHeight="130.0" prefWidth="150.0" styleClass="buttons">
                                  <children>
                                     <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
                                        <image>
@@ -134,18 +83,123 @@
                               </AnchorPane>
                            </children>
                         </FlowPane>
-                        <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" styleClass="buttons" text="Spara adress ändring">
+                        <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="420.0" styleClass="buttons" text="Spara information" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="820.0">
                            <font>
                               <Font size="45.0" />
                            </font>
                         </Button>
-                        <Line endX="1920.0" layoutY="1162.0" strokeWidth="6.0" />
-                        <Text layoutX="812.0" layoutY="1262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köphistorik">
+                        <Line endX="1920.0" layoutY="1162.0" strokeWidth="6.0" AnchorPane.topAnchor="1000.0" />
+                        <Text layoutX="812.0" layoutY="1262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köphistorik" AnchorPane.topAnchor="1020.0">
                            <font>
                               <Font size="60.0" />
                            </font>
                         </Text>
-                        <FlowPane fx:id="historyFlowPane" alignment="CENTER" layoutX="522.0" layoutY="1288.0" prefHeight="200.0" prefWidth="930.0" />
+                        <FlowPane fx:id="historyFlowPane" alignment="CENTER" layoutX="522.0" layoutY="1282.0" prefHeight="200.0" prefWidth="930.0" />
+                        <Label layoutX="214.0" layoutY="557.0" prefHeight="60.0" text="Mejl:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="290.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="585.0" layoutY="471.0" maxWidth="470.0" prefWidth="470.0" text="Användarinformation" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="200.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="584.0" layoutY="566.0" prefHeight="60.0" text="Telefonnr:" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="290.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="214.0" layoutY="747.0" prefHeight="60.0" text="Leveransadress:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="420.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="671.0" layoutY="764.0" prefHeight="60.0" text="Postort" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="420.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="275.0" layoutY="851.0" prefHeight="65.0" prefWidth="400.0" promptText="Randomvägen 3" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="726.0" layoutY="805.0" prefHeight="65.0" prefWidth="300.0" promptText="Göteborgdåva" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="275.0" layoutY="948.0" prefHeight="65.0" prefWidth="400.0" promptText="431XX" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="605.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="224.0" layoutY="911.0" prefHeight="60.0" text="Postnummer:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="550.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1297.0" layoutY="457.0" text="Betalningssätt" AnchorPane.topAnchor="200.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1116.0" layoutY="743.0" text="Kortinnehavare:" AnchorPane.leftAnchor="1120.0" AnchorPane.topAnchor="420.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField layoutX="1116.0" layoutY="780.0" prefWidth="300.0" promptText="Förnamn" AnchorPane.leftAnchor="1120.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="1452.0" layoutY="780.0" prefWidth="300.0" promptText="Efternamn" AnchorPane.leftAnchor="1470.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="1120.0" layoutY="860.0" prefHeight="65.0" prefWidth="650.0" promptText="0000-0000-0000-0000" AnchorPane.leftAnchor="1120.0" AnchorPane.topAnchor="605.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField alignment="CENTER" layoutX="1120.0" layoutY="940.0" prefWidth="130.0" promptText="MM" AnchorPane.leftAnchor="1120.0" AnchorPane.topAnchor="735.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField layoutX="1457.0" layoutY="920.0" prefWidth="300.0" promptText="XXX" AnchorPane.leftAnchor="1470.0" AnchorPane.topAnchor="735.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="1120.0" layoutY="813.0" text="Kortnummer:" AnchorPane.leftAnchor="1120.0" AnchorPane.topAnchor="550.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1120.0" layoutY="908.0" text="Giltigt till:" AnchorPane.topAnchor="680.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1262.0" layoutY="837.0" prefWidth="14.0" text="/" textAlignment="CENTER" AnchorPane.leftAnchor="1262.0" AnchorPane.rightAnchor="644.0" AnchorPane.topAnchor="740.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField alignment="CENTER" layoutX="1295.0" layoutY="920.0" prefWidth="130.0" promptText="ÅÅ" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="735.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="1470.0" layoutY="887.0" text="CVC:" AnchorPane.leftAnchor="1470.0" AnchorPane.topAnchor="680.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
               </content>

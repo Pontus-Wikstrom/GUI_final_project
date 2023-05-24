@@ -30,6 +30,8 @@ public class UserController extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
+        //String login_name = text_input_loginname.getText();
+
         String kortnummer = text_input_kortnr.getText();
         String month = text_input_month.getText();
         String year = text_input_year.getText();

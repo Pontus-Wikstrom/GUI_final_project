@@ -25,9 +25,8 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
     private Product product;
     private ShoppingItem shoppingItem;
     private Model model = Model.getInstance();
-    private HashMap<String, ProductCardController> productCardHashMap;
 
-    public HistoryCardController (Product product, HashMap<String, ProductCardController> productCardHashMap) {
+    public HistoryCardController (Product product, ShoppingItem shoppingItem) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vara_kort.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -38,8 +37,7 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
         }
 
         this.product = product;
-        this.shoppingItem = new ShoppingItem(product, 0);
-        this.productCardHashMap = productCardHashMap;
+        this.shoppingItem = shoppingItem;
 
         productNameText.setText(product.getName());
         productCostText.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
@@ -54,7 +52,6 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
 
     private void setAmountOfItemsText() {
         productAmountText.setText((int) shoppingItem.getAmount() + "");
-        //productAmountText.setText(model.getShoppingCart().get)
     }
 
 
@@ -63,11 +60,12 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
         setAmountOfItemsText();
 
 
-        model.addToShoppingCart(product);
+        model.removeFromShoppingCart(product);
+        model.addToShoppingCart(shoppingItem);
         
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
 
-        System.out.println("in increase");
+        System.out.println("in history increase");
         System.out.println(model.getShoppingCart().getItems());
         System.out.println(model.getShoppingCart().getTotal());
     }
@@ -83,7 +81,7 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
 
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         
-        System.out.println("in decrease");
+        System.out.println("in history decrease");
         System.out.println(model.getShoppingCart().getItems());
         System.out.println(model.getShoppingCart().getTotal());
     }

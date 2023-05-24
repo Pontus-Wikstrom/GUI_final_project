@@ -25,7 +25,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     private ShoppingItem shoppingItem;
     private Model model = Model.getInstance();
 
-    public ProductCardController(Product product) {
+    public ProductCardController(Product product, ShoppingItem shoppingItem) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -36,7 +36,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         }
 
         this.product = product;
-        this.shoppingItem = new ShoppingItem(product, 0);
+        this.shoppingItem = shoppingItem;
         productCardProductName.setText(product.getName());
         productCardPrice.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
         productCardImage.setImage(model.getImage(product));
@@ -59,14 +59,17 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
         setAmountOfItemsText();
 
-
-        model.addToShoppingCart(product);
+        model.removeFromShoppingCart(product);
+        model.addToShoppingCart(shoppingItem);
         
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
 
         System.out.println("in increase");
         System.out.println(model.getShoppingCart().getItems());
         System.out.println(model.getShoppingCart().getTotal());
+
+        System.out.println(shoppingItem.getAmount());
+        System.out.println("--------------------------------");
     }
 
     private void decreaseAmountOfProducts() {
@@ -83,6 +86,9 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         System.out.println("in decrease");
         System.out.println(model.getShoppingCart().getItems());
         System.out.println(model.getShoppingCart().getTotal());
+        System.out.println(model.getAmountOfProductsInShoppingCart(shoppingItem));
+
+        System.out.println("----------------------");
     }
 
 
@@ -94,13 +100,11 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     @FXML
     public void increaseProductClick() {
         increaseAmountOfProducts();
-        setAmountOfItemsText();
     }
 
     @FXML
     public void decreaseProductClick() {
         decreaseAmountOfProducts();
-        setAmountOfItemsText();
     }
 
     @FXML

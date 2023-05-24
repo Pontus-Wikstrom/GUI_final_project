@@ -68,11 +68,6 @@ public class HomePageController extends AnchorPane{
             
             i++;
         }
-
-        // flowPaneAnchorPane.setMaxHeight(productListFlowPane.getHeight());
-        // flowPaneAnchorPane.setPrefHeight(productListFlowPane.getHeight());
-
-        //productListFlowPane.getChildren().addAll(this.productCardHashMap.values());
     }
 
     private void fillProductListFlowPane(List<Product> products) {
@@ -81,9 +76,6 @@ public class HomePageController extends AnchorPane{
         for (Product product : products) {
             productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
         }
-
-        // flowPaneAnchorPane.setMaxHeight(productListFlowPane.getHeight());
-        // flowPaneAnchorPane.setPrefHeight(productListFlowPane.getHeight());
     }
 
     @FXML

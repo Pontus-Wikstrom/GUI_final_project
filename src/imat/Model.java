@@ -2,6 +2,7 @@ package imat;
 
 import se.chalmers.cse.dat216.project.*;
 import java.util.List;
+import java.util.Objects;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javafx.scene.image.Image;
@@ -91,10 +92,24 @@ public class Model {
         iMatDataHandler.getShoppingCart().clear();
     }
 
-    public void getAmountOfProductsInShoppingCart(Product product) {
+
+    // these two dont work :(
+    public int getAmountOfProductsInShoppingCart(Product product) {
         ShoppingItem findItem = new ShoppingItem(product);
-        getShoppingCart().getItems();
-        //iMatDataHandler
+
+        if (getShoppingCart().getItems().contains(findItem)) {
+            return (int) getShoppingCart().getItems().
+            get(getShoppingCart().getItems().indexOf(findItem)).getAmount();
+        }
+        return 0;
+    }
+
+    public int getAmountOfProductsInShoppingCart(ShoppingItem sci) {
+        if (getShoppingCart().getItems().contains(sci)) {
+            return (int) getShoppingCart().getItems().
+            get(getShoppingCart().getItems().indexOf(sci)).getAmount();
+        }
+        return 0;
     }
 
 }

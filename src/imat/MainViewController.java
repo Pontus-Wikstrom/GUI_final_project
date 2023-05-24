@@ -84,7 +84,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private FavouritesPageController favouritesPageController;
 
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
-    //HashMap<String, >
+    HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
 
     private final Model model = Model.getInstance();
 
@@ -116,8 +116,12 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     private void initProductCardHashMap() {
         for (Product product : model.getProducts()){
-            ProductCardController productCardController1 = new ProductCardController(product);
+            ShoppingItem itemToAdd = new ShoppingItem(product, 0);
+            ProductCardController productCardController1 = new ProductCardController(product, itemToAdd);
+            HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd);
+            
             productCardHashMap.put(product.getName(), productCardController1);
+            historyCardHashMap.put(product.getName(), historyCardController1);
         }
     }
 

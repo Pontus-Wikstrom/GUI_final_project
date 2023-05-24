@@ -12,22 +12,15 @@ import java.io.IOException;
 public class shoppingCart extends AnchorPane {
     MainViewController controller;
 
-    private final Model model = Model.getInstance();
     @FXML
-    private Label delivery;
+    private FlowPane dinaVaror;
     @FXML
-    private Label payment;
+    private Label KassaKnapp;
     @FXML
-    private Label shoppingCart;
-    @FXML
-    private FlowPane varukorgWizardLista;
-
-    @FXML
-    private Label totalpris;
-
+    private Label Totalpris;
 
     public shoppingCart(MainViewController controller){
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("wizardVarukorg.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Varukorg.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         System.out.println("hello");
@@ -40,24 +33,9 @@ public class shoppingCart extends AnchorPane {
 
         this.controller = controller;
 
-        addVara();
-        setPrice();
-
     }
 
-    public void addVara(){
-
-    }
-
-    public void back() {
-        //back to main
-    }
-
-    public void nextStep() {
-        //go to leverans
-    }
-
-    public void setPrice() {
-
+    public void toPayment(){
+        controller.toPayment();
     }
 }

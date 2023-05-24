@@ -98,6 +98,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         deliveryPage = new fullWizardController(this);
+        shoppingCartPage = new shoppingCart(this);
         homePage = homePageController;
         offersPage = offersPageController;
         favouritesPage = favouritesPageController;
@@ -146,6 +147,11 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void shoppingCartPageClick() {
+        setPage(shoppingCartPage);
+    }
+
+    @FXML
+    public void toPayment() {
         setPage(deliveryPage);
     }
 

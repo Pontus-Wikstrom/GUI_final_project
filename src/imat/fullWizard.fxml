@@ -616,7 +616,7 @@
                         <Font size="55.0" />
                      </font>
                   </Text>
-                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" prefHeight="65.0" prefWidth="116.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" prefHeight="65.0" prefWidth="130.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>

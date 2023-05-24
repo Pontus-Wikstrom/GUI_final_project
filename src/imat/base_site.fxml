@@ -13,105 +13,6 @@
    <children>
       <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <AnchorPane fx:id="baseSite" prefHeight="173.0" prefWidth="1920.0" stylesheets="@base_site.css">
-               <children>
-                  <AnchorPane fx:id="contentAnchorPane" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="906.0" prefWidth="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="173.0" stroke="#ebae07" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                  <AnchorPane fx:id="hamburgerMenuButton" onMouseClicked="#openHamburgerMenu" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
-                     <children>
-                        <ImageView fitHeight="173.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/Hamburger_icon.svg.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="194.0" onMouseClicked="#homePageClick" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
-                     <children>
-                        <ImageView fitHeight="173.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/loga.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="386.0" onMouseClicked="#categoryPageClick" prefHeight="173.0" prefWidth="273.0" styleClass="navbuttons">
-                     <children>
-                        <Text layoutX="18.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier">
-                           <font>
-                              <Font size="52.0" />
-                           </font>
-                        </Text>
-                        <Rectangle fx:id="category_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="274.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="684.0" onMouseClicked="#favouritesPageClick" prefHeight="173.0" prefWidth="266.0" styleClass="navbuttons">
-                     <children>
-                        <Text layoutX="34.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favoriter">
-                           <font>
-                              <Font size="52.0" />
-                           </font>
-                        </Text>
-                        <Rectangle fx:id="favourite_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="970.0" onMouseClicked="#offersPageClick" prefHeight="173.0" prefWidth="368.0" styleClass="navbuttons">
-                     <children>
-                        <Text layoutX="42.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erbjudanden">
-                           <font>
-                              <Font size="52.0" />
-                           </font>
-                        </Text>
-                        <Rectangle fx:id="offer_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="372.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane fx:id="helpButton" layoutX="1358.0" onMouseClicked="#helpPageClick" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
-                     <children>
-                        <Text layoutX="29.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hjälp">
-                           <font>
-                              <Font size="52.0" />
-                           </font>
-                        </Text>
-                        <Rectangle fx:id="help_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="173.0" />
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="1552.0" minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
-                     <children>
-                        <Rectangle fx:id="cart_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="173.0" />
-                        <ImageView fitHeight="173.0" fitWidth="173.0" onMouseClicked="#shoppingCartPageClick" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/varukorgsak.png" />
-                           </image>
-                        </ImageView>
-                        <Text fx:id="shoppingCartItemAmount" layoutX="132.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
-                           <font>
-                              <Font size="37.0" />
-                           </font>
-                        </Text>
-                        <Text fx:id="shoppingCartCostAmount" layoutX="46.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000 kr">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="1746.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#userPageClick" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
-                     <children>
-                        <ImageView fitHeight="146.0" fitWidth="146.0" layoutX="12.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/profilbild.png" />
-                           </image>
-                        </ImageView>
-                        <Rectangle fx:id="profile_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="173.0" />
-                        <Text layoutX="20.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profil">
-                           <font>
-                              <Font size="52.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="productDescription" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1038.0" prefWidth="950.0" stylesheets="@product_info.css">
                <children>
                   <SplitPane dividerPositions="0.5" layoutX="395.0" layoutY="387.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -277,6 +178,105 @@
                         <Text fx:id="köphistorikKnapp" layoutX="42.0" layoutY="657.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köphistorik">
                            <font>
                               <Font size="55.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="baseSite" prefHeight="173.0" prefWidth="1920.0" stylesheets="@base_site.css">
+               <children>
+                  <AnchorPane fx:id="contentAnchorPane" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="906.0" prefWidth="1920.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="173.0" stroke="#ebae07" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+                  <AnchorPane fx:id="hamburgerMenuButton" onMouseClicked="#openHamburgerMenu" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
+                     <children>
+                        <ImageView fitHeight="173.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/Hamburger_icon.svg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="194.0" onMouseClicked="#homePageClick" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
+                     <children>
+                        <ImageView fitHeight="173.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/loga.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="386.0" onMouseClicked="#categoryPageClick" prefHeight="173.0" prefWidth="273.0" styleClass="navbuttons">
+                     <children>
+                        <Text layoutX="18.0" layoutY="103.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kategorier">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Text>
+                        <Rectangle fx:id="category_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="274.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="684.0" onMouseClicked="#favouritesPageClick" prefHeight="173.0" prefWidth="266.0" styleClass="navbuttons">
+                     <children>
+                        <Text layoutX="34.0" layoutY="107.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Favoriter">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Text>
+                        <Rectangle fx:id="favourite_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="266.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="970.0" onMouseClicked="#offersPageClick" prefHeight="173.0" prefWidth="368.0" styleClass="navbuttons">
+                     <children>
+                        <Text layoutX="42.0" layoutY="111.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Erbjudanden">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Text>
+                        <Rectangle fx:id="offer_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="372.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="helpButton" layoutX="1358.0" onMouseClicked="#helpPageClick" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
+                     <children>
+                        <Text layoutX="29.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Hjälp">
+                           <font>
+                              <Font size="52.0" />
+                           </font>
+                        </Text>
+                        <Rectangle fx:id="help_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="173.0" />
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="1552.0" minHeight="0.0" minWidth="0.0" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
+                     <children>
+                        <Rectangle fx:id="cart_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="173.0" />
+                        <ImageView fitHeight="173.0" fitWidth="173.0" onMouseClicked="#shoppingCartPageClick" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/varukorgsak.png" />
+                           </image>
+                        </ImageView>
+                        <Text fx:id="shoppingCartItemAmount" layoutX="132.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0">
+                           <font>
+                              <Font size="37.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="shoppingCartCostAmount" layoutX="46.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000 kr">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="1746.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#userPageClick" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
+                     <children>
+                        <ImageView fitHeight="146.0" fitWidth="146.0" layoutX="12.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/profilbild.png" />
+                           </image>
+                        </ImageView>
+                        <Rectangle fx:id="profile_marker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="173.0" />
+                        <Text layoutX="20.0" layoutY="172.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profil">
+                           <font>
+                              <Font size="52.0" />
                            </font>
                         </Text>
                      </children>

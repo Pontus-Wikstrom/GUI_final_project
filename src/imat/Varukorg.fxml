@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
 <?import javafx.scene.text.Font?>
 
-<fx:root fx:id="Varukorg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" style="-fx-background-color: #F5F5F5;" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="Varukorg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" style="-fx-background-color: #F5F5F5;" stylesheets="@varukorg.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ScrollPane layoutX="2.0" layoutY="-6.0" prefHeight="907.0" prefWidth="1920.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0">
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0" stylesheets="@varukorg.css">
                <children>
                   <FlowPane fx:id="dinaVaror" layoutX="536.0" layoutY="260.0" prefHeight="200.0" prefWidth="857.0" />
                   <Label fx:id="DinVarukorg" alignment="CENTER" prefHeight="117.0" prefWidth="1058.0" text="Din Varukorg" AnchorPane.leftAnchor="442.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="60.0">
@@ -22,15 +23,19 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <Label fx:id="Totalpris" alignment="CENTER" prefHeight="99.0" prefWidth="337.0" style="-fx-background-color: #2B9EB3;" text="Total pris" textFill="WHITE" AnchorPane.bottomAnchor="787.0" AnchorPane.leftAnchor="1494.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="60.0">
+      <Label fx:id="Totalpris" alignment="CENTER" prefHeight="99.0" prefWidth="337.0" styleClass="blueish_stuff" text="Total pris" textFill="WHITE" AnchorPane.bottomAnchor="787.0" AnchorPane.leftAnchor="1494.0" AnchorPane.rightAnchor="89.0" AnchorPane.topAnchor="60.0">
          <font>
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="KassaKnapp" alignment="CENTER" onMouseClicked="#toPayment" prefHeight="92.0" prefWidth="785.0" style="-fx-background-color: #2B9EB3;" text="Gå till kassan" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="567.5" AnchorPane.rightAnchor="567.5" AnchorPane.topAnchor="811.0">
+      <Label fx:id="KassaKnapp" alignment="CENTER" onMouseClicked="#toPayment" prefHeight="92.0" prefWidth="785.0" text="Gå till kassan" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="567.5" AnchorPane.rightAnchor="567.5" AnchorPane.topAnchor="811.0">
          <font>
             <Font size="48.0" />
          </font>
+         <styleClass>
+            <String fx:value="blueish_stuff" />
+            <String fx:value="button" />
+         </styleClass>
       </Label>
    </children>
 </fx:root>

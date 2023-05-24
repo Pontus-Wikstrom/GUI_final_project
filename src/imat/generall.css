@@ -5,6 +5,7 @@
 
 .tillkassan:hover{
 -fx-background-color: #09929c;
+-fx-cursor: hand;
 }
 
 .background{

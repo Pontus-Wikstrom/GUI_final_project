@@ -34,4 +34,5 @@
 
 .star:hover{
     -fx-background-color: #FCAB10;
+    -fx-cursor: hand;
 }

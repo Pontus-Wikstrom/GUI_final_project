@@ -2,15 +2,20 @@
 -fx-background-color: #2B9EB3;
 -fx-text-color: white;
 -fx-background-radius: 16, 16, 16;
+}
 
+.last_buttons:hover{
+    -fx-background-color: #1B7181;
+    -fx-cursor: hand;
 }
 .not_achieved_button{
--fx-background-color: #8b8b8b;
+    -fx-background-color: #8b8b8b;
 }
 .achieved_button{
--fx-background-color: #000000;
+    -fx-background-color: #000000;
 }
 .buttons:hover{
--fx-background-color: #525252;
+    -fx-background-color: #525252;
+    -fx-cursor: hand;
 
 }

@@ -60,22 +60,34 @@
                         <Font size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="payment" alignment="CENTER" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="payment" alignment="CENTER" prefHeight="70.0" prefWidth="160.0" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
                   </Label>
                   <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="delivery" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="delivery" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="160.0" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
                   </Label>
                   <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="shoppingCart" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="shoppingCart" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
                   </Label>
                   <Pane fx:id="klarna" layoutX="595.0" layoutY="175.0" prefHeight="130.0" prefWidth="224.0" style="-fx-background-color: #f5f5f5;" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="927.0" AnchorPane.topAnchor="180.0">
                      <children>
@@ -129,10 +141,14 @@
                      </font>
                   </Button>
                   <AnchorPane fx:id="paymentOptionContent" layoutX="664.0" layoutY="314.0" prefHeight="200.0" prefWidth="590.0" />
-                  <Label fx:id="delivery3" alignment="CENTER" layoutX="970.0" layoutY="40.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="delivery3" alignment="CENTER" layoutX="970.0" layoutY="40.0" prefHeight="70.0" prefWidth="160.0" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
                   </Label>
                   <Line endX="80.0" layoutX="1160.0" layoutY="77.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
                </children>
@@ -388,22 +404,34 @@
                   <Line endX="80.0" layoutX="849.0" layoutY="57.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
                   <Line endX="80.0" layoutX="849.0" layoutY="57.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
                   <Line endX="80.0" layoutX="849.0" layoutY="57.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="payment21" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="payment21" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
                   </Label>
-                  <Label fx:id="delivery22" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="delivery22" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
                   </Label>
-                  <Label fx:id="delivery211" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="delivery211" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
                   </Label>
-                  <Label fx:id="shoppingCart21" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Varukorg:" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="shoppingCart21" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -520,15 +548,23 @@
                         <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
                         <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
                         <Line endX="80.0" layoutX="204.0" layoutY="71.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                        <Label fx:id="payment2" alignment="CENTER" layoutX="525.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                        <Label fx:id="payment2" alignment="CENTER" layoutX="525.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
                            <font>
                               <Font size="30.0" />
                            </font>
+                           <styleClass>
+                              <String fx:value="achieved_button" />
+                              <String fx:value="buttons" />
+                           </styleClass>
                         </Label>
-                        <Label fx:id="delivery2" alignment="CENTER" layoutX="768.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                        <Label fx:id="delivery2" alignment="CENTER" layoutX="768.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
                            <font>
                               <Font size="30.0" />
                            </font>
+                           <styleClass>
+                              <String fx:value="achieved_button" />
+                              <String fx:value="buttons" />
+                           </styleClass>
                         </Label>
                         <Label fx:id="delivery21" alignment="CENTER" layoutX="1006.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
                            <font>
@@ -584,10 +620,14 @@
                                     <Font size="30.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
+                                 <styleClass>
+                                    <String fx:value="achieved_button" />
+                                    <String fx:value="buttons" />
+                                 </styleClass>
                               </Label>
                               <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="762.0" />
                               <Line endX="80.0" layoutX="921.0" layoutY="74.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />

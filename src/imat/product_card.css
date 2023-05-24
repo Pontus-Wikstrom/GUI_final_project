@@ -4,6 +4,11 @@
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
 }
 
+#product_card_rec:hover{
+    -fx-background-color: #f3f3f3;
+    -fx-cursor: hand;
+}
+
 .varukorg_rec{
     -fx-background-color: #2B9EB3;
     -fx-background-radius: 50px;

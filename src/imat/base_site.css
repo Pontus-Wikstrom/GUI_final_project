@@ -13,6 +13,10 @@
     
 }
 
+.hovering_text{
+    -fx-cursor: hand;
+}
+
 .burgirbutton:hover{
     -fx-cursor:hand;
 }

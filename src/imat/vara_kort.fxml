@@ -6,13 +6,13 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="vara_kort_rec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="118.0" prefWidth="1144.0" stylesheets="@vara_kort.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane id="vara_kort_rec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="150.0" prefWidth="1144.0" stylesheets="@vara_kort.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="33.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="30.0">
+      <ImageView fitHeight="80.0" fitWidth="90.0" layoutX="33.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="35.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="35.0">
          <image>
             <Image url="@../../../../../Pictures/plus_trans_new.png" />
          </image></ImageView>
-      <AnchorPane layoutX="392.0" layoutY="29.0" prefHeight="60.0" prefWidth="110.0" styleClass="plus_minus_buttons_and_text_rec" AnchorPane.bottomAnchor="29.0" AnchorPane.leftAnchor="800.0" AnchorPane.topAnchor="29.0">
+      <AnchorPane layoutX="392.0" layoutY="29.0" prefHeight="60.0" prefWidth="110.0" styleClass="plus_minus_buttons_and_text_rec" AnchorPane.bottomAnchor="45.0" AnchorPane.leftAnchor="720.0" AnchorPane.topAnchor="45.0">
          <children>
             <Text layoutX="45.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="00">
                <font>
@@ -32,20 +32,40 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Text fill="WHITE" layoutX="605.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="price_of_product_text" text="00 kr" AnchorPane.bottomAnchor="36.5" AnchorPane.leftAnchor="950.0" AnchorPane.topAnchor="36.5">
+      <Text fill="WHITE" layoutX="605.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="price_of_product_text" text="000" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="960.0" AnchorPane.topAnchor="55.0">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Text fill="WHITE" layoutX="175.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="gogogogogogogogogogogogogogogog" wrappingWidth="550.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="39.0">
+      <Text fill="WHITE" layoutX="175.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kycklingbröstfilé" wrappingWidth="300.0" AnchorPane.bottomAnchor="55.09765625" AnchorPane.leftAnchor="120.0" AnchorPane.topAnchor="55.0">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="973.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="29.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="29.0">
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="973.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="45.0">
          <image>
             <Image url="@../../../../../Pictures/plus_trans_new.png" />
          </image>
       </ImageView>
+      <Text fill="WHITE" layoutX="860.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalt:" AnchorPane.bottomAnchor="55.0" AnchorPane.rightAnchor="190.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="1006.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kr" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="1010.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="472.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris:" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="430.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <Text fill="WHITE" layoutX="553.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="999,99 kr/förp" AnchorPane.bottomAnchor="55.0" AnchorPane.leftAnchor="490.0" AnchorPane.topAnchor="55.0">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
    </children>
 </AnchorPane>

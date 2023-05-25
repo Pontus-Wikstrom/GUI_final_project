@@ -82,7 +82,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private FavouritesPageController favouritesPageController;
     private CategoryPageController categoryPageController;
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
-    HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
+    HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap = new HashMap<>();
 
     private final Model model = Model.getInstance();
 
@@ -97,7 +97,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         model.getShoppingCart().addShoppingCartListener(this);
 
         deliveryPage = new fullWizardController(this);
-        shoppingCartPage = new shoppingCart(this, historyCardHashMap);
+        shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
         homePage = homePageController;
         offersPage = offersPageController;
         favouritesPage = favouritesPageController;
@@ -116,10 +116,10 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         for (Product product : model.getProducts()){
             ShoppingItem itemToAdd = new ShoppingItem(product, 0);
             ProductCardController productCardController1 = new ProductCardController(product, itemToAdd);
-            HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd, this);
+            ShoppingCartCardController historyCardController1 = new ShoppingCartCardController(product, itemToAdd, this);
             
             productCardHashMap.put(product.getName(), productCardController1);
-            historyCardHashMap.put(product.getName(), historyCardController1);
+            shoppingCartCardHashMap.put(product.getName(), historyCardController1);
         }
     }
 

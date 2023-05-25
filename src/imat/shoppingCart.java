@@ -28,9 +28,9 @@ public class shoppingCart extends AnchorPane implements ShoppingCartListener {
     private Label Totalpris;
 
     private final Model model = Model.getInstance();
-    private HashMap<String, HistoryCardController> historyCardHashMap;
+    private HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap;
 
-    public shoppingCart(MainViewController controller, HashMap<String, HistoryCardController> historyCardHashMap){
+    public shoppingCart(MainViewController controller, HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap){
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("Varukorg.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -43,7 +43,7 @@ public class shoppingCart extends AnchorPane implements ShoppingCartListener {
         }
 
         this.controller = controller;
-        this.historyCardHashMap = historyCardHashMap;
+        this.shoppingCartCardHashMap = shoppingCartCardHashMap;
 
         model.getShoppingCart().addShoppingCartListener(this);
 
@@ -64,7 +64,7 @@ public class shoppingCart extends AnchorPane implements ShoppingCartListener {
 
         List<String>  lst = new ArrayList<String>(0);
         for (Node item : productCardList) {
-            lst.add(((HistoryCardController) item).getName());
+            lst.add(((ShoppingCartCardController) item).getName());
         }
 
         lst.sort(null);
@@ -72,7 +72,7 @@ public class shoppingCart extends AnchorPane implements ShoppingCartListener {
         productsFlowPane.getChildren().clear();
 
         for (String productName : lst) {
-            productsFlowPane.getChildren().add(this.historyCardHashMap.get(productName));
+            productsFlowPane.getChildren().add(this.shoppingCartCardHashMap.get(productName));
         }
 
         // for (ShoppingItem item : model.getShoppingCart().getItems()) {
@@ -99,7 +99,7 @@ public class shoppingCart extends AnchorPane implements ShoppingCartListener {
         lst.sort(null);
 
         for (String productName : lst) {
-            productsFlowPane.getChildren().add(this.historyCardHashMap.get(productName));
+            productsFlowPane.getChildren().add(this.shoppingCartCardHashMap.get(productName));
         } 
     }
 

@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
-public class HistoryCardController extends AnchorPane implements ShoppingCartListener, Comparable<HistoryCardController>{
+public class ShoppingCartCardController extends AnchorPane implements ShoppingCartListener, Comparable<ShoppingCartCardController>{
     @FXML
     private Text productNameText;
     @FXML
@@ -27,7 +27,7 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
     private Model model = Model.getInstance();
     private MainViewController parentController;
 
-    public HistoryCardController (Product product, ShoppingItem shoppingItem, MainViewController parenController) {
+    public ShoppingCartCardController (Product product, ShoppingItem shoppingItem, MainViewController parenController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vara_kort.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -116,7 +116,7 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
     }
 
     @Override
-    public int compareTo(HistoryCardController o) {
+    public int compareTo(ShoppingCartCardController o) {
         return this.getName().compareTo(o.getName());
     }
 

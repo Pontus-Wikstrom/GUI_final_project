@@ -18,3 +18,8 @@
 -fx-border-width:2px;
 
 }
+.switcharrows:hover{
+    -fx-border-color: black;
+    -fx-border-radius: 20px;
+    -fx-border-width:2px;
+}

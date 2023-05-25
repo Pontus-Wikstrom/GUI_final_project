@@ -46,8 +46,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML 
     private AnchorPane favouritesPage;
     @FXML
-    private AnchorPane categoryPage;
-    @FXML
     private AnchorPane homePage;
     @FXML
     private AnchorPane userPage;
@@ -82,7 +80,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private HomePageController homePageController;
     private OffersPageController offersPageController;
     private FavouritesPageController favouritesPageController;
-
+    private CategoryPageController categoryPageController;
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
 
     private final Model model = Model.getInstance();
@@ -93,7 +91,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         homePageController = new HomePageController(productCardHashMap);
         offersPageController = new OffersPageController(productCardHashMap);
         favouritesPageController = new FavouritesPageController(productCardHashMap);
-
+        categoryPageController = new CategoryPageController(productCardHashMap); // Lade till men vet ej om det fungerar
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
 
@@ -104,7 +102,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         favouritesPage = favouritesPageController;
         //shoppingCartPage = new fullWizardController(this);
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
-        categoryPage = new SitePane(this, new FXMLLoader(getClass().getResource("kategorier.fxml")));
+      
         userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
 
         //fillProductListFlowPane(productCard);
@@ -197,7 +195,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void categoryPageClick() {
-        setPage(categoryPage);
+        categoryPageController.setCategoryToFront();
+        setPage(categoryPageController);
         category_marker.setVisible(true);
     }
 

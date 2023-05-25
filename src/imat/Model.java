@@ -39,7 +39,9 @@ public class Model {
     public Product getProduct(int idNbr) {
         return iMatDataHandler.getProduct(idNbr);
     }
-    
+    public List<Product> getCategoryProducts(ProductCategory category){
+        return iMatDataHandler.getProducts(category);
+    }
     public List<Product> findProducts(java.lang.String s) {
         return iMatDataHandler.findProducts(s);
     }

@@ -55,7 +55,7 @@ public class UserController extends AnchorPane{
 
     }
 
-    public void updateOrderHistoryList() {
+    private void updateOrderHistoryList() {
         orderHistoryList = model.getOrderHistory();
     }
 
@@ -66,10 +66,11 @@ public class UserController extends AnchorPane{
     }
 
     public void updateFlowPane() {
+        updateOrderHistoryList();
         historyFlowPane.getChildren().clear();
 
         for (Order order : orderHistoryList) {
-            historyFlowPane.getChildren().add(new OrderHistoryCardController(order));
+            historyFlowPane.getChildren().add(new OrderHistoryCardController(order, historyCardHashMap));
         }
     }
 }

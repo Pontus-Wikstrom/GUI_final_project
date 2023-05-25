@@ -236,7 +236,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         profile_marker.setVisible(true);
 
         model.placeOrder(true);
-        userPage.updateOrderHistoryList();
         userPage.updateFlowPane();
         onPlaceOrder();
 

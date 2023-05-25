@@ -7,9 +7,9 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root type="AnchorPane" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="1077.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="1077.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="flowPaneButton" fitHeight="85.0" fitWidth="85.0" layoutX="952.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="952.0" AnchorPane.topAnchor="22.0">
+      <ImageView fx:id="flowPaneButton" fitHeight="85.0" fitWidth="85.0" layoutX="952.0" layoutY="22.0" onMouseClicked="#fillFlowPane" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="952.0" AnchorPane.topAnchor="22.0">
          <image>
             <Image url="@resources/downarrow.png" />
          </image>
@@ -29,6 +29,6 @@
             <Font size="40.0" />
          </font>
       </Text>
-      <FlowPane fx:id="tidigareVarukorgFlowPane" layoutY="131.0" prefHeight="1.0" prefWidth="1077.0" vgap="20.0" />
+      <FlowPane fx:id="productFlowPane" layoutY="131.0" prefHeight="1.0" prefWidth="1077.0" vgap="20.0" />
    </children>
 </fx:root>

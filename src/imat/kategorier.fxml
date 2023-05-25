@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.net.URL?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
@@ -13,25 +14,6 @@
    <children>
       <StackPane prefHeight="907.0" prefWidth="1920.0">
          <children>
-            <ScrollPane fx:id="category1ScrollPane" prefHeight="671.0" prefWidth="1920.0">
-              <content>
-                <AnchorPane maxHeight="10000.0" minHeight="907.0" minWidth="0.0" prefWidth="1920.0" styleClass="background" stylesheets="@generall.css">
-                     <children>
-                        <FlowPane fx:id="categoryFlowPane" layoutX="124.0" layoutY="142.0" prefHeight="142.0" prefWidth="1662.0" />
-                        <Text id="breadcrumbsLink" fx:id="breadcrumbsLink" layoutX="113.0" layoutY="82.0" onMouseClicked="#setCategoryToFront" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories&gt;">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Text>
-                        <Text fx:id="valdKategori" layoutX="275.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Text>
-                     </children>
-                  </AnchorPane>
-              </content>
-            </ScrollPane>
             <ScrollPane fx:id="category2ScrollPane" prefHeight="907.0" prefWidth="1920.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1235.0" prefWidth="1920.0" styleClass="background">
@@ -198,6 +180,25 @@
                               </Text>
                            </children>
                         </AnchorPane>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+            <ScrollPane fx:id="category1ScrollPane" prefHeight="671.0" prefWidth="1920.0">
+              <content>
+                <AnchorPane maxHeight="10000.0" minHeight="907.0" minWidth="0.0" prefWidth="1920.0" styleClass="background" stylesheets="@generall.css">
+                     <children>
+                        <FlowPane fx:id="categoryFlowPane" layoutX="124.0" layoutY="142.0" prefHeight="142.0" prefWidth="1662.0" />
+                        <Text fx:id="valdKategori" layoutX="275.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Text>
+                        <Label id="breadcrumbsLink" layoutX="143.0" layoutY="49.0" onMouseClicked="#setCategoryToFront" text="Kategori&gt;">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
               </content>

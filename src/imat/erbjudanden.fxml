@@ -12,6 +12,7 @@
    <children>
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" stylesheets="@base_site.css">
          <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
             <ScrollPane layoutY="1.0" prefHeight="907.0" prefWidth="1920.0">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3423.0" prefWidth="1920.0">
@@ -27,7 +28,6 @@
                   </AnchorPane>
               </content>
             </ScrollPane>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
          </children>
       </AnchorPane>
       <AnchorPane layoutX="1580.0" layoutY="780.0" prefHeight="100.0" prefWidth="300.0" styleClass="tillkassan" stylesheets="@generall.css" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="40.0">

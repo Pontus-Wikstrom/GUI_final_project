@@ -42,9 +42,10 @@ public class ShoppingCartCardController extends AnchorPane implements ShoppingCa
         this.parentController = parenController;
 
         productNameText.setText(product.getName());
-        productCostText.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
+        productCostText.setText(String.format("%.2f", product.getPrice()) + " " + product.getUnit());
         productImage.setImage(model.getImage(product));
         productAmountText.setText("0");
+        productCostsSumText.setText("0");
 
 
 
@@ -60,7 +61,9 @@ public class ShoppingCartCardController extends AnchorPane implements ShoppingCa
     }
 
     private void setAmountOfItemsText() {
+        String totalCost = String.format("%.2f" , shoppingItem.getTotal());
         productAmountText.setText((int) shoppingItem.getAmount() + "");
+        productCostsSumText.setText(totalCost + " kr");
     }
 
 
@@ -98,7 +101,7 @@ public class ShoppingCartCardController extends AnchorPane implements ShoppingCa
 
     @Override
     public void shoppingCartChanged(CartEvent event) {
-        productAmountText.setText((int) this.shoppingItem.getAmount() + "");
+        setAmountOfItemsText();
     }
 
     @FXML

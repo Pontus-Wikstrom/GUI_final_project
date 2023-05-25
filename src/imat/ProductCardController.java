@@ -125,8 +125,6 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
             notFavourite.toFront();
         }
 
-        // TODO fixa ikonen så att den ändras
-
     
     }
 

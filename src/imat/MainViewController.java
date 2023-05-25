@@ -83,6 +83,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private CategoryPageController categoryPageController;
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
     HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap = new HashMap<>();
+    HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
 
     private final Model model = Model.getInstance();
 
@@ -104,10 +105,14 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         //shoppingCartPage = new fullWizardController(this);
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
       
-        userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
-
+        //userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
+        userPage = new UserController(historyCardHashMap);
         //fillProductListFlowPane(productCard);
-        setPage(deliveryPage);
+        
+        homePageClick();
+
+        shoppingCartCostAmount.setText("0 kr");
+        hamburgerCartCostAmount.setText("0 kr");
         
 
     } 
@@ -116,22 +121,24 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         for (Product product : model.getProducts()){
             ShoppingItem itemToAdd = new ShoppingItem(product, 0);
             ProductCardController productCardController1 = new ProductCardController(product, itemToAdd);
-            ShoppingCartCardController historyCardController1 = new ShoppingCartCardController(product, itemToAdd, this);
-            
+            ShoppingCartCardController shoppingCartCardController1 = new ShoppingCartCardController(product, itemToAdd, this);
+            HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd);
+
             productCardHashMap.put(product.getName(), productCardController1);
-            shoppingCartCardHashMap.put(product.getName(), historyCardController1);
+            shoppingCartCardHashMap.put(product.getName(), shoppingCartCardController1);
+            historyCardHashMap.put(product.getName(), historyCardController1);
         }
     }
 
     @Override
     public void shoppingCartChanged(CartEvent arg0) {
-        String totalCost = String.format("%.2f" ,model.getShoppingCart().getTotal());
+        String totalCost = String.format("%.0f" ,model.getShoppingCart().getTotal());
         int amountOfItems = model.getShoppingCart().getItems().size();
 
-        shoppingCartCostAmount.setText(totalCost);
+        shoppingCartCostAmount.setText(totalCost + " kr");
         shoppingCartItemAmount.setText(amountOfItems + "");
 
-        hamburgerCartCostAmount.setText(totalCost);
+        hamburgerCartCostAmount.setText(totalCost + " kr");
         hamburgerCartItemAmount.setText(amountOfItems + "");
     }
 

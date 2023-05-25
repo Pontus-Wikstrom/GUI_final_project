@@ -94,6 +94,10 @@ public class Model {
         iMatDataHandler.getShoppingCart().clear();
     }
 
+    public List<Order> getOrderHistory() {
+        return iMatDataHandler.getOrders();
+    }
+
     
     // public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
     //     List<ShoppingItem> itemList = getShoppingCart().getItems();

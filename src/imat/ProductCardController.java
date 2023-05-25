@@ -19,6 +19,10 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     @FXML
     private Text productCardAmountOfItems;
 
+    @FXML 
+    private AnchorPane favourite;
+    @FXML
+    private AnchorPane notFavourite;
     private Product product;
     private final static double kImageWidth = 100.0;
     private final static double kImageRatio = 0.75;
@@ -96,7 +100,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         increaseAmountOfProducts();
         setAmountOfItemsText();
     }
-
+    
     @FXML
     public void decreaseProductClick() {
         decreaseAmountOfProducts();
@@ -107,8 +111,10 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     public void favouriteButtonClick() {
         if (!model.isFavourite(product)) {
             model.setFavourite(product);
+            favourite.toFront();
         } else {
             model.removeFavourite(product);
+            notFavourite.toFront();
         }
 
         // TODO fixa ikonen så att den ändras

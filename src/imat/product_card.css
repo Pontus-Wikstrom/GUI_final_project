@@ -75,4 +75,6 @@
 .amount_of_items_text_product{
 
 }
-
+.starBackground{
+-fx-background-color:white;
+}

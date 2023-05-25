@@ -40,13 +40,13 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private AnchorPane productCard;
     
     @FXML
-    private AnchorPane offersPage;
+    private OffersPageController offersPage;
     @FXML
     private AnchorPane helpPage;
     @FXML 
-    private AnchorPane favouritesPage;
+    private FavouritesPageController favouritesPage;
     @FXML
-    private AnchorPane homePage;
+    private HomePageController homePage;
     @FXML
     private UserController userPage;
     @FXML
@@ -77,9 +77,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Rectangle profile_marker;
     
 
-    private HomePageController homePageController;
-    private OffersPageController offersPageController;
-    private FavouritesPageController favouritesPageController;
+    
     private CategoryPageController categoryPageController;
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
     HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap = new HashMap<>();
@@ -90,23 +88,21 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void initialize(URL url, ResourceBundle rb) {
         initProductCardHashMap();
 
-        homePageController = new HomePageController(productCardHashMap);
-        offersPageController = new OffersPageController(productCardHashMap);
-        favouritesPageController = new FavouritesPageController(productCardHashMap);
-        categoryPageController = new CategoryPageController(productCardHashMap); // Lade till men vet ej om det fungerar
-        model.clearShoppingCart();
-        model.getShoppingCart().addShoppingCartListener(this);
-
         deliveryPage = new fullWizardController(this);
+
+        categoryPageController = new CategoryPageController(productCardHashMap);
         shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
-        homePage = homePageController;
-        offersPage = offersPageController;
-        favouritesPage = favouritesPageController;
+        homePage = new HomePageController(productCardHashMap);
+        offersPage = new OffersPageController(productCardHashMap);
+        favouritesPage = new FavouritesPageController(productCardHashMap);
+        userPage = new UserController(historyCardHashMap);
+      
         //shoppingCartPage = new fullWizardController(this);
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
-      
-        userPage = new UserController(historyCardHashMap);
         //fillProductListFlowPane(productCard);
+
+        model.clearShoppingCart();
+        model.getShoppingCart().addShoppingCartListener(this);
         
         homePageClick();
 
@@ -171,7 +167,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void offersPageClick() {
         setPage(offersPage);
-        offersPageController.fillProductListFlowPane();
+        offersPage.fillProductListFlowPane();
         offer_marker.setVisible(true);;
     }
 
@@ -179,7 +175,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void hamburgerOffersPageClick() {
         closeHamburgerMenu();
         offersPageClick();
-        offersPageController.fillProductListFlowPane();
+        offersPage.fillProductListFlowPane();
     }
 
     @FXML
@@ -197,7 +193,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void favouritesPageClick() {
         setPage(favouritesPage);
-        favouritesPageController.fillProductListFlowPane();
+        favouritesPage.fillProductListFlowPane();
         favourite_marker.setVisible(true);
     }
 
@@ -205,7 +201,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void hamburgerFavouritesPageClick() {
         closeHamburgerMenu();
         favouritesPageClick();
-        favouritesPageController.fillProductListFlowPane();
+        favouritesPage.fillProductListFlowPane();
     }
 
     @FXML
@@ -224,14 +220,14 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void homePageClick() {
         setPage(homePage);
-        homePageController.fillProductListFlowPane();
+        homePage.fillProductListFlowPane();
     }
 
     @FXML
     public void hamburgerHomePageClick() {
         closeHamburgerMenu();
         homePageClick();
-        homePageController.fillProductListFlowPane();
+        homePage.fillProductListFlowPane();
     }
 
     @FXML
@@ -239,9 +235,25 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         setPage(userPage);
         profile_marker.setVisible(true);
 
-        model.placeOrder(false);
+        model.placeOrder(true);
         userPage.updateOrderHistoryList();
         userPage.updateFlowPane();
+        onPlaceOrder();
+
+    }
+
+    public void onPlaceOrder() { // resets HashMaps so new order can start to be built
+        productCardHashMap.clear();
+        shoppingCartCardHashMap.clear();
+        historyCardHashMap.clear();
+        initProductCardHashMap();
+
+        categoryPageController = new CategoryPageController(productCardHashMap);
+        shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
+        homePage = new HomePageController(productCardHashMap);
+        offersPage = new OffersPageController(productCardHashMap);
+        favouritesPage = new FavouritesPageController(productCardHashMap);
+        userPage = new UserController(historyCardHashMap);
 
     }
 

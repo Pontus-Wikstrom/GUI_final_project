@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
-public class ProductCardController extends AnchorPane implements ShoppingCartListener, Comparable<ProductCardController>{
+public class ProductCardController extends AnchorPane implements ShoppingCartListener {
     @FXML
     private Text productCardProductName;
     @FXML
@@ -25,8 +25,6 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     @FXML
     private AnchorPane notFavourite;
     private Product product;
-    private final static double kImageWidth = 100.0;
-    private final static double kImageRatio = 0.75;
     private ShoppingItem shoppingItem;
     private Model model = Model.getInstance();
 
@@ -102,7 +100,11 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
     @Override
     public void shoppingCartChanged(CartEvent event) {
-        productCardAmountOfItems.setText((int) this.shoppingItem.getAmount() + "");
+        if(model.getShoppingCart().getItems().contains(shoppingItem)) {
+            int i = model.getShoppingCart().getItems().indexOf(shoppingItem);
+            shoppingItem.setAmount(model.getShoppingCart().getItems().get(i).getAmount());
+        }
+        setAmountOfItemsText();
     }
 
     @FXML
@@ -127,11 +129,5 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
     
     }
-
-    @Override
-    public int compareTo(ProductCardController o) {
-        return this.getName().compareTo(o.getName());
-    }
-
 
 }

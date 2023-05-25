@@ -199,6 +199,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="194.0" onMouseClicked="#homePageClick" prefHeight="173.0" prefWidth="173.0" styleClass="navbuttons">
                      <children>
+                        <Rectangle fx:id="mainsiteMarker" arcHeight="5.0" arcWidth="5.0" fill="#fcab10" height="18.0" layoutY="155.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="173.0" />
                         <ImageView fitHeight="173.0" fitWidth="173.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/loga.png" />

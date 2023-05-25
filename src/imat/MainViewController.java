@@ -75,12 +75,15 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Rectangle cart_marker;
     @FXML
     private Rectangle profile_marker;
+    @FXML
+    private Rectangle mainsiteMarker;
     
 
     private HomePageController homePageController;
     private OffersPageController offersPageController;
     private FavouritesPageController favouritesPageController;
     private CategoryPageController categoryPageController;
+    
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
     HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
 
@@ -142,6 +145,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     favourite_marker.setVisible(false);
     cart_marker.setVisible(false);
     offer_marker.setVisible(false);
+    mainsiteMarker.setVisible(false);
     
 
     }
@@ -152,6 +156,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void shoppingCartPageClick() {
         setPage(shoppingCartPage);
         shoppingCartPage.fillShoppingCartFlowPane();
+        cart_marker.setVisible(true);
     }
 
     @FXML
@@ -216,6 +221,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void homePageClick() {
         setPage(homePage);
         homePageController.fillProductListFlowPane();
+        mainsiteMarker.setVisible(true);
     }
 
     @FXML
@@ -223,6 +229,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         closeHamburgerMenu();
         homePageClick();
         homePageController.fillProductListFlowPane();
+        
     }
 
     @FXML

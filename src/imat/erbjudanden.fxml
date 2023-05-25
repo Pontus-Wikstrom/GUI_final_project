@@ -28,15 +28,15 @@
               </content>
             </ScrollPane>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-            <AnchorPane layoutX="1450.0" layoutY="720.0" prefHeight="122.0" prefWidth="386.0" styleClass="tillkassan">
-               <children>
-                  <Text fill="WHITE" layoutX="63.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Kassan">
-                     <font>
-                        <Font size="55.0" />
-                     </font>
-                  </Text>
-               </children>
-            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="1580.0" layoutY="780.0" prefHeight="100.0" prefWidth="300.0" styleClass="tillkassan" stylesheets="@generall.css" AnchorPane.bottomAnchor="27.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Text fill="WHITE" layoutX="31.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Kassan">
+               <font>
+                  <Font size="55.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>

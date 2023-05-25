@@ -205,9 +205,9 @@
             </ScrollPane>
          </children>
       </StackPane>
-      <AnchorPane layoutX="1450.0" layoutY="720.0" prefHeight="122.0" prefWidth="386.0" styleClass="tillkassan" stylesheets="@generall.css">
+      <AnchorPane layoutX="1580.0" layoutY="780.0" prefHeight="100.0" prefWidth="300.0" styleClass="tillkassan" stylesheets="@generall.css">
          <children>
-            <Text fill="WHITE" layoutX="63.0" layoutY="79.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Kassan">
+            <Text fill="WHITE" layoutX="31.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Kassan">
                <font>
                   <Font size="55.0" />
                </font>

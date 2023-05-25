@@ -28,13 +28,13 @@
             <Font size="48.0" />
          </font>
       </Label>
-      <Label fx:id="KassaKnapp" alignment="CENTER" onMouseClicked="#toPayment" prefHeight="92.0" prefWidth="785.0" text="Gå till kassan" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="567.5" AnchorPane.rightAnchor="567.5" AnchorPane.topAnchor="811.0">
+      <Label fx:id="KassaKnapp" alignment="CENTER" onMouseClicked="#toPayment" prefHeight="92.0" prefWidth="785.0" stylesheets="@generall.css" text="Gå till kassan" textFill="WHITE" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="567.5" AnchorPane.rightAnchor="567.5" AnchorPane.topAnchor="811.0">
          <font>
             <Font size="48.0" />
          </font>
          <styleClass>
-            <String fx:value="blueish_stuff" />
             <String fx:value="button" />
+            <String fx:value="tillkassan" />
          </styleClass>
       </Label>
    </children>

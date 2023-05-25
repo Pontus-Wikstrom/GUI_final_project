@@ -98,6 +98,14 @@ public class Model {
         return iMatDataHandler.getOrders();
     }
 
+    public void placeOrder() {
+        iMatDataHandler.placeOrder();
+    }
+
+    public void placeOrder(boolean clearShoppingCart) {
+        iMatDataHandler.placeOrder(clearShoppingCart);
+    }
+
     
     // public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
     //     List<ShoppingItem> itemList = getShoppingCart().getItems();

@@ -1,6 +1,7 @@
 package imat;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -54,9 +55,21 @@ public class UserController extends AnchorPane{
 
     }
 
+    public void updateOrderHistoryList() {
+        orderHistoryList = model.getOrderHistory();
+    }
+
     private void initFlowPane() {
         historyFlowPane.getChildren().clear();
         historyFlowPane.setHgap(20);
         historyFlowPane.setVgap(20);
+    }
+
+    public void updateFlowPane() {
+        historyFlowPane.getChildren().clear();
+
+        for (Order order : orderHistoryList) {
+            historyFlowPane.getChildren().add(new OrderHistoryCardController(order));
+        }
     }
 }

@@ -48,7 +48,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane homePage;
     @FXML
-    private AnchorPane userPage;
+    private UserController userPage;
     @FXML
     private AnchorPane deliveryPage;
     @FXML
@@ -105,7 +105,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         //shoppingCartPage = new fullWizardController(this);
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
       
-        //userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
         userPage = new UserController(historyCardHashMap);
         //fillProductListFlowPane(productCard);
         
@@ -239,6 +238,11 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void userPageClick() {
         setPage(userPage);
         profile_marker.setVisible(true);
+
+        model.placeOrder(false);
+        userPage.updateOrderHistoryList();
+        userPage.updateFlowPane();
+
     }
 
 

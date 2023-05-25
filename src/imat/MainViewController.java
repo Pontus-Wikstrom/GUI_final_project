@@ -35,6 +35,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane productDescription;
     @FXML
+    private AnchorPane productDescriptionBackground;
+    @FXML
     private AnchorPane baseSite;
     @FXML 
     private AnchorPane productCard;
@@ -53,6 +55,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private AnchorPane deliveryPage;
     @FXML
     private shoppingCart shoppingCartPage;
+
+    private ProductCardInfoController productCardInfo;
 
     @FXML
     private Text shoppingCartItemAmount;
@@ -96,6 +100,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         offersPage = new OffersPageController(productCardHashMap);
         favouritesPage = new FavouritesPageController(productCardHashMap);
         userPage = new UserController(historyCardHashMap);
+        productCardInfo = new ProductCardInfoController(this);
       
         //shoppingCartPage = new fullWizardController(this);
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
@@ -115,7 +120,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private void initProductCardHashMap() {
         for (Product product : model.getProducts()){
             ShoppingItem itemToAdd = new ShoppingItem(product, 0);
-            ProductCardController productCardController1 = new ProductCardController(product, itemToAdd);
+            ProductCardController productCardController1 = new ProductCardController(product, itemToAdd, this);
             ShoppingCartCardController shoppingCartCardController1 = new ShoppingCartCardController(product, itemToAdd, this);
             HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd);
 
@@ -152,6 +157,15 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     }
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
+
+    public void productCardClick() {
+        productDescriptionBackground.toFront();
+    }
+
+    @FXML
+    public void productDescriptionClose() {
+        productDescriptionBackground.toBack();
+    }
 
     @FXML
     public void shoppingCartPageClick() {

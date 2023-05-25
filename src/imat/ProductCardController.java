@@ -27,8 +27,9 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     private Product product;
     private ShoppingItem shoppingItem;
     private Model model = Model.getInstance();
+    private MainViewController parentController;
 
-    public ProductCardController(Product product, ShoppingItem shoppingItem) {
+    public ProductCardController(Product product, ShoppingItem shoppingItem, MainViewController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_card.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -40,6 +41,8 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
         this.product = product;
         this.shoppingItem = shoppingItem;
+        this.parentController = parentController;
+
         productCardProductName.setText(product.getName());
         productCardPrice.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
         productCardImage.setImage(model.getImage(product));
@@ -52,6 +55,11 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         model.getShoppingCart().addShoppingCartListener(this);
     }
 
+
+    @FXML
+    public void productCardClick() {
+        parentController.productCardClick();
+    }
 
     private void setAmountOfItemsText() {
         productCardAmountOfItems.setText((int) shoppingItem.getAmount() + "");

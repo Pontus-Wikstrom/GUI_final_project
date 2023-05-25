@@ -42,11 +42,15 @@ public class HomePageController extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
+        
+
         this.productCardHashMap = productCardHashMap;
         initFlowPane();
         searchBar.setFocusTraversable(false);
 
         homePageScrollPane.setFitToWidth(true);
+        
+
         //searchBar.textProperty().addListener(null);
     }
 

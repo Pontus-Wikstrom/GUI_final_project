@@ -1,6 +1,7 @@
 package imat;
 
 import java.io.IOException;
+import java.util.Comparator;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
-public class ProductCardController extends AnchorPane implements ShoppingCartListener{
+public class ProductCardController extends AnchorPane implements ShoppingCartListener, Comparable<ProductCardController>{
     @FXML
     private Text productCardProductName;
     @FXML
@@ -52,6 +53,10 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
     private void setAmountOfItemsText() {
         productCardAmountOfItems.setText((int) shoppingItem.getAmount() + "");
+    }
+
+    public String getName() {
+        return product.getName();
     }
 
 
@@ -117,6 +122,11 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         // TODO fixa ikonen så att den ändras
 
     
+    }
+
+    @Override
+    public int compareTo(ProductCardController o) {
+        return this.getName().compareTo(o.getName());
     }
 
 

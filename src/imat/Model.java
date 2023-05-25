@@ -92,9 +92,10 @@ public class Model {
         iMatDataHandler.getShoppingCart().clear();
     }
 
-    public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
-        List<ShoppingItem> itemList = getShoppingCart().getItems();
-    }
+    
+    // public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
+    //     List<ShoppingItem> itemList = getShoppingCart().getItems();
+    // }
 
     /*
     // these two dont work    // actually they probably do at least the second one

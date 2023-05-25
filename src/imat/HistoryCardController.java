@@ -10,7 +10,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
-public class HistoryCardController extends AnchorPane implements ShoppingCartListener{
+public class HistoryCardController extends AnchorPane implements ShoppingCartListener, Comparable<HistoryCardController>{
     @FXML
     private Text productNameText;
     @FXML
@@ -101,6 +101,17 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
     public void decreaseProductClick() {
         decreaseAmountOfProducts();
     }
+
+    public String getName() {
+        return product.getName();
+    }
+
+    @Override
+    public int compareTo(HistoryCardController o) {
+        return this.getName().compareTo(o.getName());
+    }
+
+    
 
     //TODO Lägg till metod för att ta bort vara helt och hållet
 }

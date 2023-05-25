@@ -50,6 +50,11 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
 
     }
 
+    @FXML
+    public void removeProduct() {
+        
+    }
+
     private void setAmountOfItemsText() {
         productAmountText.setText((int) shoppingItem.getAmount() + "");
     }

@@ -42,7 +42,7 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="973.0" layoutY="-16.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="45.0">
+      <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="973.0" layoutY="-16.0" onMouseClicked="#removeProduct" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="45.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="45.0">
          <image>
             <Image url="@../../../../../Pictures/plus_trans_new.png" />
          </image>

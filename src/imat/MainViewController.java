@@ -116,7 +116,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         for (Product product : model.getProducts()){
             ShoppingItem itemToAdd = new ShoppingItem(product, 0);
             ProductCardController productCardController1 = new ProductCardController(product, itemToAdd);
-            HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd);
+            HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd, this);
             
             productCardHashMap.put(product.getName(), productCardController1);
             historyCardHashMap.put(product.getName(), historyCardController1);
@@ -136,14 +136,17 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     }
 
     public void clear_marked_sites(){
-    category_marker.setVisible(false);
-    profile_marker.setVisible(false);
-    help_marker.setVisible(false);
-    favourite_marker.setVisible(false);
-    cart_marker.setVisible(false);
-    offer_marker.setVisible(false);
+        category_marker.setVisible(false);
+        profile_marker.setVisible(false);
+        help_marker.setVisible(false);
+        favourite_marker.setVisible(false);
+        cart_marker.setVisible(false);
+        offer_marker.setVisible(false);
     
+    }
 
+    public void refreshShoppingCartFlowPane() {
+        shoppingCartPage.fillShoppingCartFlowPane();
     }
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------

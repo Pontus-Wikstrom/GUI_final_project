@@ -25,8 +25,9 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
     private Product product;
     private ShoppingItem shoppingItem;
     private Model model = Model.getInstance();
+    private MainViewController parentController;
 
-    public HistoryCardController (Product product, ShoppingItem shoppingItem) {
+    public HistoryCardController (Product product, ShoppingItem shoppingItem, MainViewController parenController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vara_kort.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -38,6 +39,7 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
 
         this.product = product;
         this.shoppingItem = shoppingItem;
+        this.parentController = parenController;
 
         productNameText.setText(product.getName());
         productCostText.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
@@ -53,6 +55,7 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
     @FXML
     public void removeProduct() {
         model.removeFromShoppingCart(product);
+        parentController.refreshShoppingCartFlowPane();
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
     }
 

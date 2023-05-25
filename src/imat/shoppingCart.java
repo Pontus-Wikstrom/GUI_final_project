@@ -105,7 +105,7 @@ public class shoppingCart extends AnchorPane implements ShoppingCartListener {
 
     @Override
     public void shoppingCartChanged(CartEvent arg0) {
-        fillShoppingCartFlowPane();    
+        //fillShoppingCartFlowPane();    
         
     }
 }

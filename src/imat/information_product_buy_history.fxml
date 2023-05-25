@@ -14,7 +14,7 @@
             <Image url="@../../../../../Pictures/plus_trans_new.png" />
          </image>
       </ImageView>
-      <Label layoutX="144.0" layoutY="42.0" prefWidth="250.0" text="Kycklingbröst" AnchorPane.bottomAnchor="27.5" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="27.5">
+      <Label layoutX="144.0" layoutY="42.0" prefWidth="250.0" text="Ekologisk kyckling hel" AnchorPane.bottomAnchor="27.5" AnchorPane.leftAnchor="130.0" AnchorPane.topAnchor="27.5">
          <font>
             <Font size="30.0" />
          </font>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.net.URL?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<fx:root fx:id="categoryPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" styleClass="background" stylesheets="@generall.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="categoryPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" styleClass="background" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <StackPane prefHeight="907.0" prefWidth="1920.0">
          <children>
@@ -17,7 +18,7 @@
                 <AnchorPane maxHeight="10000.0" minHeight="907.0" minWidth="0.0" prefWidth="1920.0" styleClass="background" stylesheets="@generall.css">
                      <children>
                         <FlowPane fx:id="categoryFlowPane" layoutX="124.0" layoutY="142.0" prefHeight="142.0" prefWidth="1662.0" />
-                        <Text layoutX="113.0" layoutY="82.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories&gt;">
+                        <Text id="breadcrumbsLink" fx:id="breadcrumbsLink" layoutX="113.0" layoutY="82.0" onMouseClicked="#setCategoryToFront" strokeType="OUTSIDE" strokeWidth="0.0" text="Categories&gt;">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -48,27 +49,27 @@
                                     <Font name="System Bold" size="40.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getRootVeg" strokeType="OUTSIDE" strokeWidth="0.0" text="Rotfrukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
+                              <Text onMouseClicked="#getRootVeg" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Rotfrukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getMelons" strokeType="OUTSIDE" strokeWidth="0.0" text="Meloner" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
+                              <Text onMouseClicked="#getMelons" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Meloner" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getExcoticFruit" strokeType="OUTSIDE" strokeWidth="0.0" text="Exotiska frukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text onMouseClicked="#getExcoticFruit" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Exotiska frukter" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getCitrus" strokeType="OUTSIDE" strokeWidth="0.0" text="Citrus" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
+                              <Text onMouseClicked="#getCitrus" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Citrus" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getVegFruit" strokeType="OUTSIDE" strokeWidth="0.0" text="Grönsaker och Frukt" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
+                              <Text onMouseClicked="#getVegFruit" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Grönsaker och Frukt" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -87,32 +88,32 @@
                                     <Font name="System Bold" size="40.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getMeat" strokeType="OUTSIDE" strokeWidth="0.0" text="Kött" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
+                              <Text onMouseClicked="#getMeat" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Kött" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getFish" strokeType="OUTSIDE" strokeWidth="0.0" text="Fisk" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
+                              <Text onMouseClicked="#getFish" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Fisk" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getColdDrinks" strokeType="OUTSIDE" strokeWidth="0.0" text="Kalla drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text onMouseClicked="#getColdDrinks" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Kalla drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getHotDrinks" strokeType="OUTSIDE" strokeWidth="0.0" text="Varma drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
+                              <Text onMouseClicked="#getHotDrinks" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Varma drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getSugar" strokeType="OUTSIDE" strokeWidth="0.0" text="Socker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
+                              <Text onMouseClicked="#getSugar" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Socker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getSweet" strokeType="OUTSIDE" strokeWidth="0.0" text="Sötsaker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="345.0">
+                              <Text onMouseClicked="#getSweet" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Sötsaker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="345.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -121,37 +122,37 @@
                         </AnchorPane>
                         <AnchorPane layoutX="366.0" layoutY="763.0" prefHeight="420.0" prefWidth="560.0" styleClass="cssed_rec" stylesheets="@rec_products_category.css">
                            <children>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mejer" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="0.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Mejer" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="0.0">
                                  <font>
                                     <Font name="System Bold" size="50.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getDairies" strokeType="OUTSIDE" strokeWidth="0.0" text="mejeri" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
+                              <Text onMouseClicked="#getDairies" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="mejeri" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Item 2" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Item 3" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Item 4" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Item 5" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;Item 6" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="345.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="345.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -165,17 +166,17 @@
                                     <Font name="System Bold" size="50.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getBread" strokeType="OUTSIDE" strokeWidth="0.0" text="Bröd" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
+                              <Text onMouseClicked="#getBread" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Bröd" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="70.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getPasta" strokeType="OUTSIDE" strokeWidth="0.0" text="Pasta" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
+                              <Text onMouseClicked="#getPasta" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Pasta" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getPotatoRice" strokeType="OUTSIDE" strokeWidth="0.0" text="Potatis och Ris" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text onMouseClicked="#getPotatoRice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Potatis och Ris" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -213,4 +214,8 @@
          </children>
       </AnchorPane>
    </children>
+   <stylesheets>
+      <URL value="@generall.css" />
+      <URL value="@category.css" />
+   </stylesheets>
 </fx:root>

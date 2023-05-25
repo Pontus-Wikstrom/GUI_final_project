@@ -1,0 +1,8 @@
+#breadcrumbsLink:hover{
+-fx-cursor:hand;
+-fx-color: hotpink;
+}
+
+.links{
+    -fx-cursor:hand;
+}

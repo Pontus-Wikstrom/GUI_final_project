@@ -52,16 +52,20 @@ public class CategoryPageController extends AnchorPane{
         category2ScrollPane.setFitToWidth(true);
         //searchBar.textProperty().addListener(null);
     }
-
+    @FXML
+    public void setCategoryToFront(){
+    category2ScrollPane.toFront();
+    }
 
     private void initFlowPane() {
+        
         categoryFlowPane.getChildren().clear();
         categoryFlowPane.setHgap(20);
         categoryFlowPane.setVgap(20);
     }
+    
 
     
-    @FXML
     public void populateProductsByCategory(ProductCategory category){
         List<Product> products = model.getCategoryProducts(category);
         fillProductListFlowPane(products);

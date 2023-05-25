@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import se.chalmers.cse.dat216.project.Product;
@@ -12,6 +13,9 @@ import se.chalmers.cse.dat216.project.Product;
 public class FavouritesPageController extends AnchorPane{
     @FXML
     private FlowPane favouritesPageFlowPane;
+
+    @FXML 
+    private Label noFavouritesLabel;
 
     private HashMap<String, ProductCardController> productCardHashMap;
 
@@ -40,8 +44,13 @@ public class FavouritesPageController extends AnchorPane{
 
     public void fillProductListFlowPane() {
         favouritesPageFlowPane.getChildren().clear();
-
+        if(model.getFavourites().isEmpty()){
+            noFavouritesLabel.setVisible(true);
+        }else{
+        noFavouritesLabel.setVisible(false);
+        }
         for (Product product : model.getFavourites()) {
+            
             favouritesPageFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
         }
     }

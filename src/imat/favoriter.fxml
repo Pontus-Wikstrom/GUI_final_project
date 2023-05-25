@@ -21,6 +21,11 @@
                         <Font size="65.0" />
                      </font>
                   </Label>
+                  <Label fx:id="noFavouritesLabel" layoutX="781.0" layoutY="171.0" text="Inga favoriter hittades">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
         </content>

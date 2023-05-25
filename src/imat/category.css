@@ -1,0 +1,10 @@
+#breadcrumbsLink:hover{
+-fx-text-fill: hotpink;
+-fx-cursor:hand;
+
+}
+
+.links:hover{
+    -fx-cursor:hand;
+    
+}

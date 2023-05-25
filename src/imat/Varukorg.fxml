@@ -11,9 +11,9 @@
    <children>
       <ScrollPane layoutX="2.0" layoutY="-6.0" prefHeight="907.0" prefWidth="1920.0">
         <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0" stylesheets="@varukorg.css">
+          <AnchorPane maxHeight="10000.0" minHeight="0.0" minWidth="0.0" prefWidth="1920.0">
                <children>
-                  <FlowPane fx:id="dinaVaror" layoutX="536.0" layoutY="260.0" prefHeight="200.0" prefWidth="857.0" />
+                  <FlowPane fx:id="productsFlowPane" layoutX="536.0" layoutY="260.0" prefHeight="200.0" prefWidth="857.0" AnchorPane.bottomAnchor="100.0" AnchorPane.topAnchor="260.0" />
                   <Label fx:id="DinVarukorg" alignment="CENTER" prefHeight="117.0" prefWidth="1058.0" text="Din Varukorg" AnchorPane.leftAnchor="442.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="60.0">
                      <font>
                         <Font size="64.0" />

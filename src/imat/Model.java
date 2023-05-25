@@ -2,6 +2,7 @@ package imat;
 
 import se.chalmers.cse.dat216.project.*;
 import java.util.List;
+import java.util.Objects;
 import java.util.ArrayList;
 import java.util.Arrays;
 import javafx.scene.image.Image;
@@ -89,10 +90,34 @@ public class Model {
         getShoppingCart().removeItem(shoppingItem);
     }
 
-
     public void clearShoppingCart() {
         iMatDataHandler.getShoppingCart().clear();
     }
+
+    
+    // public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
+    //     List<ShoppingItem> itemList = getShoppingCart().getItems();
+    // }
+
+    /*
+    // these two dont work    // actually they probably do at least the second one
+    public int getAmountOfProductsInShoppingCart(Product product) {
+        ShoppingItem findItem = new ShoppingItem(product);
+
+        if (getShoppingCart().getItems().contains(findItem)) {
+            return (int) getShoppingCart().getItems().
+            get(getShoppingCart().getItems().indexOf(findItem)).getAmount();
+        }
+        return 0;
+    }
+
+    public int getAmountOfProductsInShoppingCart(ShoppingItem sci) {
+        if (getShoppingCart().getItems().contains(sci)) {
+            return (int) getShoppingCart().getItems().
+            get(getShoppingCart().getItems().indexOf(sci)).getAmount();
+        }
+        return 0;
+    }*/ 
 
 }
 

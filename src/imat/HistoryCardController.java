@@ -1,7 +1,7 @@
 package imat;
 
 import java.io.IOException;
-import java.util.Comparator;
+import java.util.HashMap;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,28 +10,24 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.*;
 
-public class ProductCardController extends AnchorPane implements ShoppingCartListener, Comparable<ProductCardController>{
+public class HistoryCardController extends AnchorPane implements ShoppingCartListener, Comparable<HistoryCardController>{
     @FXML
-    private Text productCardProductName;
+    private Text productNameText;
     @FXML
-    private Text productCardPrice;
+    private Text productCostText;
     @FXML
-    private ImageView productCardImage;
+    private Text productAmountText;
     @FXML
-    private Text productCardAmountOfItems;
+    private Text productCostsSumText;
+    @FXML
+    private ImageView productImage;
 
-    @FXML 
-    private AnchorPane favourite;
-    @FXML
-    private AnchorPane notFavourite;
     private Product product;
-    private final static double kImageWidth = 100.0;
-    private final static double kImageRatio = 0.75;
     private ShoppingItem shoppingItem;
     private Model model = Model.getInstance();
 
-    public ProductCardController(Product product, ShoppingItem shoppingItem) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("product_card.fxml"));
+    public HistoryCardController (Product product, ShoppingItem shoppingItem) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vara_kort.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
@@ -42,25 +38,20 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
         this.product = product;
         this.shoppingItem = shoppingItem;
-        productCardProductName.setText(product.getName());
-        productCardPrice.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
-        productCardImage.setImage(model.getImage(product));
-        productCardAmountOfItems.setText("0");
-        /*if (!product.isEcological()) { //TODO Fixa eko-möjligheter?
-            itemCardBrandLabel.setText("");
-        }*/ 
+
+        productNameText.setText(product.getName());
+        productCostText.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
+        productImage.setImage(model.getImage(product));
+        productAmountText.setText("0");
+
 
 
         model.getShoppingCart().addShoppingCartListener(this);
-    }
 
+    }
 
     private void setAmountOfItemsText() {
-        productCardAmountOfItems.setText((int) shoppingItem.getAmount() + "");
-    }
-
-    public String getName() {
-        return product.getName();
+        productAmountText.setText((int) shoppingItem.getAmount() + "");
     }
 
 
@@ -68,17 +59,15 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
         setAmountOfItemsText();
 
+
         model.removeFromShoppingCart(product);
         model.addToShoppingCart(shoppingItem);
         
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
 
-        System.out.println("in increase");
+        System.out.println("in history increase");
         System.out.println(model.getShoppingCart().getItems());
         System.out.println(model.getShoppingCart().getTotal());
-
-        System.out.println(shoppingItem.getAmount());
-        System.out.println("--------------------------------");
     }
 
     private void decreaseAmountOfProducts() {
@@ -92,48 +81,37 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
         model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
         
-        System.out.println("in decrease");
+        System.out.println("in history decrease");
         System.out.println(model.getShoppingCart().getItems());
         System.out.println(model.getShoppingCart().getTotal());
-
-        System.out.println("----------------------");
     }
 
 
     @Override
     public void shoppingCartChanged(CartEvent event) {
-        productCardAmountOfItems.setText((int) this.shoppingItem.getAmount() + "");
+        productAmountText.setText((int) this.shoppingItem.getAmount() + "");
     }
 
     @FXML
     public void increaseProductClick() {
         increaseAmountOfProducts();
     }
-    
+
     @FXML
     public void decreaseProductClick() {
         decreaseAmountOfProducts();
     }
 
-    @FXML
-    public void favouriteButtonClick() {
-        if (!model.isFavourite(product)) {
-            model.setFavourite(product);
-            favourite.toFront();
-        } else {
-            model.removeFavourite(product);
-            notFavourite.toFront();
-        }
-
-        // TODO fixa ikonen så att den ändras
-
-    
+    public String getName() {
+        return product.getName();
     }
 
     @Override
-    public int compareTo(ProductCardController o) {
+    public int compareTo(HistoryCardController o) {
         return this.getName().compareTo(o.getName());
     }
 
+    
 
+    //TODO Lägg till metod för att ta bort vara helt och hållet
 }

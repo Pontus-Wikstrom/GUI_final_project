@@ -52,7 +52,8 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
 
     @FXML
     public void removeProduct() {
-        
+        model.removeFromShoppingCart(product);
+        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
     }
 
     private void setAmountOfItemsText() {

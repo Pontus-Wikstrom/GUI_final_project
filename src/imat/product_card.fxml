@@ -8,7 +8,7 @@
 
 <fx:root id="product_card_rec" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="500.0" stylesheets="@product_card.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <AnchorPane layoutX="13.0" layoutY="479.0" prefHeight="80.0" prefWidth="475.0" styleClass="varukorg_rec">
+      <AnchorPane layoutX="13.0" layoutY="479.0" prefHeight="80.0" prefWidth="475.0" styleClass="varukorg_rec" AnchorPane.bottomAnchor="16.0">
          <children>
             <Text fill="WHITE" layoutX="14.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lägg till i varukorg" wrappingWidth="290.0" AnchorPane.bottomAnchor="19.7177734375" AnchorPane.topAnchor="18.3896484375">
                <font>
@@ -37,20 +37,25 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="13.0" layoutY="14.0" onMouseClicked="#favouriteButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="star" />
-      <ImageView fx:id="productCardImage" fitHeight="210.0" fitWidth="210.0" layoutX="146.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true" styleClass="prototype_image_background">
-         <image>
-            <Image url="@../../../../../Pictures/plus_trans_new.png" />
-         </image></ImageView>
-      <Text fx:id="productCardProductName" layoutX="75.0" layoutY="353.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="productname_text" text="Produktnamn" textAlignment="CENTER" wrappingWidth="350.0">
-         <font>
-            <Font size="35.0" />
-         </font>
-      </Text>
-      <Text fx:id="productCardPrice" layoutX="136.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="price_product" text="Pris/kr" textAlignment="CENTER" wrappingWidth="230.0">
-         <font>
-            <Font name="System Bold" size="35.0" />
-         </font>
-      </Text>
+      <AnchorPane layoutY="1.0" prefHeight="475.0" prefWidth="500.0" styleClass="rec_product_card_hover" AnchorPane.bottomAnchor="98.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="productCardImage" fitHeight="210.0" fitWidth="210.0" pickOnBounds="true" preserveRatio="true" styleClass="prototype_image_background" AnchorPane.leftAnchor="145.0" AnchorPane.rightAnchor="145.0" AnchorPane.topAnchor="90.0">
+               <image>
+                  <Image url="@../../../../../Pictures/plus_trans_new.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="productCardProductName" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="productname_text" text="Produktnamn" textAlignment="CENTER" wrappingWidth="350.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="310.0">
+               <font>
+                  <Font size="35.0" />
+               </font>
+            </Text>
+            <Text fx:id="productCardPrice" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="price_product" text="Pris/kr" textAlignment="CENTER" wrappingWidth="230.0" AnchorPane.leftAnchor="130.0" AnchorPane.rightAnchor="130.0" AnchorPane.topAnchor="360.0">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane onMouseClicked="#favouriteButtonClick" prefHeight="50.0" prefWidth="50.0" styleClass="star" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="15.0" />
    </children>
 </fx:root>

@@ -1,11 +1,16 @@
 #product_card_rec{
-    -fx-background-color: white;
+    -fx-background-color: #ffffff;
     -fx-background-radius: 25px;
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 5, 0, 0, 0);
 }
 
-#product_card_rec:hover{
-    -fx-background-color: #f3f3f3;
+.rec_product_card_hover{
+    -fx-background-radius: 25px 25px 0px 0px;
+    -fx-background-color: #ffffff;
+}
+
+.rec_product_card_hover:hover{
+    -fx-background-color: #f9f9f9;
     -fx-cursor: hand;
 }
 

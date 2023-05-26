@@ -59,7 +59,7 @@ public class OrderHistoryCardController extends AnchorPane {
     private void initHistoryCardHashMap() {
         for (ShoppingItem item : order.getItems()) {
             Product product = item.getProduct();
-            ShoppingItem itemToAdd = new ShoppingItem(product, 0);
+            ShoppingItem itemToAdd = new ShoppingItem(product, item.getAmount());
             HistoryCardController cardToAdd = new HistoryCardController(product, itemToAdd);
 
             historyCardHashMap.put(product.getName(), cardToAdd);

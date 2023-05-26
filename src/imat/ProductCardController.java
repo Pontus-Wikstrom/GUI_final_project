@@ -78,7 +78,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         return this.shoppingItem;
     }
 
-    private void increaseAmountOfProducts() {
+    public void increaseAmountOfProducts() {
         shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
         setAmountOfItemsText();
 
@@ -95,7 +95,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         System.out.println("--------------------------------");
     }
 
-    private void decreaseAmountOfProducts() {
+    public void decreaseAmountOfProducts() {
         if (shoppingItem.getAmount() < 1) return;
 
         shoppingItem.setAmount((int) shoppingItem.getAmount() - 1);

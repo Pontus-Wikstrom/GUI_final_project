@@ -156,6 +156,10 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
         hamburgerCartCostAmount.setText(totalCost + " kr");
         hamburgerCartItemAmount.setText(amountOfItems + "");
+
+        if (currentProductCard != null) {
+            productInfoAmount.setText(String.format("%.0f", currentProductCard.getShoppingItem().getAmount()));
+        }
     }
 
     public void clear_marked_sites(){
@@ -171,6 +175,16 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     public void refreshShoppingCartFlowPane() {
         shoppingCartPage.fillShoppingCartFlowPane();
+    }
+
+    @FXML
+    public void decreaseProductAmount() {
+        currentProductCard.decreaseAmountOfProducts();
+    }
+    
+    @FXML
+    public void increaseProductAmount() {
+        currentProductCard.increaseAmountOfProducts();
     }
 
     

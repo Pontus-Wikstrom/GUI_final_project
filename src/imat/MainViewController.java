@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
@@ -56,7 +57,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     private shoppingCart shoppingCartPage;
 
-    private ProductCardInfoController productCardInfo;
 
     @FXML
     private Text shoppingCartItemAmount;
@@ -81,7 +81,19 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Rectangle profile_marker;
     @FXML
     private Rectangle mainsiteMarker;
+
+    @FXML
+    private Text productInfoName;
+    @FXML
+    private ImageView productInfoImage;
+    @FXML
+    private Text productInfoPrice;
+    @FXML
+    private AnchorPane productInfoDecreaseAmount;
+    @FXML
+    private Text productInfoAmount;
     
+    private ProductCardController currentProductCard;
 
     
     private CategoryPageController categoryPageController;
@@ -105,7 +117,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         offersPage = new OffersPageController(productCardHashMap);
         favouritesPage = new FavouritesPageController(productCardHashMap);
         userPage = new UserController(historyCardHashMap);
-        productCardInfo = new ProductCardInfoController(this);
+        productDescription = new ProductCardInfoController(this);
       
         //shoppingCartPage = new fullWizardController(this);
         helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
@@ -120,7 +132,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
         shoppingCartCostAmount.setText("0 kr");
         hamburgerCartCostAmount.setText("0 kr");
-        
 
     } 
 
@@ -144,6 +155,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
         hamburgerCartCostAmount.setText(totalCost + " kr");
         hamburgerCartItemAmount.setText(amountOfItems + "");
+
+        updateProductCardInfo();
     }
 
     public void clear_marked_sites(){
@@ -163,8 +176,29 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
 
-    public void productCardClick() {
+    public void productCardClick(ProductCardController productCard) {
+        currentProductCard = productCard;
+        updateProductCardInfo();
+        
         productDescriptionBackground.toFront();
+
+    }
+
+    private void updateProductCardInfo() {
+        productInfoName.setText(currentProductCard.getProduct().getName());
+        productInfoImage.setImage(model.getImage(currentProductCard.getProduct()));
+        productInfoPrice.setText(currentProductCard.getProduct().getPrice() + currentProductCard.getProduct().getUnit());
+        productInfoAmount.setText(String.format("%.0f", currentProductCard.getShoppingItem().getAmount()));
+    }
+
+    @FXML
+    public void productInfoIncreaseAmount() {
+        currentProductCard.increaseAmountOfProducts();
+    }
+
+    @FXML
+    public void productInfoDecreaseAmount() {
+        currentProductCard.decreaseAmountOfProducts();
     }
 
     @FXML

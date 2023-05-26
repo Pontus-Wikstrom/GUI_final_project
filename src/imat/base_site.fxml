@@ -198,26 +198,26 @@
                            <items>
                               <AnchorPane maxWidth="950.0" minHeight="0.0" minWidth="0.0" prefHeight="514.0" prefWidth="950.0">
                                  <children>
-                                    <Text layoutX="141.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kundvara #999" textAlignment="CENTER" wrappingWidth="250.0" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="110.0">
+                                    <Text fx:id="productInfoName" layoutX="141.0" layoutY="101.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kundvara #999" textAlignment="CENTER" wrappingWidth="250.0" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="110.0">
                                        <font>
                                           <Font size="35.0" />
                                        </font>
                                     </Text>
-                                    <ImageView fitHeight="250.0" fitWidth="250.0" layoutX="148.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="150.0">
+                                    <ImageView fx:id="productInfoImage" fitHeight="250.0" fitWidth="250.0" layoutX="148.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="145.0" AnchorPane.topAnchor="150.0">
                                        <image>
                                           <Image url="@resources/kundvagn.png" />
                                        </image>
                                     </ImageView>
                                     <AnchorPane layoutX="776.0" layoutY="22.0" prefHeight="50.0" prefWidth="150.0" styleClass="close_button" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
                                        <children>
-                                          <Text fill="WHITE" layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stäng" textAlignment="CENTER" wrappingWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                                          <Text fill="WHITE" layoutX="5.0" layoutY="37.0" onMouseClicked="#productDescriptionClose" strokeType="OUTSIDE" strokeWidth="0.0" text="Stäng" textAlignment="CENTER" wrappingWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
                                              <font>
                                                 <Font size="30.0" />
                                              </font>
                                           </Text>
                                        </children>
                                     </AnchorPane>
-                                    <Text layoutX="665.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" textAlignment="CENTER" wrappingWidth="350.0" AnchorPane.leftAnchor="490.0">
+                                    <Text fx:id="productInfoPrice" layoutX="665.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pris" textAlignment="CENTER" wrappingWidth="350.0" AnchorPane.leftAnchor="490.0">
                                        <font>
                                           <Font name="System Bold" size="30.0" />
                                        </font>
@@ -250,17 +250,17 @@
                                           </Text>
                                           <AnchorPane layoutX="323.0" layoutY="13.0" maxHeight="60.0" maxWidth="110.0" prefHeight="60.0" prefWidth="110.0" scaleShape="false" styleClass="plus_minus_buttons_and_text_rec" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="10.0">
                                              <children>
-                                                <Text layoutX="25.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="amount_of_items_text_product" text="00" textAlignment="CENTER" wrappingWidth="55.0">
+                                                <Text fx:id="productInfoAmount" layoutX="25.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="amount_of_items_text_product" text="00" textAlignment="CENTER" wrappingWidth="55.0">
                                                    <font>
                                                       <Font size="20.0" />
                                                    </font>
                                                 </Text>
-                                                <AnchorPane layoutY="1.0" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-30.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="productInfoDecreaseAmount" layoutY="1.0" onMouseClicked="#productInfoDecreaseAmount" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-30.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <AnchorPane layoutX="5.0" layoutY="27.0" prefHeight="7.0" prefWidth="50.0" styleClass="rec_in_circle_test" />
                                                    </children>
                                                 </AnchorPane>
-                                                <AnchorPane layoutX="110.0" layoutY="1.0" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
+                                                <AnchorPane fx:id="productInfoIncreaseAmount" layoutX="110.0" layoutY="1.0" onMouseClicked="#productInfoIncreaseAmount" prefHeight="60.0" prefWidth="60.0" styleClass="circle_test" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-30.0" AnchorPane.topAnchor="0.0">
                                                    <children>
                                                       <AnchorPane layoutX="5.0" layoutY="27.0" prefHeight="7.0" prefWidth="50.0" styleClass="rec_in_circle_test" />
                                                       <AnchorPane layoutX="27.0" layoutY="5.0" prefHeight="50.0" prefWidth="7.0" styleClass="rec_in_circle_test" />

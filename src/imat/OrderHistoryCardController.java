@@ -66,12 +66,15 @@ public class OrderHistoryCardController extends AnchorPane {
         }
     }
 
-    @FXML
     public void fillFlowPane() {
         productFlowPane.getChildren().clear();
         
         for (ShoppingItem item : order.getItems()) {
             productFlowPane.getChildren().add(this.historyCardHashMap.get(item.getProduct().getName()));
         }
+    }
+
+    private void clearFlowPane() {
+
     }
 }

@@ -42,9 +42,7 @@ public class HistoryCardController extends AnchorPane {
         productNameText.setText(product.getName());
         productPriceText.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
         productImage.setImage(model.getImage(product));
-        productAmountText.setText(shoppingItem.getAmount() + "");
-        productSumPriceText.setText(shoppingItem.getAmount() * product.getPrice() + "");
-
-        
+        productAmountText.setText(String.format("%.0f", shoppingItem.getAmount()) + " " + product.getUnitSuffix());
+        productSumPriceText.setText(String.format("%.2f", shoppingItem.getAmount() * product.getPrice()) + " kr");        
     }
 }

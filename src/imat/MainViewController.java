@@ -35,24 +35,28 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     private AnchorPane productDescription;
     @FXML
+    private AnchorPane productDescriptionBackground;
+    @FXML
     private AnchorPane baseSite;
     @FXML 
     private AnchorPane productCard;
     
     @FXML
-    private AnchorPane offersPage;
+    private OffersPageController offersPage;
     @FXML
     private AnchorPane helpPage;
     @FXML 
-    private AnchorPane favouritesPage;
+    private FavouritesPageController favouritesPage;
     @FXML
-    private AnchorPane homePage;
+    private HomePageController homePage;
     @FXML
-    private AnchorPane userPage;
+    private UserController userPage;
     @FXML
     private AnchorPane deliveryPage;
     @FXML
     private shoppingCart shoppingCartPage;
+
+    private ProductCardInfoController productCardInfo;
 
     @FXML
     private Text shoppingCartItemAmount;
@@ -79,38 +83,43 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Rectangle mainsiteMarker;
     
 
-    private HomePageController homePageController;
-    private OffersPageController offersPageController;
-    private FavouritesPageController favouritesPageController;
+    
     private CategoryPageController categoryPageController;
     
     HashMap<String, ProductCardController> productCardHashMap = new HashMap<>();
+    HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap = new HashMap<>();
     HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
+
+    List<Order> orderHistory;
 
     private final Model model = Model.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
         initProductCardHashMap();
 
-        homePageController = new HomePageController(productCardHashMap);
-        offersPageController = new OffersPageController(productCardHashMap);
-        favouritesPageController = new FavouritesPageController(productCardHashMap);
-        categoryPageController = new CategoryPageController(productCardHashMap); // Lade till men vet ej om det fungerar
+        deliveryPage = new fullWizardController(this);
+
+        categoryPageController = new CategoryPageController(productCardHashMap);
+        shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
+        homePage = new HomePageController(productCardHashMap);
+        offersPage = new OffersPageController(productCardHashMap);
+        favouritesPage = new FavouritesPageController(productCardHashMap);
+        userPage = new UserController(historyCardHashMap);
+        productCardInfo = new ProductCardInfoController(this);
+      
+        //shoppingCartPage = new fullWizardController(this);
+        helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
+        //fillProductListFlowPane(productCard);
+
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
 
-        deliveryPage = new fullWizardController(this);
-        shoppingCartPage = new shoppingCart(this, historyCardHashMap);
-        homePage = homePageController;
-        offersPage = offersPageController;
-        favouritesPage = favouritesPageController;
-        //shoppingCartPage = new fullWizardController(this);
-        helpPage = new SitePane(this, new FXMLLoader(getClass().getResource("help_content.fxml")));
-      
-        userPage = new SitePane(this, new FXMLLoader(getClass().getResource("user.fxml")));
+        orderHistory = model.getOrderHistory();
+        
+        homePageClick();
 
-        //fillProductListFlowPane(productCard);
-        setPage(deliveryPage);
+        shoppingCartCostAmount.setText("0 kr");
+        hamburgerCartCostAmount.setText("0 kr");
         
 
     } 
@@ -118,23 +127,22 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private void initProductCardHashMap() {
         for (Product product : model.getProducts()){
             ShoppingItem itemToAdd = new ShoppingItem(product, 0);
-            ProductCardController productCardController1 = new ProductCardController(product, itemToAdd);
-            HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd);
-            
+            ProductCardController productCardController1 = new ProductCardController(product, itemToAdd, this);
+            ShoppingCartCardController shoppingCartCardController1 = new ShoppingCartCardController(product, itemToAdd, this);
             productCardHashMap.put(product.getName(), productCardController1);
-            historyCardHashMap.put(product.getName(), historyCardController1);
+            shoppingCartCardHashMap.put(product.getName(), shoppingCartCardController1);
         }
     }
 
     @Override
     public void shoppingCartChanged(CartEvent arg0) {
-        String totalCost = String.format("%.2f" ,model.getShoppingCart().getTotal());
+        String totalCost = String.format("%.0f" ,model.getShoppingCart().getTotal());
         int amountOfItems = model.getShoppingCart().getItems().size();
 
-        shoppingCartCostAmount.setText(totalCost);
+        shoppingCartCostAmount.setText(totalCost + " kr");
         shoppingCartItemAmount.setText(amountOfItems + "");
 
-        hamburgerCartCostAmount.setText(totalCost);
+        hamburgerCartCostAmount.setText(totalCost + " kr");
         hamburgerCartItemAmount.setText(amountOfItems + "");
     }
 
@@ -147,10 +155,22 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     offer_marker.setVisible(false);
     mainsiteMarker.setVisible(false);
     
+    }
 
+    public void refreshShoppingCartFlowPane() {
+        shoppingCartPage.fillShoppingCartFlowPane();
     }
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
+
+    public void productCardClick() {
+        productDescriptionBackground.toFront();
+    }
+
+    @FXML
+    public void productDescriptionClose() {
+        productDescriptionBackground.toBack();
+    }
 
     @FXML
     public void shoppingCartPageClick() {
@@ -167,7 +187,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void offersPageClick() {
         setPage(offersPage);
-        offersPageController.fillProductListFlowPane();
+        offersPage.fillProductListFlowPane();
         offer_marker.setVisible(true);;
     }
 
@@ -175,7 +195,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void hamburgerOffersPageClick() {
         closeHamburgerMenu();
         offersPageClick();
-        offersPageController.fillProductListFlowPane();
+        offersPage.fillProductListFlowPane();
     }
 
     @FXML
@@ -193,7 +213,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     public void favouritesPageClick() {
         setPage(favouritesPage);
-        favouritesPageController.fillProductListFlowPane();
+        favouritesPage.fillProductListFlowPane();
         favourite_marker.setVisible(true);
     }
 
@@ -201,7 +221,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void hamburgerFavouritesPageClick() {
         closeHamburgerMenu();
         favouritesPageClick();
-        favouritesPageController.fillProductListFlowPane();
+        favouritesPage.fillProductListFlowPane();
     }
 
     @FXML
@@ -228,14 +248,33 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void hamburgerHomePageClick() {
         closeHamburgerMenu();
         homePageClick();
-        homePageController.fillProductListFlowPane();
-        
+        homePage.fillProductListFlowPane();
     }
 
     @FXML
     public void userPageClick() {
         setPage(userPage);
         profile_marker.setVisible(true);
+
+        model.placeOrder(true);
+        userPage.updateFlowPane();
+        onPlaceOrder();
+
+    }
+
+    public void onPlaceOrder() { // resets HashMaps so new order can start to be built
+        productCardHashMap.clear();
+        shoppingCartCardHashMap.clear();
+        historyCardHashMap.clear();
+        initProductCardHashMap();
+
+        categoryPageController = new CategoryPageController(productCardHashMap);
+        shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
+        homePage = new HomePageController(productCardHashMap);
+        offersPage = new OffersPageController(productCardHashMap);
+        favouritesPage = new FavouritesPageController(productCardHashMap);
+        userPage = new UserController(historyCardHashMap);
+
     }
 
 

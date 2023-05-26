@@ -1,33 +1,33 @@
 package imat;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.text.Text;
-import se.chalmers.cse.dat216.project.*;
+import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingItem;
 
-public class HistoryCardController extends AnchorPane implements ShoppingCartListener, Comparable<HistoryCardController>{
+public class HistoryCardController extends AnchorPane {
     @FXML
-    private Text productNameText;
+    private Label productNameText;
     @FXML
-    private Text productCostText;
+    private Label productPriceText;
     @FXML
-    private Text productAmountText;
+    private Label productAmountText;
     @FXML
-    private Text productCostsSumText;
+    private Label productSumPriceText;
     @FXML
     private ImageView productImage;
 
     private Product product;
     private ShoppingItem shoppingItem;
-    private Model model = Model.getInstance();
+    private Model model= Model.getInstance();
 
-    public HistoryCardController (Product product, ShoppingItem shoppingItem) {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("vara_kort.fxml"));
+    public HistoryCardController(Product product, ShoppingItem shoppingItem) {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("information_product_buy_history.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         try {
@@ -40,78 +40,9 @@ public class HistoryCardController extends AnchorPane implements ShoppingCartLis
         this.shoppingItem = shoppingItem;
 
         productNameText.setText(product.getName());
-        productCostText.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
+        productPriceText.setText(String.format("%.2f", product.getPrice()) + product.getUnit());
         productImage.setImage(model.getImage(product));
-        productAmountText.setText("0");
-
-
-
-        model.getShoppingCart().addShoppingCartListener(this);
-
+        productAmountText.setText(String.format("%.0f", shoppingItem.getAmount()) + " " + product.getUnitSuffix());
+        productSumPriceText.setText(String.format("%.2f", shoppingItem.getAmount() * product.getPrice()) + " kr");        
     }
-
-    private void setAmountOfItemsText() {
-        productAmountText.setText((int) shoppingItem.getAmount() + "");
-    }
-
-
-    private void increaseAmountOfProducts() {
-        shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
-        setAmountOfItemsText();
-
-
-        model.removeFromShoppingCart(product);
-        model.addToShoppingCart(shoppingItem);
-        
-        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-
-        System.out.println("in history increase");
-        System.out.println(model.getShoppingCart().getItems());
-        System.out.println(model.getShoppingCart().getTotal());
-    }
-
-    private void decreaseAmountOfProducts() {
-        if (shoppingItem.getAmount() < 1) return;
-
-        shoppingItem.setAmount((int) shoppingItem.getAmount() - 1);
-        model.removeFromShoppingCart(product);
-
-        if (shoppingItem.getAmount() > 0) model.addToShoppingCart(shoppingItem);
-
-
-        model.getShoppingCart().fireShoppingCartChanged(shoppingItem, true);
-        
-        System.out.println("in history decrease");
-        System.out.println(model.getShoppingCart().getItems());
-        System.out.println(model.getShoppingCart().getTotal());
-    }
-
-
-    @Override
-    public void shoppingCartChanged(CartEvent event) {
-        productAmountText.setText((int) this.shoppingItem.getAmount() + "");
-    }
-
-    @FXML
-    public void increaseProductClick() {
-        increaseAmountOfProducts();
-    }
-
-    @FXML
-    public void decreaseProductClick() {
-        decreaseAmountOfProducts();
-    }
-
-    public String getName() {
-        return product.getName();
-    }
-
-    @Override
-    public int compareTo(HistoryCardController o) {
-        return this.getName().compareTo(o.getName());
-    }
-
-    
-
-    //TODO Lägg till metod för att ta bort vara helt och hållet
 }

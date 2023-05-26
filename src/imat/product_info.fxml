@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1038.0" prefWidth="950.0" stylesheets="@product_info.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1038.0" prefWidth="950.0" stylesheets="@product_info.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imat.ProductCardInfoController">
    <children>
       <SplitPane dividerPositions="0.5" layoutX="395.0" layoutY="387.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
@@ -25,7 +25,7 @@
                   </ImageView>
                   <AnchorPane layoutX="776.0" layoutY="22.0" prefHeight="50.0" prefWidth="150.0" styleClass="close_button" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
                      <children>
-                        <Text fill="WHITE" layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stäng" textAlignment="CENTER" wrappingWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
+                        <Text fill="WHITE" layoutX="5.0" layoutY="37.0" onMouseClicked="#productDescriptionClose" strokeType="OUTSIDE" strokeWidth="0.0" text="Stäng" textAlignment="CENTER" wrappingWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
                            <font>
                               <Font size="30.0" />
                            </font>

@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
@@ -81,6 +82,15 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Rectangle profile_marker;
     @FXML
     private Rectangle mainsiteMarker;
+
+    @FXML
+    private Text productInfoName;
+    @FXML
+    private ImageView productInfoImage;
+    @FXML
+    private Text productInfoPrice;
+    @FXML
+    private Text productInfoAmount;
     
 
     

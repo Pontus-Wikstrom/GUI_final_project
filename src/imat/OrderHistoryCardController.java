@@ -1,6 +1,8 @@
 package imat;
 
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
 
@@ -24,6 +26,8 @@ public class OrderHistoryCardController extends AnchorPane {
     @FXML
     private FlowPane productFlowPane;
 
+    private boolean flowPaneIsOpen = false;
+
     private Order order;
     private HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
 
@@ -41,8 +45,9 @@ public class OrderHistoryCardController extends AnchorPane {
         initHistoryCardHashMap();
 
         Date date = order.getDate();
-        String formattedDate = String.format("%1$tb %1$te, %1$tY %1$tI:%1$tM %1$Tp", date);
-        purchaseDateText.setText(formattedDate);
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
+        String strDate = dateFormat.format(date);
+        purchaseDateText.setText(strDate);
 
         double amount = 0;
         double totPrice = 0;
@@ -51,7 +56,12 @@ public class OrderHistoryCardController extends AnchorPane {
             totPrice += (item.getProduct().getPrice() * item.getAmount());
         }
 
-        totalProductAmount.setText(String.format("%.0f", amount) + " st");
+        if (order.getItems().size() == 1) {
+            totalProductAmount.setText("1 produkt");    
+        } else {
+            totalProductAmount.setText(order.getItems().size() + " st produkter");
+        }
+        
         totalCostText.setText(String.format("%.2f", totPrice) + " kr");
         
     }
@@ -66,7 +76,7 @@ public class OrderHistoryCardController extends AnchorPane {
         }
     }
 
-    public void fillFlowPane() {
+    private void fillFlowPane() {
         productFlowPane.getChildren().clear();
         
         for (ShoppingItem item : order.getItems()) {
@@ -75,6 +85,17 @@ public class OrderHistoryCardController extends AnchorPane {
     }
 
     private void clearFlowPane() {
+        productFlowPane.getChildren().clear();
+    }
 
+    @FXML
+    public void updateFlowPane() {
+        if (!flowPaneIsOpen) {
+            fillFlowPane();
+            flowPaneIsOpen = true;
+        } else {
+            clearFlowPane();
+            flowPaneIsOpen = false;
+        }
     }
 }

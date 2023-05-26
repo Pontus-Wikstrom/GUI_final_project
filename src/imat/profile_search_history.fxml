@@ -9,7 +9,7 @@
 
 <fx:root maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="1077.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ImageView fx:id="flowPaneButton" fitHeight="85.0" fitWidth="85.0" layoutX="952.0" layoutY="22.0" onMouseClicked="#fillFlowPane" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="952.0" AnchorPane.topAnchor="22.0">
+      <ImageView fx:id="flowPaneButton" fitHeight="85.0" fitWidth="85.0" layoutX="952.0" layoutY="22.0" onMouseClicked="#updateFlowPane" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="23.0" AnchorPane.leftAnchor="952.0" AnchorPane.topAnchor="22.0">
          <image>
             <Image url="@resources/downarrow.png" />
          </image>

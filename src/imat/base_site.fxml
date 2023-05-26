@@ -208,7 +208,7 @@
                                           <Image url="@resources/kundvagn.png" />
                                        </image>
                                     </ImageView>
-                                    <AnchorPane layoutX="776.0" layoutY="22.0" prefHeight="50.0" prefWidth="150.0" styleClass="close_button" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+                                    <AnchorPane layoutX="776.0" layoutY="22.0" onMouseClicked="#productDescriptionClose" prefHeight="50.0" prefWidth="150.0" styleClass="close_button" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
                                        <children>
                                           <Text fill="WHITE" layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Stäng" textAlignment="CENTER" wrappingWidth="150.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="3.0">
                                              <font>

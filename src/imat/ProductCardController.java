@@ -58,7 +58,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
     @FXML
     public void productCardClick() {
-        parentController.productCardClick();
+        parentController.productCardClick(this);
     }
 
     private void setAmountOfItemsText() {
@@ -69,6 +69,13 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         return product.getName();
     }
 
+    public Product getProduct() {
+        return this.product;
+    }
+
+    public ShoppingItem getShoppingItem() {
+        return this.shoppingItem;
+    }
 
     private void increaseAmountOfProducts() {
         shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);

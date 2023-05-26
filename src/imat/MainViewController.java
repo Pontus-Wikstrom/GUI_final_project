@@ -91,6 +91,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Text productInfoPrice;
     @FXML
     private Text productInfoAmount;
+
+    private ProductCardController currentProductCard;
     
 
     
@@ -171,10 +173,28 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         shoppingCartPage.fillShoppingCartFlowPane();
     }
 
+    
+
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
 
     public void productCardClick() {
         productDescriptionBackground.toFront();
+    }
+
+    public void productCardClick(ProductCardController productCard) {
+        currentProductCard = productCard;
+        updateProductCardInfo();
+        
+        productDescriptionBackground.toFront();
+
+    }
+
+    private void updateProductCardInfo() {
+        Product product = currentProductCard.getProduct();
+        productInfoName.setText(product.getName());
+        productInfoImage.setImage(model.getImage(product));
+        productInfoPrice.setText(String.format("%.0f", product.getPrice()) + product.getUnit());
+        productInfoAmount.setText(String.format("%.0f", currentProductCard.getShoppingItem().getAmount()));
     }
 
     @FXML

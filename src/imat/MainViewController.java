@@ -87,6 +87,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap = new HashMap<>();
     HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
 
+    List<Order> orderHistory;
+
     private final Model model = Model.getInstance();
 
     public void initialize(URL url, ResourceBundle rb) {
@@ -108,6 +110,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
         model.clearShoppingCart();
         model.getShoppingCart().addShoppingCartListener(this);
+
+        orderHistory = model.getOrderHistory();
         
         homePageClick();
 
@@ -122,11 +126,8 @@ public class MainViewController implements Initializable, ShoppingCartListener {
             ShoppingItem itemToAdd = new ShoppingItem(product, 0);
             ProductCardController productCardController1 = new ProductCardController(product, itemToAdd, this);
             ShoppingCartCardController shoppingCartCardController1 = new ShoppingCartCardController(product, itemToAdd, this);
-            HistoryCardController historyCardController1 = new HistoryCardController(product, itemToAdd);
-
             productCardHashMap.put(product.getName(), productCardController1);
             shoppingCartCardHashMap.put(product.getName(), shoppingCartCardController1);
-            historyCardHashMap.put(product.getName(), historyCardController1);
         }
     }
 

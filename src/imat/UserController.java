@@ -44,7 +44,8 @@ public class UserController extends AnchorPane{
 
         this.historyCardHashMap = historyCardHashMap;
         orderHistoryList = model.getOrderHistory();
-        initFlowPane();
+        
+        //initFlowPane();
 
         //String login_name = text_input_loginname.getText();
 
@@ -70,7 +71,7 @@ public class UserController extends AnchorPane{
         historyFlowPane.getChildren().clear();
 
         for (Order order : orderHistoryList) {
-            historyFlowPane.getChildren().add(new OrderHistoryCardController(order, historyCardHashMap));
+            historyFlowPane.getChildren().add(new OrderHistoryCardController(order));
         }
     }
 }

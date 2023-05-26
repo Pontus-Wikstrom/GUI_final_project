@@ -25,9 +25,9 @@ public class OrderHistoryCardController extends AnchorPane {
     private FlowPane productFlowPane;
 
     private Order order;
-    private HashMap<String, HistoryCardController> historyCardHashMap;
+    private HashMap<String, HistoryCardController> historyCardHashMap = new HashMap<>();
 
-    public OrderHistoryCardController(Order order, HashMap<String, HistoryCardController> historyCardHashMap) {
+    public OrderHistoryCardController(Order order) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("profile_search_history.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -38,7 +38,7 @@ public class OrderHistoryCardController extends AnchorPane {
         }
 
         this.order = order;
-        this.historyCardHashMap = historyCardHashMap;
+        initHistoryCardHashMap();
 
         Date date = order.getDate();
         String formattedDate = String.format("%1$tb %1$te, %1$tY %1$tI:%1$tM %1$Tp", date);
@@ -54,7 +54,16 @@ public class OrderHistoryCardController extends AnchorPane {
         totalProductAmount.setText(String.format("%.0f", amount) + " st");
         totalCostText.setText(String.format("%.2f", totPrice) + " kr");
         
-        
+    }
+
+    private void initHistoryCardHashMap() {
+        for (ShoppingItem item : order.getItems()) {
+            Product product = item.getProduct();
+            ShoppingItem itemToAdd = new ShoppingItem(product, 0);
+            HistoryCardController cardToAdd = new HistoryCardController(product, itemToAdd);
+
+            historyCardHashMap.put(product.getName(), cardToAdd);
+        }
     }
 
     @FXML

@@ -2,6 +2,7 @@ package imat;
 
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
@@ -29,6 +30,10 @@ public class HomePageController extends AnchorPane{
     private ScrollPane homePageScrollPane;
     @FXML
     private Text currentSideText;
+    @FXML
+    private AnchorPane leftButton;
+    @FXML
+    private AnchorPane rightButton;
 
     private HashMap<String, ProductCardController> productCardHashMap;
 
@@ -52,6 +57,7 @@ public class HomePageController extends AnchorPane{
         this.productCardHashMap = productCardHashMap;
         currentProducts = model.getProducts();
         sideIndex = 0;
+        leftButton.setVisible(false);
 
         initFlowPane();
         searchBar.setFocusTraversable(false);
@@ -119,6 +125,10 @@ public class HomePageController extends AnchorPane{
     public void nextPageClick() {
         int oldIndex = sideIndex;
         if (sideIndex < Math.floor(currentProducts.size() / 20)) sideIndex++;
+
+        if (sideIndex >= Math.floor(currentProducts.size() / 20)) rightButton.setVisible(false);
+        leftButton.setVisible(true);
+
         if (oldIndex != sideIndex )setScrollPanePosition(0);
         fillProductListFlowPane(); 
     }
@@ -127,6 +137,9 @@ public class HomePageController extends AnchorPane{
     public void previousPageClick() {
         int oldIndex = sideIndex;
         if (sideIndex > 0) sideIndex--;
+        if ((sideIndex) == 0) leftButton.setVisible(false);
+        rightButton.setVisible(true);
+
         if (oldIndex != sideIndex) setScrollPanePosition(0);
         fillProductListFlowPane();
     }
@@ -140,6 +153,8 @@ public class HomePageController extends AnchorPane{
             fillProductListFlowPane();
             return;
         }
+
+        leftButton.setVisible(false);
 
         currentProducts = model.findProducts(searchBar.getText());
 

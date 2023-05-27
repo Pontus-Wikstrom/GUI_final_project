@@ -16,9 +16,9 @@
 
 <fx:root fx:id="userPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" stylesheets="@user.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane fx:id="userScrollPane" prefHeight="907.0" prefWidth="1920.0">
+      <ScrollPane fx:id="userScrollPane" fitToWidth="true" prefHeight="907.0" prefWidth="1920.0">
         <content>
-          <AnchorPane maxHeight="10000.0" minHeight="0.0" minWidth="0.0" prefHeight="2150.0" prefWidth="1920.0">
+          <AnchorPane maxHeight="10000.0" minHeight="2150.0" minWidth="0.0" prefHeight="2150.0" prefWidth="1920.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="2150.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1820.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
                   <Label alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="80.0">

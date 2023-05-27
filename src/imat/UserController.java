@@ -63,6 +63,14 @@ public class UserController extends AnchorPane{
         userScrollPane.setVvalue(position);
     }
 
+    public void testData() {
+        System.out.println(userScrollPane.getVmin());
+        System.out.println(userScrollPane.getVmax());
+        System.out.println(userScrollPane.getVvalue());
+        System.out.println(userScrollPane.getVbarPolicy());
+        System.out.println("---------------------");
+    }
+
     private void updateOrderHistoryList() {
         orderHistoryList = model.getOrderHistory();
     }

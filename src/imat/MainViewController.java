@@ -194,8 +194,10 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void purchaseHistoryClick() {
         setPage(userPage);
         userPage.updateFlowPane();
+        userPage.testData();
         userPage.setScrollPaneDistance(0.77);
         closeHamburgerMenu();
+        userPage.testData();
         
     }
 

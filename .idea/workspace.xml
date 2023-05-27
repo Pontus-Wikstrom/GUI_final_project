@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="Fixade till i wizarden">
+      <change afterPath="$PROJECT_DIR$/src/imat/KlarnaochPayPalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/BetalningKortController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/BetalningKortController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/betalning_telefonnr.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/betalning_telefonnr.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/imat/fullWizard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/fullWizard.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/imat/fullWizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/fullWizardController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/paypalochklarna.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/paypalochklarna.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,7 +116,14 @@
       <option name="project" value="LOCAL" />
       <updated>1684911015802</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixade till i wizarden">
+      <created>1685185153779</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1685185153779</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.History.Properties">

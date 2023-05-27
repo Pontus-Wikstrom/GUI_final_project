@@ -9,7 +9,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import se.chalmers.cse.dat216.project.CreditCard;
 import se.chalmers.cse.dat216.project.Customer;
 import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.User;
@@ -20,6 +22,9 @@ import java.util.Random;
 public class fullWizardController extends AnchorPane{
 
     MainViewController controller;
+
+    @FXML
+    private StackPane wizardStackPane;
     @FXML
     private Pane paypal;
     @FXML
@@ -197,6 +202,8 @@ public class fullWizardController extends AnchorPane{
     @FXML
     private AnchorPane timeFill2;
 
+    CreditCard creditCard;
+
 
     public fullWizardController(MainViewController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fullWizard.fxml"));
@@ -204,6 +211,7 @@ public class fullWizardController extends AnchorPane{
         fxmlLoader.setController(this);
         System.out.println("hello");
         customer = IMatDataHandler.getInstance().getCustomer();
+        creditCard = IMatDataHandler.getInstance().getCreditCard();
 
         try {
             fxmlLoader.load();
@@ -369,6 +377,9 @@ public class fullWizardController extends AnchorPane{
     }
     @FXML
     public void toFinishPage(){
+        if (card.isFocused()) {
+            
+        }
         confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
         wizardDoneSteg.toFront();
     }
@@ -706,6 +717,8 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #f5f5f5");
+        AnchorPane payPalPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
+        setPage(payPalPayment);
     }
 
     @FXML
@@ -714,6 +727,8 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #ffffff");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #f5f5f5");
+        AnchorPane klarnaPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
+        setPage(klarnaPayment);
     }
     @FXML
     public void cardOption(){
@@ -721,6 +736,8 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #ffffff");
         swish.setStyle("-fx-background-color: #f5f5f5");
+        AnchorPane cardPayment= new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_kort.fxml")));
+        setPage(cardPayment);
     }
     @FXML
     public void swishOption(){
@@ -728,12 +745,8 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #ffffff");
-    }
-
-    public void switchPane() {
-        if (wizardTidSteg.isFocused()) {
-
-        }
+        AnchorPane swishPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_telefonnr.fxml")));
+        setPage(swishPayment);
     }
 
     @FXML
@@ -741,5 +754,11 @@ public class fullWizardController extends AnchorPane{
         paymentOptionContent.getChildren().clear();
         paymentOptionContent.getChildren().add(page);
     }
+
+    public void cardUsed(){
+
+    }
+
+
 
 }

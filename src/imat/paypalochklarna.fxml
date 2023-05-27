@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="mejl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="675.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root fx:id="mejl" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="675.0" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label fx:id="mejlLabel" alignment="CENTER" layoutX="88.0" layoutY="75.0" prefHeight="50.0" prefWidth="80.0" text="Mejl:" textAlignment="RIGHT" underline="true" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="45.0" AnchorPane.topAnchor="75.0">
          <font>
@@ -18,4 +18,4 @@
          </font>
       </TextField>
    </children>
-</AnchorPane>
+</fx:root>

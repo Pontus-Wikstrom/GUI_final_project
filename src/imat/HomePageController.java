@@ -54,6 +54,14 @@ public class HomePageController extends AnchorPane{
         //searchBar.textProperty().addListener(null);
     }
 
+    public void setScrollPanePosition(double position) {
+        homePageScrollPane.setVvalue(position);
+    }
+
+    public void clearSearchBar() {
+        searchBar.clear();
+    }
+
 
     private void initFlowPane() {
         productListFlowPane.getChildren().clear();

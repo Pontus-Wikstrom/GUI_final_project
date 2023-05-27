@@ -7,6 +7,7 @@ import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -24,6 +25,8 @@ public class UserController extends AnchorPane{
     
     @FXML
     private FlowPane historyFlowPane;
+    @FXML
+    private ScrollPane userScrollPane;
 
     private HashMap<String, HistoryCardController> historyCardHashMap;
     private List<Order> orderHistoryList;
@@ -54,6 +57,10 @@ public class UserController extends AnchorPane{
         // String year = text_input_year.getText();
         // String cvc = text_input_cvc.getText();
 
+    }
+    
+    public void setScrollPaneDistance(double position) {
+        userScrollPane.setVvalue(position);
     }
 
     private void updateOrderHistoryList() {

@@ -35,6 +35,7 @@ public class HomePageController extends AnchorPane{
     private final Model model = Model.getInstance();
 
     private int sideIndex;
+    private List<Product> currentProducts;
 
     public HomePageController(HashMap<String, ProductCardController> productCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sökSida.fxml"));
@@ -49,6 +50,7 @@ public class HomePageController extends AnchorPane{
 
     
         this.productCardHashMap = productCardHashMap;
+        currentProducts = model.getProducts();
         sideIndex = 0;
 
         initFlowPane();
@@ -83,7 +85,7 @@ public class HomePageController extends AnchorPane{
         currentSideText.setText((sideIndex + 1) + "");
 
         for (int i = startIndex; i <= endIndex; i++) {
-            Product product = model.getProducts().get(i);
+            Product product = currentProducts.get(i);
             productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
             
         }
@@ -102,31 +104,43 @@ public class HomePageController extends AnchorPane{
     private void fillProductListFlowPane(List<Product> products) {
         productListFlowPane.getChildren().clear();
 
-        for (Product product : products) {
+        int startIndex = sideIndex * 21;
+        int endIndex = startIndex + 20;
+        currentSideText.setText((sideIndex + 1) + "");
+
+        for (int i = startIndex; i <= endIndex; i++) {
+            Product product = model.getProducts().get(i);
             productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
+            
         }
     }
 
     @FXML
     public void nextPageClick() {
-        if (sideIndex < Math.floor(model.getProducts().size() / 20)) sideIndex++;
-        fillProductListFlowPane();
+        if (sideIndex < Math.floor(currentProducts.size() / 20)) sideIndex++;
+        fillProductListFlowPane(); 
+        setScrollPanePosition(0);
     }
 
     @FXML
     public void previousPageClick() {
         if (sideIndex > 0) sideIndex--;
         fillProductListFlowPane();
+        setScrollPanePosition(0);
     }
 
     @FXML
     public void displaySearchResults() {
+        sideIndex = 0;
+
         if (searchBar.getText() == "") {
+            currentProducts = model.getProducts();
             fillProductListFlowPane();
             return;
         }
 
-        List<Product> products = model.findProducts(searchBar.getText());
-        fillProductListFlowPane(products);
+        currentProducts = model.findProducts(searchBar.getText());
+
+        fillProductListFlowPane();
     }
 }

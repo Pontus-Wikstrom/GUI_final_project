@@ -32,9 +32,11 @@ public class BetalningKortController extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
+        System.out.println(text_input_kortnr.getText());
     }
 
     public boolean controlCard() {
+        System.out.println(text_input_kortnr.getText());
         if (text_input_kortnr.getText().isBlank() || text_input_year.getText().isBlank()
                 || text_input_month.getText().isBlank() || text_input_cvc.getText().isBlank()) {
             System.out.println("False");

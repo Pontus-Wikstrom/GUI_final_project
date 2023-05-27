@@ -174,6 +174,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void shoppingCartPageClick() {
+
         setPage(shoppingCartPage);
         shoppingCartPage.fillShoppingCartFlowPane();
         cart_marker.setVisible(true);

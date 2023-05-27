@@ -235,6 +235,7 @@ public class fullWizardController extends AnchorPane{
 
         addProduct();
         setPrice();
+
     }
 
     public void addProduct(){
@@ -380,17 +381,30 @@ public class fullWizardController extends AnchorPane{
         wizardVarukorgSteg.toFront();
     }
     @FXML
-    public void toFinishPage(){
-        if (card.isFocused()) {
+    public void toFinishPage() throws InterruptedException {
+        System.out.println("IntoFinish");
+        if (selectedOption == card) {
+            System.out.println("CardFinish");
            if (betalningKortController.controlCard()) {
+               System.out.println("CardWorked");
                confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
                wizardDoneSteg.toFront();
+               wizardDoneSteg.requestFocus();
            }
 
-        }else if (klarna.isFocused()){
-            if (klarnaochPayPalController.controlEmail())
-            wizardDoneSteg.toFront();
+        }else if (selectedOption == klarna){
+            if (klarnaochPayPalController.controlEmail()) {
+                wizardDoneSteg.toFront();
+                wizardDoneSteg.requestFocus();
+            }
         }
+        //wizardDoneSteg.toFront();
+        //wizardDoneSteg.requestFocus();
+        /*if (wizardDoneSteg.isFocused()) {
+            Thread.sleep(10000);
+            wizardVarukorgSteg.toFront();
+
+        }*/
 
     }
 
@@ -741,6 +755,7 @@ public class fullWizardController extends AnchorPane{
         AnchorPane klarnaPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
         setPage(klarnaPayment);
         klarna.requestFocus();
+        selectedOption = klarna;
     }
     @FXML
     public void cardOption(){
@@ -751,7 +766,9 @@ public class fullWizardController extends AnchorPane{
         AnchorPane cardPayment= new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_kort.fxml")));
         setPage(cardPayment);
         card.requestFocus();
+        selectedOption = card;
     }
+    Pane selectedOption;
     @FXML
     public void swishOption(){
         paypal.setStyle("-fx-background-color: #f5f5f5");
@@ -771,6 +788,12 @@ public class fullWizardController extends AnchorPane{
 
     public void cardUsed(){
 
+    }
+
+    public void newOrder(){
+        if (wizardDoneSteg.isFocused()) {
+
+        }
     }
 
 

@@ -155,7 +155,7 @@
                               <Font size="55.0" />
                            </font>
                         </Text>
-                        <AnchorPane layoutX="81.0" layoutY="802.0" prefHeight="173.0" prefWidth="169.0">
+                        <AnchorPane layoutX="81.0" layoutY="802.0" onMouseClicked="#hamburgerShoppingCartClick" prefHeight="173.0" prefWidth="169.0">
                            <children>
                               <ImageView fitHeight="173.0" fitWidth="173.0" layoutX="-2.0" layoutY="-5.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -167,7 +167,7 @@
                                     <Font size="37.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="hamburgerCartCostAmount" layoutX="40.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000 kr" textAlignment="CENTER">
+                              <Text fx:id="hamburgerCartCostAmount" layoutX="29.0" layoutY="161.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 kr" textAlignment="CENTER" wrappingWidth="112.5">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
@@ -264,7 +264,7 @@
                               <Font size="37.0" />
                            </font>
                         </Text>
-                        <Text fx:id="shoppingCartCostAmount" layoutX="46.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="000 kr">
+                        <Text fx:id="shoppingCartCostAmount" layoutX="28.0" layoutY="165.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0 kr" textAlignment="CENTER" wrappingWidth="119.8333740234375">
                            <font>
                               <Font size="30.0" />
                            </font>

@@ -246,6 +246,14 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     }
 
     @FXML
+    public void hamburgerShoppingCartClick() {
+        setPage(shoppingCartPage);
+        shoppingCartPage.fillShoppingCartFlowPane();
+        cart_marker.setVisible(true);
+        closeHamburgerMenu();
+    }
+
+    @FXML
     public void toPayment() {
         setPage(deliveryPage);
     }
@@ -307,7 +315,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void homePageClick() {
         setPage(homePage);
         homePage.fillProductListFlowPane();
-        homePage.setScrollPanePosition(0.97);
+        homePage.setScrollPanePosition(0);
         homePage.clearSearchBar();
         mainsiteMarker.setVisible(true);
     }

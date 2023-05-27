@@ -117,16 +117,18 @@ public class HomePageController extends AnchorPane{
 
     @FXML
     public void nextPageClick() {
+        int oldIndex = sideIndex;
         if (sideIndex < Math.floor(currentProducts.size() / 20)) sideIndex++;
+        if (oldIndex != sideIndex )setScrollPanePosition(0);
         fillProductListFlowPane(); 
-        setScrollPanePosition(0);
     }
 
     @FXML
     public void previousPageClick() {
+        int oldIndex = sideIndex;
         if (sideIndex > 0) sideIndex--;
+        if (oldIndex != sideIndex) setScrollPanePosition(0);
         fillProductListFlowPane();
-        setScrollPanePosition(0);
     }
 
     @FXML

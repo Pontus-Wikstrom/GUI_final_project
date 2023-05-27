@@ -23,6 +23,10 @@ public class fullWizardController extends AnchorPane{
 
     MainViewController controller;
 
+    BetalningKortController betalningKortController = new BetalningKortController();
+
+    KlarnaochPayPalController klarnaochPayPalController = new KlarnaochPayPalController();
+
     @FXML
     private StackPane wizardStackPane;
     @FXML
@@ -378,10 +382,16 @@ public class fullWizardController extends AnchorPane{
     @FXML
     public void toFinishPage(){
         if (card.isFocused()) {
-            
+           if (betalningKortController.controlCard()) {
+               confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
+               wizardDoneSteg.toFront();
+           }
+
+        }else if (klarna.isFocused()){
+            if (klarnaochPayPalController.controlEmail())
+            wizardDoneSteg.toFront();
         }
-        confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
-        wizardDoneSteg.toFront();
+
     }
 
 
@@ -719,6 +729,7 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #f5f5f5");
         AnchorPane payPalPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
         setPage(payPalPayment);
+        payPalPayment.requestFocus();
     }
 
     @FXML
@@ -729,6 +740,7 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #f5f5f5");
         AnchorPane klarnaPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
         setPage(klarnaPayment);
+        klarna.requestFocus();
     }
     @FXML
     public void cardOption(){
@@ -738,6 +750,7 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #f5f5f5");
         AnchorPane cardPayment= new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_kort.fxml")));
         setPage(cardPayment);
+        card.requestFocus();
     }
     @FXML
     public void swishOption(){
@@ -747,6 +760,7 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #ffffff");
         AnchorPane swishPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_telefonnr.fxml")));
         setPage(swishPayment);
+        swish.requestFocus();
     }
 
     @FXML

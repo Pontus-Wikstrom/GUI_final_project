@@ -19,8 +19,6 @@ public class BetalningKortController extends AnchorPane{
     @FXML
     private TextField text_input_cvc;
 
-    CreditCard creditCard;
-
     public BetalningKortController() {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("betalning_kort.fxml"));
         fxmlLoader.setRoot(this);
@@ -33,15 +31,17 @@ public class BetalningKortController extends AnchorPane{
                 IOException exception) {
             throw new RuntimeException(exception);
         }
-        creditCard = IMatDataHandler.getInstance().getCreditCard();
 
     }
 
-    public void cardInput() {
+    public boolean controlCard() {
+        if (text_input_kortnr.getText().isBlank() || text_input_year.getText().isBlank()
+                || text_input_month.getText().isBlank() || text_input_cvc.getText().isBlank()) {
+            System.out.println("False");
+            return false;
+        }
+        System.out.println("True");
+        return true;
 
-        creditCard.setCardNumber(text_input_kortnr.getText());
-        creditCard.setValidYear(Integer.parseInt(text_input_year.getText()));
-        creditCard.setValidMonth(Integer.parseInt(text_input_month.getText()));
-        creditCard.setVerificationCode(Integer.parseInt(text_input_cvc.getText()));
     }
 }

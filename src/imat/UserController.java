@@ -32,6 +32,8 @@ public class UserController extends AnchorPane{
     private List<Order> orderHistoryList;
     private final Model model = Model.getInstance();
 
+    private double vBarPosition = 0;
+
     public UserController(HashMap<String, HistoryCardController> historyCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user.fxml"));
         fxmlLoader.setRoot(this);
@@ -59,8 +61,8 @@ public class UserController extends AnchorPane{
 
     }
     
-    public void setScrollPaneDistance(double position) {
-        userScrollPane.setVvalue(position);
+    public void setScrollPanePosition(double position) {
+        vBarPosition = position;
     }
 
     public void testData() {
@@ -83,6 +85,8 @@ public class UserController extends AnchorPane{
 
     public void updateFlowPane() {
         updateOrderHistoryList();
+        userScrollPane.setVvalue(vBarPosition);
+
         historyFlowPane.getChildren().clear();
 
         for (Order order : orderHistoryList) {

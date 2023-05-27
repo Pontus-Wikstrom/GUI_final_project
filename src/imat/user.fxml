@@ -101,7 +101,7 @@
                         <Font size="60.0" />
                      </font>
                   </Text>
-                  <FlowPane fx:id="historyFlowPane" alignment="CENTER" layoutX="522.0" layoutY="1138.0" prefHeight="200.0" prefWidth="930.0" />
+                  <FlowPane fx:id="historyFlowPane" alignment="CENTER" layoutX="522.0" layoutY="1138.0" prefHeight="150.0" prefWidth="930.0" />
                   <Label layoutX="214.0" layoutY="557.0" prefHeight="60.0" text="Mejl:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="290.0">
                      <font>
                         <Font size="35.0" />

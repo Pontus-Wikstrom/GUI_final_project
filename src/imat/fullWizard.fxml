@@ -55,12 +55,12 @@
                         </ImageView>
                      </children>
                   </Pane>
-                  <Label fx:id="tillbaka" alignment="CENTER" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                  <Label fx:id="tillbaka" alignment="CENTER" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
                      <font>
                         <Font size="48.0" />
                      </font>
                   </Label>
-                  <Label fx:id="payment" alignment="CENTER" prefHeight="70.0" prefWidth="160.0" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="payment4" alignment="CENTER" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -70,7 +70,7 @@
                      </styleClass>
                   </Label>
                   <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="delivery" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="160.0" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="payment2" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -80,7 +80,7 @@
                      </styleClass>
                   </Label>
                   <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="shoppingCart" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="payment1" alignment="CENTER" layoutX="20.0" layoutY="20.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -93,7 +93,7 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="165.58" layoutX="30.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Saker/GUI/recipesearch/GUI_final_project/src/imat/resources/2560px-Klarna_Payment_Badge.svg.png" />
+                              <Image url="@resources/2560px-Klarna_Payment_Badge.svg.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -102,7 +102,7 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.5" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Saker/GUI/recipesearch/GUI_final_project/src/imat/resources/2695971.png" />
+                              <Image url="@resources/2695971.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -111,7 +111,7 @@
                      <children>
                         <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="40.785" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../Saker/GUI/recipesearch/GUI_final_project/src/imat/resources/Swish_Logo_Primary_Light-BG_P3.png" />
+                              <Image url="@resources/Swish_Logo_Primary_Light-BG_P3.png" />
                            </image>
                         </ImageView>
                      </children>
@@ -125,7 +125,7 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Label fx:id="doneButton" alignment="CENTER" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #fcab10; -fx-background-radius: 90 90 90 90;" text="Slutför och betala" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="1078.0" AnchorPane.rightAnchor="662.0" AnchorPane.topAnchor="700.0">
+                  <Label fx:id="doneButton" alignment="CENTER" onMouseClicked="#toFinishPage" prefHeight="70.0" prefWidth="180.0" style="-fx-background-color: #fcab10; -fx-background-radius: 90 90 90 90;" text="Slutför och betala" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="1078.0" AnchorPane.rightAnchor="662.0" AnchorPane.topAnchor="700.0">
                      <font>
                         <Font size="22.0" />
                      </font>
@@ -135,13 +135,13 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <Button layoutX="647.0" layoutY="700.0" mnemonicParsing="false" styleClass="last_buttons" stylesheets="@leverans.css" text="Föregående" textFill="WHITE">
+                  <Button layoutX="647.0" layoutY="700.0" mnemonicParsing="false" onAction="#backToTime" styleClass="last_buttons" stylesheets="@leverans.css" text="Föregående" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Button>
                   <AnchorPane fx:id="paymentOptionContent" layoutX="664.0" layoutY="314.0" prefHeight="200.0" prefWidth="590.0" />
-                  <Label fx:id="delivery3" alignment="CENTER" layoutX="970.0" layoutY="40.0" prefHeight="70.0" prefWidth="160.0" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                  <Label fx:id="payment3" alignment="CENTER" layoutX="970.0" layoutY="40.0" prefHeight="70.0" prefWidth="160.0" style="-fx-background-color: #000000;" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
                      <font>
                         <Font size="30.0" />
                      </font>
@@ -153,17 +153,163 @@
                   <Line endX="80.0" layoutX="1160.0" layoutY="77.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
                </children>
             </AnchorPane>
-            <AnchorPane prefHeight="907.0" prefWidth="1920.0" styleClass="background">
+            <AnchorPane fx:id="wizardLeveransSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
                <children>
-                  <AnchorPane id="datum_tid_rec" layoutX="386.0" layoutY="133.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="1144.0" stylesheets="@rec_datum_tid.css" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="386.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="150.0">
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0" stylesheets="@generall.css">
                      <children>
-                        <SplitPane dividerPositions="0.23226544622425632" maxHeight="585.0" orientation="VERTICAL" prefHeight="585.0" prefWidth="1144.0" style="-fx-background-color: #ffffff;" styleClass="splitter_datum_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" layoutX="3.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+                        <AnchorPane layoutX="996.0" layoutY="150.0" maxWidth="860.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <TextField fx:id="firstName" prefHeight="65.0" prefWidth="350.0" promptText="Jakob" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Namn*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="lastName" prefHeight="65.0" prefWidth="350.0" promptText="pettersson" AnchorPane.leftAnchor="472.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="440.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="email" prefHeight="65.0" prefWidth="350.0" promptText="jakob.petterson@gmail.com" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="phoneNumber" layoutX="494.0" layoutY="170.0" prefHeight="65.0" prefWidth="350.0" promptText="0730212943" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="470.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="96.0" layoutY="151.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <TextField fx:id="address" prefHeight="65.0" prefWidth="350.0" promptText="Vägen 3" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransadress*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="postNumber" prefHeight="65.0" prefWidth="350.0" promptText="4124124" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="city" prefHeight="65.0" prefWidth="350.0" promptText="Gothenburg" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postort*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="portinfo" prefHeight="65.0" prefWidth="350.0" promptText="Våning 3 gata 4...." AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Portinformation" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="tillbaka2" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="90.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
+                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
+                        <Line endX="80.0" layoutX="204.0" layoutY="71.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
+                        <Label fx:id="delivery1" alignment="CENTER" layoutX="525.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="delivery2" alignment="CENTER" layoutX="768.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="1006.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="1244.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="4.0" layoutY="1074.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
+                        <Text layoutX="631.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meddelanden:" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="520.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="meddelanden" layoutX="631.0" layoutY="517.0" prefHeight="150.0" prefWidth="831.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="560.0" />
+                        <Button layoutX="1489.0" layoutY="780.0" mnemonicParsing="false" onAction="#toTime" prefWidth="200.0" styleClass="last_buttons" text="Nästa" textFill="WHITE" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="780.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="364.0" layoutY="780.0" mnemonicParsing="false" onAction="#backToShoppingCart" prefWidth="200.0" styleClass="last_buttons" text="Föregående" textFill="WHITE" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="780.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <stylesheets>
+                  <URL value="@leverans.css" />
+                  <URL value="@leverans.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane fx:id="wizardTidSteg" prefHeight="907.0" prefWidth="1920.0" style="-fx-background-color: F5f5f5;" stylesheets="@leverans.css">
+               <children>
+                  <AnchorPane fx:id="datum_tid_rec" layoutX="386.0" layoutY="133.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="1144.0" stylesheets="@rec_datum_tid.css" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="386.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="150.0">
+                     <children>
+                        <SplitPane dividerPositions="0.5" maxHeight="585.0" orientation="VERTICAL" prefHeight="585.0" prefWidth="1144.0" style="-fx-background-color: #ffffff;" styleClass="splitter_datum_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                            <items>
                               <AnchorPane maxHeight="157.0" maxWidth="1144.0" minHeight="0.0" minWidth="0.0" prefHeight="157.0" prefWidth="1144.0">
                                  <children>
-                                    <AnchorPane layoutX="77.0" layoutY="14.0" maxWidth="990.0" onMouseClicked="#clicked1" prefHeight="120.0" prefWidth="990.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="17.0">
+                                    <AnchorPane fx:id="timeFill1" layoutX="77.0" layoutY="14.0" maxWidth="990.0" prefHeight="120.0" prefWidth="990.0" AnchorPane.leftAnchor="75.0" AnchorPane.rightAnchor="75.0" AnchorPane.topAnchor="17.0">
                                        <children>
-                                          <AnchorPane maxWidth="240.0" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="day1" maxWidth="240.0" onMouseClicked="#clicked1" prefHeight="120.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="dag1" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -176,8 +322,12 @@
                                                    </font>
                                                 </Text>
                                              </children>
+                                             <styleClass>
+                                                <String fx:value="datum_tid_val" />
+                                                <String fx:value="buttons" />
+                                             </styleClass>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="361.0" layoutY="1.0" maxWidth="240.0" onMouseClicked="#clicked2" prefHeight="120.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="day2" layoutX="361.0" layoutY="1.0" maxWidth="240.0" onMouseClicked="#clicked2" prefHeight="120.0" prefWidth="240.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="dag2" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -195,7 +345,7 @@
                                                 <String fx:value="buttons" />
                                              </styleClass>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="495.0" layoutY="-3.0" maxWidth="240.0" onMouseClicked="#clicked3" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="day3" layoutX="495.0" layoutY="-3.0" maxWidth="240.0" onMouseClicked="#clicked3" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="dag3" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -209,7 +359,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="683.0" layoutY="-15.0" maxWidth="240.0" onMouseClicked="#clicked4" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="day4" layoutX="683.0" layoutY="-15.0" maxWidth="240.0" onMouseClicked="#clicked4" prefHeight="120.0" prefWidth="240.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="750.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="dag4" layoutX="15.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_daginformation" text="Dag" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -245,11 +395,11 @@
                                     </AnchorPane>
                                  </children>
                               </AnchorPane>
-                              <AnchorPane maxHeight="424.0" maxWidth="1144.0" minHeight="0.0" minWidth="0.0" prefHeight="424.0" prefWidth="1144.0">
+                              <AnchorPane fx:id="timeFill2" maxHeight="424.0" maxWidth="1144.0" minHeight="0.0" minWidth="0.0" prefHeight="424.0" prefWidth="1144.0">
                                  <children>
                                     <AnchorPane prefHeight="120.0" prefWidth="1144.0" AnchorPane.bottomAnchor="287.0" AnchorPane.leftAnchor="0.0">
                                        <children>
-                                          <AnchorPane prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid1" onMouseClicked="#time1" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t1" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -263,7 +413,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="443.0" layoutY="-4.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid2" layoutX="443.0" layoutY="-4.0" onMouseClicked="#time4" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t4" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -277,7 +427,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="804.0" layoutY="-9.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid3" layoutX="804.0" layoutY="-9.0" onMouseClicked="#time7" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t7" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -295,7 +445,7 @@
                                     </AnchorPane>
                                     <AnchorPane prefHeight="120.0" prefWidth="1144.0" AnchorPane.bottomAnchor="152.0" AnchorPane.leftAnchor="0.0">
                                        <children>
-                                          <AnchorPane prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid4" onMouseClicked="#time2" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t2" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -309,7 +459,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="443.0" layoutY="-4.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0">
+                                          <AnchorPane fx:id="tid5" layoutX="443.0" layoutY="-4.0" onMouseClicked="#time5" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0">
                                              <children>
                                                 <Text fx:id="t5" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -323,7 +473,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="804.0" layoutY="-9.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid6" layoutX="804.0" layoutY="-9.0" onMouseClicked="#time8" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t8" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -341,7 +491,7 @@
                                     </AnchorPane>
                                     <AnchorPane prefHeight="120.0" prefWidth="1144.0" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="0.0">
                                        <children>
-                                          <AnchorPane prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid7" onMouseClicked="#time3" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="17.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t3" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -355,7 +505,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="443.0" layoutY="-4.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid8" layoutX="443.0" layoutY="-4.0" onMouseClicked="#time6" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="392.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t6" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -369,7 +519,7 @@
                                                 </Text>
                                              </children>
                                           </AnchorPane>
-                                          <AnchorPane layoutX="804.0" layoutY="-9.0" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
+                                          <AnchorPane fx:id="tid9" layoutX="804.0" layoutY="-9.0" onMouseClicked="#time9" prefHeight="120.0" prefWidth="360.0" styleClass="datum_tid_val" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="767.0" AnchorPane.topAnchor="0.0">
                                              <children>
                                                 <Text fx:id="t9" layoutX="25.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_tidpunkt_information" text="Tidpunkt" textAlignment="CENTER" wrappingWidth="360.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                                                    <font>
@@ -391,247 +541,73 @@
                         </SplitPane>
                      </children>
                   </AnchorPane>
-                  <Button layoutX="1489.0" layoutY="780.0" mnemonicParsing="false" styleClass="last_buttons" stylesheets="@leverans.css" text="Nästa" textFill="WHITE" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="780.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Button>
-                  <Button layoutX="364.0" layoutY="780.0" mnemonicParsing="false" styleClass="last_buttons" stylesheets="@leverans.css" text="Föregående" textFill="WHITE" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="780.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Button>
-                  <Line endX="80.0" layoutX="849.0" layoutY="57.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                  <Line endX="80.0" layoutX="849.0" layoutY="57.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                  <Line endX="80.0" layoutX="849.0" layoutY="57.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="payment21" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="achieved_button" />
-                        <String fx:value="buttons" />
-                     </styleClass>
-                  </Label>
-                  <Label fx:id="delivery22" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="achieved_button" />
-                        <String fx:value="buttons" />
-                     </styleClass>
-                  </Label>
-                  <Label fx:id="delivery211" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="achieved_button" />
-                        <String fx:value="buttons" />
-                     </styleClass>
-                  </Label>
-                  <Label fx:id="shoppingCart21" alignment="CENTER" layoutX="808.0" layoutY="22.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="tillbaka21" alignment="CENTER" layoutX="34.0" layoutY="13.0" prefHeight="90.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                  <Label fx:id="s" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="90.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
                      <font>
                         <Font size="48.0" />
                      </font>
                   </Label>
+                  <Line endX="80.0" layoutX="50.0" layoutY="78.0" AnchorPane.leftAnchor="695.0" AnchorPane.topAnchor="74.5" />
+                  <Line endX="80.0" layoutX="50.0" layoutY="78.0" AnchorPane.leftAnchor="935.0" AnchorPane.topAnchor="74.5" />
+                  <Line endX="80.0" layoutX="60.0" layoutY="88.0" AnchorPane.leftAnchor="1175.0" AnchorPane.topAnchor="74.5" />
+                  <Label fx:id="time1" alignment="CENTER" layoutX="535.0" layoutY="44.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Varukorg:" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time2" alignment="CENTER" layoutX="778.0" layoutY="44.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Leverans:" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="time3" alignment="CENTER" layoutX="1016.0" layoutY="44.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="1254.0" layoutY="44.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="1499.0" layoutY="790.0" mnemonicParsing="false" onAction="#toPayment" prefWidth="200.0" styleClass="last_buttons" text="Nästa" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="374.0" layoutY="790.0" mnemonicParsing="false" onAction="#toDelivery" prefWidth="200.0" styleClass="last_buttons" text="Föregående" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
                </children>
-               <stylesheets>
-                  <URL value="@generall.css" />
-                  <URL value="@leverans.css" />
-               </stylesheets>
-            </AnchorPane>
-            <AnchorPane fx:id="wizardLeveransSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
-               <children>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0" stylesheets="@generall.css">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" layoutX="3.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                        <AnchorPane layoutX="996.0" layoutY="150.0" maxWidth="860.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="200.0">
-                           <children>
-                              <TextField prefHeight="65.0" prefWidth="350.0" promptText="Jakob" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Namn*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField prefHeight="65.0" prefWidth="350.0" promptText="pettersson" AnchorPane.leftAnchor="472.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text layoutX="440.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField prefHeight="65.0" prefWidth="350.0" promptText="jakob.petterson@gmail.com" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField layoutX="494.0" layoutY="170.0" prefHeight="65.0" prefWidth="350.0" promptText="0730212943" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text layoutX="470.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="96.0" layoutY="151.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="200.0">
-                           <children>
-                              <TextField prefHeight="65.0" prefWidth="350.0" promptText="Vägen 3" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransadress*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField prefHeight="65.0" prefWidth="350.0" promptText="4124124" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField prefHeight="65.0" prefWidth="350.0" promptText="Gothenburg" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postort*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField prefHeight="65.0" prefWidth="350.0" promptText="Våning 3 gata 4...." AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Portinformation" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                        <Label fx:id="tillbaka2" alignment="CENTER" layoutX="40.0" layoutY="17.0" prefHeight="90.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                        </Label>
-                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-                        <Line endX="80.0" layoutX="204.0" layoutY="71.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                        <Label fx:id="payment2" alignment="CENTER" layoutX="525.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="achieved_button" />
-                              <String fx:value="buttons" />
-                           </styleClass>
-                        </Label>
-                        <Label fx:id="delivery2" alignment="CENTER" layoutX="768.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="achieved_button" />
-                              <String fx:value="buttons" />
-                           </styleClass>
-                        </Label>
-                        <Label fx:id="delivery21" alignment="CENTER" layoutX="1006.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="shoppingCart2" alignment="CENTER" layoutX="1244.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Varukorg:" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Label>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="4.0" layoutY="1074.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
-                        <Text layoutX="631.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meddelanden:" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="520.0">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <TextArea layoutX="631.0" layoutY="517.0" prefHeight="150.0" prefWidth="831.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="560.0" />
-                        <Button layoutX="1489.0" layoutY="780.0" mnemonicParsing="false" prefWidth="200.0" styleClass="last_buttons" text="Nästa" textFill="WHITE" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="780.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="364.0" layoutY="780.0" mnemonicParsing="false" prefWidth="200.0" styleClass="last_buttons" text="Föregående" textFill="WHITE" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="780.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-               </children>
-               <stylesheets>
-                  <URL value="@leverans.css" />
-                  <URL value="@leverans.css" />
-               </stylesheets>
             </AnchorPane>
             <AnchorPane fx:id="wizardVarukorgSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
                <children>
                   <ScrollPane prefHeight="907.0" prefWidth="1920.0">
                      <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1228.0" prefWidth="1920.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
                            <children>
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="1889.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
                               <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                              <Label fx:id="delivery1" alignment="CENTER" layoutX="909.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                              <Label alignment="CENTER" layoutX="909.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
                               </Label>
                               <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-                              <Label fx:id="payment1" alignment="CENTER" layoutX="1203.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
+                              <Label alignment="CENTER" layoutX="1203.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
                               </Label>
-                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="achieved_button" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
-                                 <styleClass>
-                                    <String fx:value="achieved_button" />
-                                    <String fx:value="buttons" />
-                                 </styleClass>
                               </Label>
                               <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="762.0" />
                               <Line endX="80.0" layoutX="921.0" layoutY="74.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                              <Label fx:id="delivery11" alignment="CENTER" layoutX="1001.0" layoutY="41.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                              <Label alignment="CENTER" layoutX="1001.0" layoutY="41.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
                                  <font>
                                     <Font size="30.0" />
                                  </font>
@@ -640,7 +616,7 @@
                         </AnchorPane>
                      </content>
                   </ScrollPane>
-                  <Label fx:id="tillbaka1" alignment="CENTER" layoutX="80.0" layoutY="99.0" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                  <Label fx:id="tillbaka1" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
                      <font>
                         <Font size="48.0" />
                      </font>
@@ -656,14 +632,14 @@
                         <Font size="55.0" />
                      </font>
                   </Text>
-                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" prefHeight="65.0" prefWidth="130.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" onMouseClicked="#toDelivery" prefHeight="65.0" prefWidth="116.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
                      <font>
                         <Font size="30.0" />
                      </font>
                   </Label>
                </children>
                <stylesheets>
-                  <URL value="@../../Saker/GUI/recipesearch/GUI_final_project/src/imat/leverans.css" />
+                  <URL value="@leverans.css" />
                   <URL value="@leverans.css" />
                </stylesheets>
             </AnchorPane>

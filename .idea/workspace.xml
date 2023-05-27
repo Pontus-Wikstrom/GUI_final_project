@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="1625016d-4690-4dd9-b643-c5c6e390310b" name="Default Changelist" comment="Fixade till i wizarden">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/MainViewController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/MainViewController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/Varukorg.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/Varukorg.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/imat/shoppingCart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/shoppingCart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/fullWizard.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/fullWizard.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/imat/fullWizardController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/imat/fullWizardController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +114,17 @@
     </task>
     <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="Space.CommitStatus" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

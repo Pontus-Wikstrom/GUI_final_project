@@ -2,6 +2,7 @@ package imat;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -10,6 +11,7 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import se.chalmers.cse.dat216.project.Customer;
+import se.chalmers.cse.dat216.project.IMatDataHandler;
 import se.chalmers.cse.dat216.project.User;
 
 import java.io.IOException;
@@ -41,6 +43,26 @@ public class fullWizardController extends AnchorPane{
     @FXML
     private Label adress;
     @FXML
+    private Label shoppingCart1;
+    @FXML
+    private Label delivery1;
+    @FXML
+    private Label delivery2;
+    @FXML
+    private Label time1;
+    @FXML
+    private Label time2;
+    @FXML
+    private Label time3;
+    @FXML
+    private Label payment1;
+    @FXML
+    private Label payment2;
+    @FXML
+    private Label payment3;
+    @FXML
+    private Label payment4;
+    @FXML
     private AnchorPane paymentOptionContent;
     Customer customer;
     User user;
@@ -49,10 +71,12 @@ public class fullWizardController extends AnchorPane{
     int weekday = 0;
     String day;
     String date;
-    String bokningsbar;
+    String available;
     String timeSpot;
 
-    String[] veckodagar = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
+    String[] weekdays = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
+
+
 
     @FXML
     private TextField firstName;
@@ -157,6 +181,8 @@ public class fullWizardController extends AnchorPane{
     @FXML
     private Label totalpris;
     @FXML
+    private Label confirmation;
+    @FXML
     private AnchorPane wizardLeveransSteg;
     @FXML
     private AnchorPane wizardVarukorgSteg;
@@ -164,13 +190,20 @@ public class fullWizardController extends AnchorPane{
     private AnchorPane wizardBetalSteg;
     @FXML
     private AnchorPane wizardDoneSteg;
+    @FXML
+    private AnchorPane wizardTidSteg;
+    @FXML
+    private AnchorPane timeFill1;
+    @FXML
+    private AnchorPane timeFill2;
 
 
-    public fullWizardController(MainViewController controller){
+    public fullWizardController(MainViewController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fullWizard.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         System.out.println("hello");
+        customer = IMatDataHandler.getInstance().getCustomer();
 
         try {
             fxmlLoader.load();
@@ -188,11 +221,11 @@ public class fullWizardController extends AnchorPane{
         setDates();
         setWeekday();
 
-        addVara();
+        addProduct();
         setPrice();
     }
 
-    public void addVara(){
+    public void addProduct(){
 
     }
 
@@ -213,131 +246,165 @@ public class fullWizardController extends AnchorPane{
     public void getDataFromCustomer(){
         customer.setFirstName(firstName.getText());
         customer.setLastName(lastName.getText());
-        customer.setAddress(address.getText());
-        customer.setPostCode(postNumber.getText());
-        customer.setPostAddress(city.getText());
-        customer.setEmail(email.getText());
-        customer.setPhoneNumber(phoneNumber.getText());
-        String portInfo = portinfo.getText();
-        String meddelande = meddelanden.getText();
-    }
 
-    public void stepBack(){if (firstName != null) {
-        customer.setFirstName(firstName.getText());
+        customer.setPostCode(postNumber.getText());
+
+        customer.setPostAddress(city.getText());
+
+        customer.setAddress(address.getText());
+
+        customer.setPhoneNumber(phoneNumber.getText());
+        customer.setMobilePhoneNumber(phoneNumber.getText());
+
+        customer.setEmail(email.getText());
+
+        String portInfo = portinfo.getText();
+
+        String meddelande = meddelanden.getText();
+
     }
-        if (firstName != null) {
-            customer.setLastName(lastName.getText());
-        }
-        if (firstName != null) {
-            customer.setPostCode(postNumber.getText());
-        }
-        if (firstName != null) {
-            customer.setPostAddress(city.getText());
-        }
-        if (firstName != null) {
-            customer.setAddress(address.getText());
-        }
-        if (firstName != null) {
-            customer.setPhoneNumber(phoneNumber.getText());
-        }
-        if (firstName != null) {
-            customer.setEmail(email.getText());
-        }
+    @FXML
+    public void stepBack(){
+        customer.setFirstName(firstName.getText());
+
+        customer.setLastName(lastName.getText());
+
+        customer.setPostCode(postNumber.getText());
+
+        customer.setPostAddress(city.getText());
+
+        customer.setAddress(address.getText());
+
+        customer.setPhoneNumber(phoneNumber.getText());
+
+        customer.setEmail(email.getText());
+
 
         //Get back to shoppingCart
         wizardVarukorgSteg.toFront();
 
     }
+    @FXML
     public void backToMain(){
-        if (firstName != null) {
-            customer.setFirstName(firstName.getText());
-        }
-        if (firstName != null) {
-            customer.setLastName(lastName.getText());
-        }
-        if (firstName != null) {
-            customer.setPostCode(postNumber.getText());
-        }
-        if (firstName != null) {
-            customer.setPostAddress(city.getText());
-        }
-        if (firstName != null) {
-            customer.setAddress(address.getText());
-        }
-        if (firstName != null) {
-            customer.setPhoneNumber(phoneNumber.getText());
-        }
-        if (firstName != null) {
-            customer.setEmail(email.getText());
-        }
+        customer.setFirstName(firstName.getText());
+        customer.setLastName(lastName.getText());
+        customer.setPostCode(postNumber.getText());
+        customer.setPostAddress(city.getText());
+        customer.setAddress(address.getText());
+        customer.setPhoneNumber(phoneNumber.getText());
+        customer.setEmail(email.getText());
         //Get back to main
         controller.homePageClick();
     }
-
-    public void nextStep1(){
+    @FXML
+    public void toTime(){
         getDataFromCustomer();
-        if (customer.getFirstName() != null & customer.getLastName() != null & customer.getAddress() != null & customer.getEmail() != null & customer.getPhoneNumber() != null & customer.getPostAddress() != null & customer.getPostCode() != null & bokningsbar != "Fullbokad") {
-            //go to pay
-            wizardBetalSteg.toFront();
-        }
 
+        setFieldErrorState(firstName, firstName.getText().isBlank());
+        setFieldErrorState(lastName, lastName.getText().isBlank());
+        setFieldErrorState(email, email.getText().isBlank());
+        setFieldErrorState(address, address.getText().isBlank());
+        setFieldErrorState(city, city.getText().isBlank());
+        setFieldErrorState(postNumber, postNumber.getText().isBlank());
+        setFieldErrorState(phoneNumber, phoneNumber.getText().isBlank());
+
+        if (IMatDataHandler.getInstance().isCustomerComplete()) {
+            //go to pay
+            wizardTidSteg.toFront();
+        }
     }
+    public void setFieldErrorState(TextField tf, boolean error){
+        if (error) {
+            tf.setStyle("-fx-border-color: red");
+        } else {
+            tf.setStyle("");
+        }
+    }
+
+    public void toPayment(){
+        if (available == "79.00kr" & date != null) {
+            wizardBetalSteg.toFront();
+        }else if(date == null || timeSpot == null) {
+            if (date == null) {
+                timeFill1.setStyle("-fx-border-color: red");
+            } else {
+                timeFill1.setStyle("");
+            }
+            if (timeSpot == null) {
+                timeFill2.setStyle("-fx-border-color: red");
+            } else {
+                timeFill2.setStyle("");
+            }
+        }
+    }
+    @FXML
     public void toDelivery(){
         wizardLeveransSteg.toFront();
     }
+    @FXML
     public void backToDelivery(){
         wizardLeveransSteg.toFront();
     }
-
+    @FXML
+    public void backToTime() {
+        wizardTidSteg.toFront();
+    }
+    @FXML
     public void backToShoppingCart(){
-        if (firstName != null) {
-            customer.setFirstName(firstName.getText());
-        }
-        if (firstName != null) {
-            customer.setLastName(lastName.getText());
-        }
-        if (firstName != null) {
-            customer.setPostCode(postNumber.getText());
-        }
-        if (firstName != null) {
-            customer.setPostAddress(city.getText());
-        }
-        if (firstName != null) {
-            customer.setAddress(address.getText());
-        }
-        if (firstName != null) {
-            customer.setPhoneNumber(phoneNumber.getText());
-        }
-        if (firstName != null) {
-            customer.setEmail(email.getText());
-        }
+        customer.setFirstName(firstName.getText());
+
+        customer.setLastName(lastName.getText());
+
+        customer.setPostCode(postNumber.getText());
+
+        customer.setPostAddress(city.getText());
+
+        customer.setAddress(address.getText());
+
+        customer.setPhoneNumber(phoneNumber.getText());
+
+        customer.setEmail(email.getText());
+
         wizardVarukorgSteg.toFront();
     }
-
+    @FXML
     public void toFinishPage(){
+        confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
         wizardDoneSteg.toFront();
     }
 
+
+    @FXML
     public void clicked1() {
+        System.out.println("clicked1");
+
         date = datum1.getText();
         day = dag1.getText();
         setBokningsbar();
+
         day1.setStyle("-fx-background-color: #2B9EB3");
         day2.setStyle("-fx-background-color: #f5f5f5");
         day3.setStyle("-fx-background-color: #f5f5f5");
         day4.setStyle("-fx-background-color: #f5f5f5");
     }
 
+    @FXML
     public void clicked2() {
+        System.out.println("clicked2");
+
         date = datum2.getText();
         day = dag2.getText();
         setBokningsbar();
         day2.setStyle("-fx-background-color: #2B9EB3");
-        day1.setStyle("-fx-background-color: #f5f5f5");
-        day3.setStyle("-fx-background-color: #f5f5f5");
-        day4.setStyle("-fx-background-color: #f5f5f5");
+        day1.setStyle("-fx-background-color: white");
+        day3.setStyle("-fx-background-color: white");
+        day4.setStyle("-fx-background-color: green");
+
     }
+    @FXML
     public void clicked3() {
+        System.out.println("clicked3");
+
         date = datum3.getText();
         day = dag3.getText();
         setBokningsbar();
@@ -346,7 +413,7 @@ public class fullWizardController extends AnchorPane{
         day1.setStyle("-fx-background-color: #f5f5f5");
         day2.setStyle("-fx-background-color: #f5f5f5");
     }
-
+    @FXML
     public void clicked4() {
         date = datum4.getText();
         day = dag4.getText();
@@ -357,60 +424,133 @@ public class fullWizardController extends AnchorPane{
         day3.setStyle("-fx-background-color: #f5f5f5");
 
     }
-
+    @FXML
     public void time1() {
         timeSpot = t1.getText();
-        bokningsbar = b1.getText();
+        available = b1.getText();
         tid1.setStyle("-fx-background-color: #2B9EB3");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
 
     }
-
+    @FXML
     public void time2() {
         timeSpot = t2.getText();
-        bokningsbar = b2.getText();
+        available = b2.getText();
         tid4.setStyle("-fx-background-color: #2B9EB3");
-    }
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
 
+    }
+    @FXML
     public void time3() {
         timeSpot = t3.getText();
-        bokningsbar = b3.getText();
+        available = b3.getText();
         tid7.setStyle("-fx-background-color: #2B9EB3");
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
     }
-
+    @FXML
     public void time4() {
         timeSpot = t4.getText();
-        bokningsbar = b4.getText();
+        available = b4.getText();
         tid2.setStyle("-fx-background-color: #2B9EB3");
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
     }
-
+    @FXML
     public void time5() {
         timeSpot = t5.getText();
-        bokningsbar = b5.getText();
+        available = b5.getText();
         tid5.setStyle("-fx-background-color: #2B9EB3");
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
     }
-
+    @FXML
     public void time6() {
         timeSpot = t6.getText();
-        bokningsbar = b6.getText();
+        available = b6.getText();
         tid8.setStyle("-fx-background-color: #2B9EB3");
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
     }
-
+    @FXML
     public void time7() {
         timeSpot = t7.getText();
-        bokningsbar = b7.getText();
+        available = b7.getText();
         tid3.setStyle("-fx-background-color: #2B9EB3");
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
     }
-
+    @FXML
     public void time8() {
         timeSpot = t8.getText();
-        bokningsbar = b8.getText();
+        available = b8.getText();
         tid6.setStyle("-fx-background-color: #2B9EB3");
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
+        tid9.setStyle("-fx-background-color: #f5f5f5");
     }
-
+    @FXML
     public void time9() {
         timeSpot = t9.getText();
-        bokningsbar = b9.getText();
+        available = b9.getText();
         tid9.setStyle("-fx-background-color: #2B9EB3");
+        tid1.setStyle("-fx-background-color: #f5f5f5");
+        tid2.setStyle("-fx-background-color: #f5f5f5");
+        tid3.setStyle("-fx-background-color: #f5f5f5");
+        tid4.setStyle("-fx-background-color: #f5f5f5");
+        tid5.setStyle("-fx-background-color: #f5f5f5");
+        tid6.setStyle("-fx-background-color: #f5f5f5");
+        tid7.setStyle("-fx-background-color: #f5f5f5");
+        tid8.setStyle("-fx-background-color: #f5f5f5");
     }
 
     public void setTimes() {
@@ -515,7 +655,7 @@ public class fullWizardController extends AnchorPane{
 
         return datum + "/" + month;
     }
-
+    @FXML
     public void earlier() {
         datum -= 8;
         if (datum < 0) {
@@ -538,7 +678,7 @@ public class fullWizardController extends AnchorPane{
         setDates();
         setWeekday();
     }
-
+    @FXML
     public void later() {
         setDates();
         setWeekday();
@@ -557,31 +697,49 @@ public class fullWizardController extends AnchorPane{
         if (weekday == 7) {
             weekday = 0;
         }
-        return veckodagar[weekday];
+        return weekdays[weekday];
     }
 
+    @FXML
     public void payPalOption(){
         paypal.setStyle("-fx-background-color: #ffffff");
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #f5f5f5");
     }
+
+    @FXML
     public void klarnaOption(){
         paypal.setStyle("-fx-background-color: #f5f5f5");
         klarna.setStyle("-fx-background-color: #ffffff");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #f5f5f5");
     }
+    @FXML
     public void cardOption(){
         paypal.setStyle("-fx-background-color: #f5f5f5");
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #ffffff");
         swish.setStyle("-fx-background-color: #f5f5f5");
     }
+    @FXML
     public void swishOption(){
         paypal.setStyle("-fx-background-color: #f5f5f5");
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #ffffff");
     }
+
+    public void switchPane() {
+        if (wizardTidSteg.isFocused()) {
+
+        }
+    }
+
+    @FXML
+    private void setPage(AnchorPane page){
+        paymentOptionContent.getChildren().clear();
+        paymentOptionContent.getChildren().add(page);
+    }
+
 }

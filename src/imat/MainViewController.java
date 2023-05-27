@@ -97,7 +97,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void initialize(URL url, ResourceBundle rb) {
         initProductCardHashMap();
 
-        deliveryPage = new fullWizardController(this);
+        deliveryPage = new fullWizardController(this, shoppingCartCardHashMap);
 
         categoryPageController = new CategoryPageController(productCardHashMap);
         shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);

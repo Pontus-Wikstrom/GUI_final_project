@@ -1,7 +1,9 @@
 package imat;
 
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
@@ -11,24 +13,79 @@ import javafx.scene.layout.FlowPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
-import se.chalmers.cse.dat216.project.CreditCard;
-import se.chalmers.cse.dat216.project.Customer;
-import se.chalmers.cse.dat216.project.IMatDataHandler;
-import se.chalmers.cse.dat216.project.User;
+import se.chalmers.cse.dat216.project.*;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Random;
 
 public class fullWizardController extends AnchorPane{
 
     MainViewController controller;
 
+    CreditCard creditCard;
+
+    Customer customer;
+
+    User user;
+
     BetalningKortController betalningKortController = new BetalningKortController();
 
     KlarnaochPayPalController klarnaochPayPalController = new KlarnaochPayPalController();
 
+    private final Model model = Model.getInstance();
+
+    private HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap;
+
     @FXML
     private StackPane wizardStackPane;
+    @FXML
+    private FlowPane varukorgWizardLista;
+    @FXML
+    private AnchorPane wizardLeveransSteg;
+    @FXML
+    private AnchorPane wizardVarukorgSteg;
+    @FXML
+    private AnchorPane wizardBetalSteg;
+    @FXML
+    private AnchorPane wizardDoneSteg;
+    @FXML
+    private AnchorPane wizardTidSteg;
+    @FXML
+    private AnchorPane paymentOptionContent;
+    @FXML
+    private AnchorPane timeFill1;
+    @FXML
+    private AnchorPane timeFill2;
+    @FXML
+    private AnchorPane day1;
+    @FXML
+    private AnchorPane day2;
+    @FXML
+    private AnchorPane day3;
+    @FXML
+    private AnchorPane day4;
+    @FXML
+    private AnchorPane tid1;
+    @FXML
+    private AnchorPane tid2;
+    @FXML
+    private AnchorPane tid3;
+    @FXML
+    private AnchorPane tid4;
+    @FXML
+    private AnchorPane tid5;
+    @FXML
+    private AnchorPane tid6;
+    @FXML
+    private AnchorPane tid7;
+    @FXML
+    private AnchorPane tid8;
+    @FXML
+    private AnchorPane tid9;
+    private Pane selectedOption;
     @FXML
     private Pane paypal;
     @FXML
@@ -37,6 +94,10 @@ public class fullWizardController extends AnchorPane{
     private Pane card;
     @FXML
     private Pane swish;
+    @FXML
+    private Label totalpris;
+    @FXML
+    private Label confirmation;
     @FXML
     private Label tillbaka;
     @FXML
@@ -72,22 +133,6 @@ public class fullWizardController extends AnchorPane{
     @FXML
     private Label payment4;
     @FXML
-    private AnchorPane paymentOptionContent;
-    Customer customer;
-    User user;
-    int datum = 10;
-    int month = 5;
-    int weekday = 0;
-    String day;
-    String date;
-    String available;
-    String timeSpot;
-
-    String[] weekdays = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
-
-
-
-    @FXML
     private TextField firstName;
     @FXML
     private TextField lastName;
@@ -121,32 +166,6 @@ public class fullWizardController extends AnchorPane{
     private Text datum3;
     @FXML
     private Text datum4;
-    @FXML
-    private AnchorPane day1;
-    @FXML
-    private AnchorPane day2;
-    @FXML
-    private AnchorPane day3;
-    @FXML
-    private AnchorPane day4;
-    @FXML
-    private AnchorPane tid1;
-    @FXML
-    private AnchorPane tid2;
-    @FXML
-    private AnchorPane tid3;
-    @FXML
-    private AnchorPane tid4;
-    @FXML
-    private AnchorPane tid5;
-    @FXML
-    private AnchorPane tid6;
-    @FXML
-    private AnchorPane tid7;
-    @FXML
-    private AnchorPane tid8;
-    @FXML
-    private AnchorPane tid9;
     @FXML
     private Text t1;
     @FXML
@@ -184,32 +203,18 @@ public class fullWizardController extends AnchorPane{
     @FXML
     private Text b9;
 
-    private final Model model = Model.getInstance();
-    @FXML
-    private FlowPane varukorgWizardLista;
-    @FXML
-    private Label totalpris;
-    @FXML
-    private Label confirmation;
-    @FXML
-    private AnchorPane wizardLeveransSteg;
-    @FXML
-    private AnchorPane wizardVarukorgSteg;
-    @FXML
-    private AnchorPane wizardBetalSteg;
-    @FXML
-    private AnchorPane wizardDoneSteg;
-    @FXML
-    private AnchorPane wizardTidSteg;
-    @FXML
-    private AnchorPane timeFill1;
-    @FXML
-    private AnchorPane timeFill2;
+    int datum = 10;
+    int month = 5;
+    int weekday = 0;
+    String day;
+    String date;
+    String available;
+    String timeSpot;
 
-    CreditCard creditCard;
+    String[] weekdays = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
 
 
-    public fullWizardController(MainViewController controller) {
+    public fullWizardController(MainViewController controller, HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fullWizard.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -236,46 +241,16 @@ public class fullWizardController extends AnchorPane{
         addProduct();
         setPrice();
 
-    }
+        this.shoppingCartCardHashMap = shoppingCartCardHashMap;
 
-    public void addProduct(){
+        //model.getShoppingCart().addShoppingCartListener(this);
 
-    }
-
-    public void setPrice() {
+        initFlowPane();
 
     }
 
-    public void loadDataFromAccount() {
-        firstName.setText(customer.getFirstName());
-        lastName.setText(customer.getLastName());
-        email.setText(customer.getEmail());
-        phoneNumber.setText(customer.getPhoneNumber());
-        city.setText(customer.getPostAddress());
-        address.setText(customer.getAddress());
-        postNumber.setText(customer.getPostCode());
-    }
+    //Knappar och dess implementation
 
-    public void getDataFromCustomer(){
-        customer.setFirstName(firstName.getText());
-        customer.setLastName(lastName.getText());
-
-        customer.setPostCode(postNumber.getText());
-
-        customer.setPostAddress(city.getText());
-
-        customer.setAddress(address.getText());
-
-        customer.setPhoneNumber(phoneNumber.getText());
-        customer.setMobilePhoneNumber(phoneNumber.getText());
-
-        customer.setEmail(email.getText());
-
-        String portInfo = portinfo.getText();
-
-        String meddelande = meddelanden.getText();
-
-    }
     @FXML
     public void stepBack(){
         customer.setFirstName(firstName.getText());
@@ -350,10 +325,7 @@ public class fullWizardController extends AnchorPane{
             }
         }
     }
-    @FXML
-    public void toDelivery(){
-        wizardLeveransSteg.toFront();
-    }
+
     @FXML
     public void backToDelivery(){
         wizardLeveransSteg.toFront();
@@ -380,17 +352,18 @@ public class fullWizardController extends AnchorPane{
 
         wizardVarukorgSteg.toFront();
     }
+
     @FXML
     public void toFinishPage() throws InterruptedException {
         System.out.println("IntoFinish");
         if (selectedOption == card) {
             System.out.println("CardFinish");
-           if (betalningKortController.controlCard()) {
-               System.out.println("CardWorked");
-               confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
-               wizardDoneSteg.toFront();
-               wizardDoneSteg.requestFocus();
-           }
+            if (betalningKortController.controlCard()) {
+                System.out.println("CardWorked");
+                confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
+                wizardDoneSteg.toFront();
+                wizardDoneSteg.requestFocus();
+            }
 
         }else if (selectedOption == klarna){
             if (klarnaochPayPalController.controlEmail()) {
@@ -398,16 +371,55 @@ public class fullWizardController extends AnchorPane{
                 wizardDoneSteg.requestFocus();
             }
         }
-        //wizardDoneSteg.toFront();
-        //wizardDoneSteg.requestFocus();
-        /*if (wizardDoneSteg.isFocused()) {
-            Thread.sleep(10000);
+        wizardDoneSteg.toFront();
+        wizardDoneSteg.requestFocus();
+        if (wizardDoneSteg.isFocused()) {
+            Thread.sleep(1000);
             wizardVarukorgSteg.toFront();
 
-        }*/
+        }
 
     }
 
+    @FXML
+    public void toDelivery(){
+        wizardLeveransSteg.toFront();
+    }
+
+    //Delivery
+
+    public void loadDataFromAccount() {
+        firstName.setText(customer.getFirstName());
+        lastName.setText(customer.getLastName());
+        email.setText(customer.getEmail());
+        phoneNumber.setText(customer.getPhoneNumber());
+        city.setText(customer.getPostAddress());
+        address.setText(customer.getAddress());
+        postNumber.setText(customer.getPostCode());
+    }
+
+    public void getDataFromCustomer(){
+        customer.setFirstName(firstName.getText());
+        customer.setLastName(lastName.getText());
+
+        customer.setPostCode(postNumber.getText());
+
+        customer.setPostAddress(city.getText());
+
+        customer.setAddress(address.getText());
+
+        customer.setPhoneNumber(phoneNumber.getText());
+        customer.setMobilePhoneNumber(phoneNumber.getText());
+
+        customer.setEmail(email.getText());
+
+        String portInfo = portinfo.getText();
+
+        String meddelande = meddelanden.getText();
+
+    }
+
+    //Time
 
     @FXML
     public void clicked1() {
@@ -735,6 +747,9 @@ public class fullWizardController extends AnchorPane{
         return weekdays[weekday];
     }
 
+    //Betalning
+
+
     @FXML
     public void payPalOption(){
         paypal.setStyle("-fx-background-color: #ffffff");
@@ -743,7 +758,7 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #f5f5f5");
         AnchorPane payPalPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
         setPage(payPalPayment);
-        payPalPayment.requestFocus();
+        selectedOption = paypal;
     }
 
     @FXML
@@ -754,7 +769,6 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #f5f5f5");
         AnchorPane klarnaPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
         setPage(klarnaPayment);
-        klarna.requestFocus();
         selectedOption = klarna;
     }
     @FXML
@@ -765,10 +779,8 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #f5f5f5");
         AnchorPane cardPayment= new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_kort.fxml")));
         setPage(cardPayment);
-        card.requestFocus();
         selectedOption = card;
     }
-    Pane selectedOption;
     @FXML
     public void swishOption(){
         paypal.setStyle("-fx-background-color: #f5f5f5");
@@ -777,7 +789,7 @@ public class fullWizardController extends AnchorPane{
         swish.setStyle("-fx-background-color: #ffffff");
         AnchorPane swishPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_telefonnr.fxml")));
         setPage(swishPayment);
-        swish.requestFocus();
+        selectedOption = swish;
     }
 
     @FXML
@@ -790,12 +802,73 @@ public class fullWizardController extends AnchorPane{
 
     }
 
-    public void newOrder(){
-        if (wizardDoneSteg.isFocused()) {
 
+    //Varukorg
+
+    private void initFlowPane() {
+        varukorgWizardLista.getChildren().clear();
+        varukorgWizardLista.setVgap(20);
+    }
+
+    private void updateWizardFlowPane() {
+        ObservableList<Node> productCardList = varukorgWizardLista.getChildren();
+
+        List<String> lst = new ArrayList<String>(0);
+        for (Node item : productCardList) {
+            lst.add(((ShoppingCartCardController) item).getName());
+        }
+
+        lst.sort(null);
+
+        varukorgWizardLista.getChildren().clear();
+
+        for (String productName : lst) {
+            varukorgWizardLista.getChildren().add(this.shoppingCartCardHashMap.get(productName));
+        }
+
+        // for (ShoppingItem item : model.getShoppingCart().getItems()) {
+        //     if (item.getAmount() == 0) {
+        //         //productsFlowPane.getChildren().clear
+        //     }
+        // }
+        /*for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            Product product = item.getProduct();
+        }*/
+    }
+
+    public void fillShoppingCartFlowPane() {
+        varukorgWizardLista.getChildren().clear();
+
+
+        List<String>  lst = new ArrayList<String>(0);
+
+        for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            String productName = item.getProduct().getName();
+            lst.add(productName);
+        }
+
+        lst.sort(null);
+
+        for (String productName : lst) {
+            varukorgWizardLista.getChildren().add(this.shoppingCartCardHashMap.get(productName));
         }
     }
 
+    public void shoppingCartChanged(CartEvent arg0) {
+        //fillShoppingCartFlowPane();
 
+    }
 
+    public void addProduct(){
+
+    }
+
+    public void setPrice() {
+
+    }
 }
+
+
+
+
+

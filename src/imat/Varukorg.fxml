@@ -13,7 +13,7 @@
         <content>
           <AnchorPane maxHeight="10000.0" minHeight="0.0" minWidth="0.0" prefWidth="1920.0">
                <children>
-                  <FlowPane fx:id="productsFlowPane" layoutX="536.0" layoutY="260.0" prefHeight="200.0" prefWidth="1144.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="388.0" AnchorPane.topAnchor="260.0" />
+                  <FlowPane fx:id="productsFlowPane" layoutX="536.0" layoutY="260.0" prefHeight="200.0" prefWidth="1144.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="388.0" AnchorPane.rightAnchor="388.0" AnchorPane.topAnchor="260.0" />
                   <Label fx:id="DinVarukorg" alignment="CENTER" prefHeight="117.0" prefWidth="1058.0" text="Din Varukorg" AnchorPane.leftAnchor="442.0" AnchorPane.rightAnchor="442.0" AnchorPane.topAnchor="60.0">
                      <font>
                         <Font size="64.0" />

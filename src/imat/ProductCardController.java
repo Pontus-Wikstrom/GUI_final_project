@@ -3,7 +3,6 @@ package imat;
 import java.io.IOException;
 import java.util.Comparator;
 
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.image.ImageView;
@@ -59,7 +58,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
 
     @FXML
     public void productCardClick() {
-        parentController.productCardClick(this);
+        parentController.productCardClick();
     }
 
     private void setAmountOfItemsText() {
@@ -70,15 +69,8 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         return product.getName();
     }
 
-    public Product getProduct() {
-        return this.product;
-    }
 
-    public ShoppingItem getShoppingItem() {
-        return this.shoppingItem;
-    }
-
-    public void increaseAmountOfProducts() {
+    private void increaseAmountOfProducts() {
         shoppingItem.setAmount((int) shoppingItem.getAmount() + 1);
         setAmountOfItemsText();
 
@@ -95,7 +87,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
         System.out.println("--------------------------------");
     }
 
-    public void decreaseAmountOfProducts() {
+    private void decreaseAmountOfProducts() {
         if (shoppingItem.getAmount() < 1) return;
 
         shoppingItem.setAmount((int) shoppingItem.getAmount() - 1);
@@ -124,19 +116,17 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
     }
 
     @FXML
-    public void increaseProductClick(Event event) {
+    public void increaseProductClick() {
         increaseAmountOfProducts();
-        event.consume();
     }
     
     @FXML
-    public void decreaseProductClick(Event event) {
+    public void decreaseProductClick() {
         decreaseAmountOfProducts();
-        event.consume();
     }
 
     @FXML
-    public void favouriteButtonClick(Event event) {
+    public void favouriteButtonClick() {
         if (!model.isFavourite(product)) {
             model.setFavourite(product);
             favourite.toFront();
@@ -145,7 +135,7 @@ public class ProductCardController extends AnchorPane implements ShoppingCartLis
             notFavourite.toFront();
         }
 
-        event.consume();
+    
     }
 
 }

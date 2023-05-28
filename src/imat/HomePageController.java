@@ -2,10 +2,8 @@ package imat;
 
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
-import javafx.scene.text.Text;
 
 import java.io.IOException;
 import java.net.URL;
@@ -28,19 +26,10 @@ public class HomePageController extends AnchorPane{
     private AnchorPane flowPaneAnchorPane;
     @FXML
     private ScrollPane homePageScrollPane;
-    @FXML
-    private Text currentSideText;
-    @FXML
-    private AnchorPane leftButton;
-    @FXML
-    private AnchorPane rightButton;
 
     private HashMap<String, ProductCardController> productCardHashMap;
 
     private final Model model = Model.getInstance();
-
-    private int sideIndex;
-    private List<Product> currentProducts;
 
     public HomePageController(HashMap<String, ProductCardController> productCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sökSida.fxml"));
@@ -53,12 +42,9 @@ public class HomePageController extends AnchorPane{
             throw new RuntimeException(exception);
         }
 
-    
-        this.productCardHashMap = productCardHashMap;
-        currentProducts = model.getProducts();
-        sideIndex = 0;
-        leftButton.setVisible(false);
+        
 
+        this.productCardHashMap = productCardHashMap;
         initFlowPane();
         searchBar.setFocusTraversable(false);
 
@@ -66,14 +52,6 @@ public class HomePageController extends AnchorPane{
         
 
         //searchBar.textProperty().addListener(null);
-    }
-
-    public void setScrollPanePosition(double position) {
-        homePageScrollPane.setVvalue(position);
-    }
-
-    public void clearSearchBar() {
-        searchBar.clear();
     }
 
 
@@ -86,78 +64,32 @@ public class HomePageController extends AnchorPane{
     public void fillProductListFlowPane() {
         productListFlowPane.getChildren().clear();
 
-        int startIndex = sideIndex * 21;
-        int endIndex = startIndex + 20;
-        currentSideText.setText((sideIndex + 1) + "");
-
-        for (int i = startIndex; i <= endIndex; i++) {
-            Product product = currentProducts.get(i);
+        int i = 0;
+        for (Product product : model.getProducts()) {
+            if (i>20) break;
+            
             productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
             
+            i++;
         }
-
-        // for (int i = 0; i<5; i++) {
-
-        // }
-        // for (Product product : model.getProducts()) {
-        //     if (i>20) break;
-            
-        //     productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
-            
-        // }
     }
 
     private void fillProductListFlowPane(List<Product> products) {
         productListFlowPane.getChildren().clear();
 
-        int startIndex = sideIndex * 21;
-        int endIndex = startIndex + 20;
-        currentSideText.setText((sideIndex + 1) + "");
-
-        for (int i = startIndex; i <= endIndex; i++) {
-            Product product = model.getProducts().get(i);
+        for (Product product : products) {
             productListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
-            
         }
-    }
-
-    @FXML
-    public void nextPageClick() {
-        int oldIndex = sideIndex;
-        if (sideIndex < Math.floor(currentProducts.size() / 20)) sideIndex++;
-
-        if (sideIndex >= Math.floor(currentProducts.size() / 20)) rightButton.setVisible(false);
-        leftButton.setVisible(true);
-
-        if (oldIndex != sideIndex )setScrollPanePosition(0);
-        fillProductListFlowPane(); 
-    }
-
-    @FXML
-    public void previousPageClick() {
-        int oldIndex = sideIndex;
-        if (sideIndex > 0) sideIndex--;
-        if ((sideIndex) == 0) leftButton.setVisible(false);
-        rightButton.setVisible(true);
-
-        if (oldIndex != sideIndex) setScrollPanePosition(0);
-        fillProductListFlowPane();
     }
 
     @FXML
     public void displaySearchResults() {
-        sideIndex = 0;
-
         if (searchBar.getText() == "") {
-            currentProducts = model.getProducts();
             fillProductListFlowPane();
             return;
         }
 
-        leftButton.setVisible(false);
-
-        currentProducts = model.findProducts(searchBar.getText());
-
-        fillProductListFlowPane();
+        List<Product> products = model.findProducts(searchBar.getText());
+        fillProductListFlowPane(products);
     }
 }

@@ -104,17 +104,17 @@
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="290.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="345.0">
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="345.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
@@ -133,17 +133,17 @@
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getHotDrinks" strokeType="OUTSIDE" strokeWidth="0.0" text="Varma drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
+                              <Text onMouseClicked="#getHotDrinks" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Varma drycker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="125.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getSugar" strokeType="OUTSIDE" strokeWidth="0.0" text="Socker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
+                              <Text onMouseClicked="#getSugar" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Socker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="180.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>
                               </Text>
-                              <Text onMouseClicked="#getSweet" strokeType="OUTSIDE" strokeWidth="0.0" text="Sötsaker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
+                              <Text onMouseClicked="#getSweet" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="links" text="Sötsaker" textAlignment="CENTER" wrappingWidth="420.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="235.0">
                                  <font>
                                     <Font size="35.0" />
                                  </font>

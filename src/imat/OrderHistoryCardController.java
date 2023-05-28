@@ -67,6 +67,17 @@ public class OrderHistoryCardController extends AnchorPane {
     }
 
     private void initHistoryCardHashMap() {
+        
+        // for (int i = order.getItems().size() - 1; i >= 0; i--) {
+        //     ShoppingItem item = order.getItems().get(i);
+        //     Product product = item.getProduct();
+        //     //Product product = item.getProduct();
+        //     ShoppingItem itemToAdd = new ShoppingItem(product, item.getAmount());
+        //     HistoryCardController cardToAdd = new HistoryCardController(product, itemToAdd);
+
+        //     historyCardHashMap.put(product.getName(), cardToAdd);
+        // }
+
         for (ShoppingItem item : order.getItems()) {
             Product product = item.getProduct();
             ShoppingItem itemToAdd = new ShoppingItem(product, item.getAmount());
@@ -79,6 +90,9 @@ public class OrderHistoryCardController extends AnchorPane {
     private void fillFlowPane() {
         productFlowPane.getChildren().clear();
         
+        // for (int i = order.getItems().size() - 1; i >= 0; i--) {
+        //     productFlowPane.getChildren().add(this.historyCardHashMap.get(order.getItems().get(i).getProduct().getName()));
+        // }
         for (ShoppingItem item : order.getItems()) {
             productFlowPane.getChildren().add(this.historyCardHashMap.get(item.getProduct().getName()));
         }

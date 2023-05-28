@@ -110,6 +110,10 @@ public class Model {
         iMatDataHandler.shutDown();
     }
 
+    public void resetData() {
+        iMatDataHandler.reset();
+    }
+
     
     // public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
     //     List<ShoppingItem> itemList = getShoppingCart().getItems();

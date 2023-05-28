@@ -153,6 +153,226 @@
                   <Line endX="80.0" layoutX="1160.0" layoutY="77.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
                </children>
             </AnchorPane>
+            <AnchorPane fx:id="wizardLeveransSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
+               <children>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0" stylesheets="@generall.css">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" layoutX="3.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+                        <AnchorPane layoutX="996.0" layoutY="150.0" maxWidth="860.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <TextField fx:id="firstName" prefHeight="65.0" prefWidth="350.0" promptText="Jakob" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Namn*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="lastName" prefHeight="65.0" prefWidth="350.0" promptText="pettersson" AnchorPane.leftAnchor="472.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="440.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="email" prefHeight="65.0" prefWidth="350.0" promptText="jakob.petterson@gmail.com" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="phoneNumber" layoutX="494.0" layoutY="170.0" prefHeight="65.0" prefWidth="350.0" promptText="0730212943" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text layoutX="470.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="96.0" layoutY="151.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <TextField fx:id="address" prefHeight="65.0" prefWidth="350.0" promptText="Vägen 3" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransadress*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="postNumber" prefHeight="65.0" prefWidth="350.0" promptText="4124124" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="60.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="city" prefHeight="65.0" prefWidth="350.0" promptText="Gothenburg" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postort*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                              <TextField fx:id="portinfo" prefHeight="65.0" prefWidth="350.0" promptText="Våning 3 gata 4...." AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="170.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </TextField>
+                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Portinformation" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
+                                 <font>
+                                    <Font size="35.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <Label fx:id="tillbaka2" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="90.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                           <font>
+                              <Font size="48.0" />
+                           </font>
+                        </Label>
+                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
+                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
+                        <Line endX="80.0" layoutX="204.0" layoutY="71.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
+                        <Label fx:id="delivery1" alignment="CENTER" layoutX="525.0" layoutY="34.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="achieved_button" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Label>
+                        <Label fx:id="delivery2" alignment="CENTER" layoutX="768.0" layoutY="34.0" onMouseClicked="#toDelivery" prefHeight="70.0" prefWidth="160.0" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                           <styleClass>
+                              <String fx:value="achieved_button" />
+                              <String fx:value="buttons" />
+                           </styleClass>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="1006.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="1244.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="40.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="4.0" layoutY="1074.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
+                        <Text layoutX="631.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meddelanden:" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="520.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Text>
+                        <TextArea fx:id="meddelanden" layoutX="631.0" layoutY="517.0" prefHeight="150.0" prefWidth="831.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="560.0" />
+                        <Button layoutX="1489.0" layoutY="780.0" mnemonicParsing="false" onAction="#toTime" prefWidth="200.0" styleClass="last_buttons" text="Nästa" textFill="WHITE" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="780.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="364.0" layoutY="780.0" mnemonicParsing="false" onAction="#backToShoppingCart" prefWidth="200.0" styleClass="last_buttons" text="Föregående" textFill="WHITE" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="780.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+               </children>
+               <stylesheets>
+                  <URL value="@leverans.css" />
+                  <URL value="@leverans.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane fx:id="wizardVarukorgSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
+               <children>
+                  <ScrollPane prefHeight="907.0" prefWidth="1920.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="1889.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
+                              <Label alignment="CENTER" layoutX="909.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
+                              <Label alignment="CENTER" layoutX="1203.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="achieved_button" />
+                                    <String fx:value="buttons" />
+                                 </styleClass>
+                              </Label>
+                              <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="762.0" />
+                              <Line endX="80.0" layoutX="921.0" layoutY="74.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
+                              <Label alignment="CENTER" layoutX="1001.0" layoutY="41.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="tillbaka1" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="450.0" layoutY="707.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1100.0" />
+                  <Text layoutX="587.0" layoutY="828.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp:">
+                     <font>
+                        <Font size="55.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="totalPris" layoutX="947.0" layoutY="830.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 KR">
+                     <font>
+                        <Font size="55.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" onMouseClicked="#toDelivery" prefHeight="65.0" prefWidth="116.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+               <stylesheets>
+                  <URL value="@leverans.css" />
+                  <URL value="@leverans.css" />
+               </stylesheets>
+            </AnchorPane>
             <AnchorPane fx:id="wizardTidSteg" prefHeight="907.0" prefWidth="1920.0" style="-fx-background-color: F5f5f5;" stylesheets="@leverans.css">
                <children>
                   <AnchorPane fx:id="datum_tid_rec" layoutX="386.0" layoutY="133.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="585.0" prefWidth="1144.0" stylesheets="@rec_datum_tid.css" AnchorPane.bottomAnchor="189.0" AnchorPane.leftAnchor="386.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="150.0">
@@ -446,226 +666,6 @@
                      </font>
                   </Button>
                </children>
-            </AnchorPane>
-            <AnchorPane fx:id="wizardLeveransSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
-               <children>
-                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0" stylesheets="@generall.css">
-                     <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" layoutX="3.0" layoutY="4.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                        <AnchorPane layoutX="996.0" layoutY="150.0" maxWidth="860.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="200.0">
-                           <children>
-                              <TextField fx:id="firstName" prefHeight="65.0" prefWidth="350.0" promptText="Jakob" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Namn*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField fx:id="lastName" prefHeight="65.0" prefWidth="350.0" promptText="pettersson" AnchorPane.leftAnchor="472.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text layoutX="440.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mail*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField fx:id="email" prefHeight="65.0" prefWidth="350.0" promptText="jakob.petterson@gmail.com" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Efternamn*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField fx:id="phoneNumber" layoutX="494.0" layoutY="170.0" prefHeight="65.0" prefWidth="350.0" promptText="0730212943" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text layoutX="470.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefonnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                        <AnchorPane layoutX="96.0" layoutY="151.0" prefHeight="280.0" prefWidth="860.0" styleClass="titledsections" stylesheets="@generall.css" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="200.0">
-                           <children>
-                              <TextField fx:id="address" prefHeight="65.0" prefWidth="350.0" promptText="Vägen 3" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Leveransadress*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField fx:id="postNumber" prefHeight="65.0" prefWidth="350.0" promptText="4124124" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="60.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postnummer*" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="20.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField fx:id="city" prefHeight="65.0" prefWidth="350.0" promptText="Gothenburg" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Postort*" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                              <TextField fx:id="portinfo" prefHeight="65.0" prefWidth="350.0" promptText="Våning 3 gata 4...." AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="170.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </TextField>
-                              <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Portinformation" AnchorPane.leftAnchor="470.0" AnchorPane.topAnchor="130.0">
-                                 <font>
-                                    <Font size="35.0" />
-                                 </font>
-                              </Text>
-                           </children>
-                        </AnchorPane>
-                        <Label fx:id="tillbaka2" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="90.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
-                           <font>
-                              <Font size="48.0" />
-                           </font>
-                        </Label>
-                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                        <Line endX="80.0" layoutX="40.0" layoutY="68.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-                        <Line endX="80.0" layoutX="204.0" layoutY="71.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                        <Label fx:id="delivery1" alignment="CENTER" layoutX="525.0" layoutY="34.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="achieved_button" />
-                              <String fx:value="buttons" />
-                           </styleClass>
-                        </Label>
-                        <Label fx:id="delivery2" alignment="CENTER" layoutX="768.0" layoutY="34.0" onMouseClicked="#toDelivery" prefHeight="70.0" prefWidth="160.0" text="Leverans" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                           <styleClass>
-                              <String fx:value="achieved_button" />
-                              <String fx:value="buttons" />
-                           </styleClass>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="1006.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Label>
-                        <Label alignment="CENTER" layoutX="1244.0" layoutY="34.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.rightAnchor="520.0" AnchorPane.topAnchor="40.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Label>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" height="10.0" layoutX="4.0" layoutY="1074.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" />
-                        <Text layoutX="631.0" layoutY="495.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Meddelanden:" AnchorPane.leftAnchor="500.0" AnchorPane.topAnchor="520.0">
-                           <font>
-                              <Font size="35.0" />
-                           </font>
-                        </Text>
-                        <TextArea fx:id="meddelanden" layoutX="631.0" layoutY="517.0" prefHeight="150.0" prefWidth="831.0" AnchorPane.leftAnchor="500.0" AnchorPane.rightAnchor="500.0" AnchorPane.topAnchor="560.0" />
-                        <Button layoutX="1489.0" layoutY="780.0" mnemonicParsing="false" onAction="#toTime" prefWidth="200.0" styleClass="last_buttons" text="Nästa" textFill="WHITE" AnchorPane.rightAnchor="450.0" AnchorPane.topAnchor="780.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Button>
-                        <Button layoutX="364.0" layoutY="780.0" mnemonicParsing="false" onAction="#backToShoppingCart" prefWidth="200.0" styleClass="last_buttons" text="Föregående" textFill="WHITE" AnchorPane.leftAnchor="450.0" AnchorPane.topAnchor="780.0">
-                           <font>
-                              <Font size="30.0" />
-                           </font>
-                        </Button>
-                     </children>
-                  </AnchorPane>
-               </children>
-               <stylesheets>
-                  <URL value="@leverans.css" />
-                  <URL value="@leverans.css" />
-               </stylesheets>
-            </AnchorPane>
-            <AnchorPane fx:id="wizardVarukorgSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
-               <children>
-                  <ScrollPane prefHeight="907.0" prefWidth="1920.0">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
-                           <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="1889.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                              <Label alignment="CENTER" layoutX="909.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Label>
-                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-                              <Label alignment="CENTER" layoutX="1203.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <styleClass>
-                                    <String fx:value="achieved_button" />
-                                    <String fx:value="buttons" />
-                                 </styleClass>
-                              </Label>
-                              <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="762.0" />
-                              <Line endX="80.0" layoutX="921.0" layoutY="74.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                              <Label alignment="CENTER" layoutX="1001.0" layoutY="41.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </ScrollPane>
-                  <Label fx:id="tillbaka1" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="450.0" layoutY="707.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1100.0" />
-                  <Text layoutX="587.0" layoutY="828.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp:">
-                     <font>
-                        <Font size="55.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="totalPris" layoutX="947.0" layoutY="830.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 KR">
-                     <font>
-                        <Font size="55.0" />
-                     </font>
-                  </Text>
-                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" onMouseClicked="#toDelivery" prefHeight="65.0" prefWidth="116.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Label>
-               </children>
-               <stylesheets>
-                  <URL value="@leverans.css" />
-                  <URL value="@leverans.css" />
-               </stylesheets>
             </AnchorPane>
          </children>
       </StackPane>

@@ -21,3 +21,7 @@
     -fx-background-color: #000000;
     -fx-background-radius: 5px;
 }
+
+.hover_image:hover{
+    -fx-cursor: hand;
+}

@@ -519,7 +519,7 @@
                                     <String fx:value="buttons" />
                                  </styleClass>
                               </Label>
-                              <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="762.0" />
+                              <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="1144.0" AnchorPane.leftAnchor="388.0" AnchorPane.rightAnchor="388.0" />
                               <Line endX="80.0" layoutX="921.0" layoutY="74.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
                               <Label alignment="CENTER" layoutX="1001.0" layoutY="41.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
                                  <font>

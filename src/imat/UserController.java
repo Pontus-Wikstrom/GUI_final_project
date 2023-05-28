@@ -7,6 +7,7 @@ import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -41,6 +42,8 @@ public class UserController extends AnchorPane{
     
     @FXML
     private FlowPane historyFlowPane;
+    @FXML
+    private ScrollPane userScrollPane;
 
     private HashMap<String, HistoryCardController> historyCardHashMap;
     private List<Order> orderHistoryList;
@@ -51,11 +54,8 @@ public class UserController extends AnchorPane{
 
 
 
-<<<<<<< HEAD
     private double vBarPosition = 0;
 
-=======
->>>>>>> parent of eb538de (Merge branch 'not_broken_2_pls')
     public UserController(HashMap<String, HistoryCardController> historyCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user.fxml"));
         fxmlLoader.setRoot(this);
@@ -92,7 +92,6 @@ public class UserController extends AnchorPane{
         customer.setMobilePhoneNumber(text_input_phone.getText());
 
     }
-<<<<<<< HEAD
     
     public void setScrollPanePosition(double position) {
         vBarPosition = position;
@@ -127,8 +126,6 @@ public class UserController extends AnchorPane{
 
         System.out.println("hello hello" + creditCard.getCardNumber());
     }
-=======
->>>>>>> parent of eb538de (Merge branch 'not_broken_2_pls')
 
     public void showUserData(){
         firstName.setText(customer.getFirstName());
@@ -157,6 +154,8 @@ public class UserController extends AnchorPane{
 
     public void updateFlowPane() {
         updateOrderHistoryList();
+        userScrollPane.setVvalue(vBarPosition);
+
         historyFlowPane.getChildren().clear();
 
         for (Order order : orderHistoryList) {

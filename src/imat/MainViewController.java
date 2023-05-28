@@ -10,7 +10,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.fxml.FXMLLoader;
 import javafx.event.Event;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
 import javafx.scene.text.Text;
@@ -82,17 +81,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     private Rectangle profile_marker;
     @FXML
     private Rectangle mainsiteMarker;
-
-    @FXML
-    private Text productInfoName;
-    @FXML
-    private ImageView productInfoImage;
-    @FXML
-    private Text productInfoPrice;
-    @FXML
-    private Text productInfoAmount;
-
-    private ProductCardController currentProductCard;
     
 
     
@@ -156,10 +144,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
         hamburgerCartCostAmount.setText(totalCost + " kr");
         hamburgerCartItemAmount.setText(amountOfItems + "");
-
-        if (currentProductCard != null) {
-            productInfoAmount.setText(String.format("%.0f", currentProductCard.getShoppingItem().getAmount()));
-        }
     }
 
     public void clear_marked_sites(){
@@ -177,60 +161,10 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         shoppingCartPage.fillShoppingCartFlowPane();
     }
 
-    @FXML
-    public void decreaseProductAmount() {
-        currentProductCard.decreaseAmountOfProducts();
-    }
-    
-    @FXML
-    public void increaseProductAmount() {
-        currentProductCard.increaseAmountOfProducts();
-    }
-
-    
-
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
-
-    public void purchaseHistoryClick() {
-        setPage(userPage);
-        
-        userPage.testData();
-
-        userPage.setScrollPanePosition(0.28);
-        userPage.updateFlowPane();
-
-        userPage.testData();
-
-        closeHamburgerMenu();
-                
-    }
-
-    private void test() {
-        setPage(userPage);
-
-        closeHamburgerMenu();
-        userPage.updateFlowPane();
-        userPage.setScrollPanePosition(0.77);
-    }
 
     public void productCardClick() {
         productDescriptionBackground.toFront();
-    }
-
-    public void productCardClick(ProductCardController productCard) {
-        currentProductCard = productCard;
-        updateProductCardInfo();
-        
-        productDescriptionBackground.toFront();
-
-    }
-
-    private void updateProductCardInfo() {
-        Product product = currentProductCard.getProduct();
-        productInfoName.setText(product.getName());
-        productInfoImage.setImage(model.getImage(product));
-        productInfoPrice.setText(String.format("%.0f", product.getPrice()) + product.getUnit());
-        productInfoAmount.setText(String.format("%.0f", currentProductCard.getShoppingItem().getAmount()));
     }
 
     @FXML
@@ -244,14 +178,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         setPage(shoppingCartPage);
         shoppingCartPage.fillShoppingCartFlowPane();
         cart_marker.setVisible(true);
-    }
-
-    @FXML
-    public void hamburgerShoppingCartClick() {
-        setPage(shoppingCartPage);
-        shoppingCartPage.fillShoppingCartFlowPane();
-        cart_marker.setVisible(true);
-        closeHamburgerMenu();
     }
 
     @FXML
@@ -317,8 +243,6 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void homePageClick() {
         setPage(homePage);
         homePage.fillProductListFlowPane();
-        homePage.setScrollPanePosition(0);
-        homePage.clearSearchBar();
         mainsiteMarker.setVisible(true);
     }
 

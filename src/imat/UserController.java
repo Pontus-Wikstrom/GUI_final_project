@@ -7,7 +7,6 @@ import java.util.List;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
@@ -42,8 +41,6 @@ public class UserController extends AnchorPane{
     
     @FXML
     private FlowPane historyFlowPane;
-    @FXML
-    private ScrollPane userScrollPane;
 
     private HashMap<String, HistoryCardController> historyCardHashMap;
     private List<Order> orderHistoryList;
@@ -53,8 +50,6 @@ public class UserController extends AnchorPane{
     User user;
 
 
-
-    private double vBarPosition = 0;
 
     public UserController(HashMap<String, HistoryCardController> historyCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user.fxml"));
@@ -92,19 +87,20 @@ public class UserController extends AnchorPane{
         customer.setMobilePhoneNumber(text_input_phone.getText());
 
     }
-    
-    public void setScrollPanePosition(double position) {
-        vBarPosition = position;
-    }
 
-    public void testData() {
-        System.out.println(userScrollPane.getVmin());
-        System.out.println(userScrollPane.getVmax());
-        System.out.println(userScrollPane.getVvalue());
-        System.out.println(userScrollPane.getVbarPolicy());
-        System.out.println("---------------------");
+    public void showUserData(){
+        firstName.setText(customer.getFirstName());
+        lastName.setText(customer.getLastName());
+        text_input_kortnr.setText(creditCard.getCardNumber());
+        text_input_month.setText(String.valueOf(creditCard.getValidMonth()));
+        text_input_year.setText(String.valueOf(creditCard.getValidYear()));
+        text_input_cvc.setText(String.valueOf(creditCard.getVerificationCode()));
+        text_input_postCode.setText(customer.getPostCode());
+        text_input_address.setText(customer.getAddress());
+        text_input_city.setText(customer.getPostAddress());
+        text_input_email.setText(customer.getEmail());
+        text_input_phone.setText(customer.getPhoneNumber());
     }
-
 
     public void saveCardInput(){
         user.setUserName(firstName.getText() + " " + lastName.getText());
@@ -127,21 +123,6 @@ public class UserController extends AnchorPane{
         System.out.println("hello hello" + creditCard.getCardNumber());
     }
 
-    public void showUserData(){
-        firstName.setText(customer.getFirstName());
-        lastName.setText(customer.getLastName());
-        text_input_kortnr.setText(creditCard.getCardNumber());
-        text_input_month.setText(String.valueOf(creditCard.getValidMonth()));
-        text_input_year.setText(String.valueOf(creditCard.getValidYear()));
-        text_input_cvc.setText(String.valueOf(creditCard.getVerificationCode()));
-        text_input_postCode.setText(customer.getPostCode());
-        text_input_address.setText(customer.getAddress());
-        text_input_city.setText(customer.getPostAddress());
-        text_input_email.setText(customer.getEmail());
-        text_input_phone.setText(customer.getPhoneNumber());
-    }
-
-
     private void updateOrderHistoryList() {
         orderHistoryList = model.getOrderHistory();
     }
@@ -154,8 +135,6 @@ public class UserController extends AnchorPane{
 
     public void updateFlowPane() {
         updateOrderHistoryList();
-        userScrollPane.setVvalue(vBarPosition);
-
         historyFlowPane.getChildren().clear();
 
         for (Order order : orderHistoryList) {

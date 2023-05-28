@@ -45,7 +45,7 @@ public class OrderHistoryCardController extends AnchorPane {
         initHistoryCardHashMap();
 
         Date date = order.getDate();
-        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
         String strDate = dateFormat.format(date);
         purchaseDateText.setText(strDate);
 

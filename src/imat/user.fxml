@@ -9,6 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
@@ -16,200 +17,204 @@
 
 <fx:root fx:id="userPage" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" stylesheets="@user.css" type="AnchorPane" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <ScrollPane fx:id="userScrollPane" fitToWidth="true" prefHeight="907.0" prefWidth="1920.0">
-        <content>
-          <AnchorPane maxHeight="10000.0" minHeight="2150.0" minWidth="0.0" prefHeight="2150.0" prefWidth="1920.0">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="2150.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1820.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
-                  <Label fx:id="userName" alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="80.0">
-                     <font>
-                        <Font size="50.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="text_input_email" layoutX="284.0" layoutY="611.0" prefHeight="65.0" prefWidth="400.0" promptText="randommelj@mejl.com" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="345.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="text_input_phone" layoutX="570.0" layoutY="617.0" prefHeight="65.0" prefWidth="300.0" promptText="070-XXXXXXX" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="345.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <Button fx:id="savePaymentOptionButton" layoutX="1213.0" layoutY="922.0" mnemonicParsing="false" onAction="#saveCardInput" prefHeight="100.0" prefWidth="470.0" styleClass="buttons" text="Spara betalningssätt" AnchorPane.leftAnchor="1205.0" AnchorPane.topAnchor="820.0">
-                     <font>
-                        <Font size="45.0" />
-                     </font>
-                  </Button>
-                  <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="1100.0" layoutY="509.0" prefHeight="175.0" prefWidth="700.0" rowValignment="TOP" styleClass="rec_payment_methods" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="260.0">
+      <StackPane prefHeight="907.0" prefWidth="1920.0">
+         <children>
+            <ScrollPane maxHeight="907.0" prefHeight="907.0" prefWidth="1920.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2200.0" prefWidth="1920.0">
                      <children>
-                        <AnchorPane fx:id="paypal_button" prefHeight="141.0" prefWidth="150.0" styleClass="button_payment_method">
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="2150.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1820.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
+                        <Label fx:id="userName" alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="80.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="text_input_email" layoutX="284.0" layoutY="611.0" prefHeight="65.0" prefWidth="400.0" promptText="randommelj@mejl.com" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="345.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="text_input_phone" layoutX="570.0" layoutY="617.0" prefHeight="65.0" prefWidth="300.0" promptText="070-XXXXXXX" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="345.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="savePaymentOptionButton" layoutX="1213.0" layoutY="922.0" mnemonicParsing="false" onAction="#saveCardInput" prefHeight="100.0" prefWidth="470.0" styleClass="buttons" text="Spara betalningssätt" AnchorPane.leftAnchor="1205.0" AnchorPane.topAnchor="820.0">
+                           <font>
+                              <Font size="45.0" />
+                           </font>
+                        </Button>
+                        <FlowPane alignment="CENTER" columnHalignment="CENTER" layoutX="1100.0" layoutY="509.0" prefHeight="175.0" prefWidth="700.0" rowValignment="TOP" styleClass="rec_payment_methods" AnchorPane.rightAnchor="180.0" AnchorPane.topAnchor="260.0">
                            <children>
-                              <ImageView fitHeight="115.0" fitWidth="106.0" layoutX="25.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/Paypal_2014_logo.png" />
-                                 </image>
-                              </ImageView>
+                              <AnchorPane fx:id="paypal_button" prefHeight="141.0" prefWidth="150.0" styleClass="button_payment_method">
+                                 <children>
+                                    <ImageView fitHeight="115.0" fitWidth="106.0" layoutX="25.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/Paypal_2014_logo.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets right="5.0" />
+                                 </FlowPane.margin>
+                              </AnchorPane>
+                              <AnchorPane fx:id="klarna_button" prefHeight="153.0" prefWidth="203.0" styleClass="button_payment_method">
+                                 <children>
+                                    <ImageView fitHeight="92.0" fitWidth="186.0" layoutX="19.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/2560px-Klarna_Payment_Badge.svg.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets right="5.0" />
+                                 </FlowPane.margin>
+                              </AnchorPane>
+                              <AnchorPane fx:id="card_button" prefHeight="143.0" prefWidth="150.0" styleClass="button_payment_method">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/2695971.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <FlowPane.margin>
+                                    <Insets right="5.0" />
+                                 </FlowPane.margin>
+                              </AnchorPane>
+                              <AnchorPane fx:id="swish_button" prefHeight="130.0" prefWidth="150.0" styleClass="button_payment_method">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/Swish_Logo_Primary_Light-BG_P3.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </AnchorPane>
                            </children>
-                           <FlowPane.margin>
-                              <Insets right="5.0" />
-                           </FlowPane.margin>
-                        </AnchorPane>
-                        <AnchorPane fx:id="klarna_button" prefHeight="153.0" prefWidth="203.0" styleClass="button_payment_method">
-                           <children>
-                              <ImageView fitHeight="92.0" fitWidth="186.0" layoutX="19.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/2560px-Klarna_Payment_Badge.svg.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                           <FlowPane.margin>
-                              <Insets right="5.0" />
-                           </FlowPane.margin>
-                        </AnchorPane>
-                        <AnchorPane fx:id="card_button" prefHeight="143.0" prefWidth="150.0" styleClass="button_payment_method">
-                           <children>
-                              <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="25.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/2695971.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                           <FlowPane.margin>
-                              <Insets right="5.0" />
-                           </FlowPane.margin>
-                        </AnchorPane>
-                        <AnchorPane fx:id="swish_button" prefHeight="130.0" prefWidth="150.0" styleClass="button_payment_method">
-                           <children>
-                              <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="34.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@resources/Swish_Logo_Primary_Light-BG_P3.png" />
-                                 </image>
-                              </ImageView>
-                           </children>
-                        </AnchorPane>
+                        </FlowPane>
+                        <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" onAction="#saveUserInput" prefHeight="100.0" prefWidth="420.0" styleClass="buttons" text="Spara information" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="820.0">
+                           <font>
+                              <Font size="45.0" />
+                           </font>
+                        </Button>
+                        <Line endX="1920.0" layoutY="1162.0" strokeWidth="6.0" AnchorPane.topAnchor="1000.0" />
+                        <Text layoutX="812.0" layoutY="1262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köphistorik" AnchorPane.topAnchor="1020.0">
+                           <font>
+                              <Font size="60.0" />
+                           </font>
+                        </Text>
+                        <FlowPane fx:id="historyFlowPane" alignment="CENTER" layoutX="522.0" layoutY="1282.0" prefHeight="200.0" prefWidth="1080.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
+                        <Label layoutX="214.0" layoutY="557.0" prefHeight="60.0" text="Mejl:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="290.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="585.0" layoutY="471.0" maxWidth="470.0" prefWidth="470.0" text="Användarinformation" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="200.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="584.0" layoutY="566.0" prefHeight="60.0" text="Telefonnr:" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="290.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="214.0" layoutY="747.0" prefHeight="60.0" text="Leveransadress:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="420.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="671.0" layoutY="764.0" prefHeight="60.0" text="Postort" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="420.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="text_input_address" layoutX="275.0" layoutY="851.0" prefHeight="65.0" prefWidth="400.0" promptText="Randomvägen 3" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="text_input_city" layoutX="726.0" layoutY="805.0" prefHeight="65.0" prefWidth="300.0" promptText="Göteborgdåva" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="text_input_postCode" layoutX="275.0" layoutY="948.0" prefHeight="65.0" prefWidth="400.0" promptText="431XX" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="605.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="224.0" layoutY="911.0" prefHeight="60.0" text="Postnummer:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="550.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1297.0" layoutY="457.0" text="Betalningssätt" AnchorPane.rightAnchor="355.0" AnchorPane.topAnchor="200.0">
+                           <font>
+                              <Font size="50.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1116.0" layoutY="743.0" text="Kortinnehavare:" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="420.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="firstName" layoutX="1116.0" layoutY="780.0" prefWidth="300.0" promptText="Förnamn" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="lastName" layoutX="1452.0" layoutY="780.0" prefWidth="300.0" promptText="Efternamn" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="475.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="text_input_kortnr" layoutX="1120.0" layoutY="860.0" prefHeight="65.0" prefWidth="650.0" promptText="0000-0000-0000-0000" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="605.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="text_input_month" alignment="CENTER" layoutX="1120.0" layoutY="940.0" prefWidth="130.0" promptText="MM" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="735.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="text_input_cvc" layoutX="1457.0" layoutY="920.0" prefWidth="300.0" promptText="XXX" AnchorPane.leftAnchor="1420.0" AnchorPane.topAnchor="735.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="1120.0" layoutY="813.0" text="Kortnummer:" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="550.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1120.0" layoutY="908.0" text="Giltigt till:" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="680.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="1262.0" layoutY="837.0" prefWidth="14.0" text="/" textAlignment="CENTER" AnchorPane.leftAnchor="1212.0" AnchorPane.rightAnchor="694.0" AnchorPane.topAnchor="740.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="text_input_year" alignment="CENTER" layoutX="1295.0" layoutY="920.0" prefWidth="130.0" promptText="ÅÅ" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="735.0">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </TextField>
+                        <Label layoutX="1470.0" layoutY="887.0" text="CVC:" AnchorPane.leftAnchor="1420.0" AnchorPane.topAnchor="680.0">
+                           <font>
+                              <Font size="35.0" />
+                           </font>
+                        </Label>
                      </children>
-                  </FlowPane>
-                  <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" onAction="#saveUserInput" prefHeight="100.0" prefWidth="420.0" styleClass="buttons" text="Spara information" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="820.0">
-                     <font>
-                        <Font size="45.0" />
-                     </font>
-                  </Button>
-                  <Line endX="1920.0" layoutY="1162.0" strokeWidth="6.0" AnchorPane.topAnchor="1000.0" />
-                  <Text layoutX="812.0" layoutY="1262.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Köphistorik" AnchorPane.topAnchor="1020.0">
-                     <font>
-                        <Font size="60.0" />
-                     </font>
-                  </Text>
-                  <FlowPane fx:id="historyFlowPane" alignment="CENTER" layoutX="522.0" layoutY="1138.0" prefHeight="150.0" prefWidth="1080.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="420.0" />
-                  <Label layoutX="214.0" layoutY="557.0" prefHeight="60.0" text="Mejl:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="290.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="585.0" layoutY="471.0" maxWidth="470.0" prefWidth="470.0" text="Användarinformation" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="200.0">
-                     <font>
-                        <Font size="50.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="584.0" layoutY="566.0" prefHeight="60.0" text="Telefonnr:" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="290.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="214.0" layoutY="747.0" prefHeight="60.0" text="Leveransadress:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="420.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="671.0" layoutY="764.0" prefHeight="60.0" text="Postort" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="420.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="text_input_address" layoutX="275.0" layoutY="851.0" prefHeight="65.0" prefWidth="400.0" promptText="Randomvägen 3" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="475.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="text_input_city" layoutX="726.0" layoutY="805.0" prefHeight="65.0" prefWidth="300.0" promptText="Göteborgdåva" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="475.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="text_input_postCode" layoutX="275.0" layoutY="948.0" prefHeight="65.0" prefWidth="400.0" promptText="431XX" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="605.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <Label layoutX="224.0" layoutY="911.0" prefHeight="60.0" text="Postnummer:" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="550.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="1297.0" layoutY="457.0" text="Betalningssätt" AnchorPane.rightAnchor="355.0" AnchorPane.topAnchor="200.0">
-                     <font>
-                        <Font size="50.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="1116.0" layoutY="743.0" text="Kortinnehavare:" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="420.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="firstName" layoutX="1116.0" layoutY="780.0" prefWidth="300.0" promptText="Förnamn" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="475.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="lastName" layoutX="1452.0" layoutY="780.0" prefWidth="300.0" promptText="Efternamn" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="475.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="text_input_kortnr" layoutX="1120.0" layoutY="860.0" prefHeight="65.0" prefWidth="650.0" promptText="0000-0000-0000-0000" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="605.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="text_input_month" alignment="CENTER" layoutX="1120.0" layoutY="940.0" prefWidth="130.0" promptText="MM" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="735.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <TextField fx:id="text_input_cvc" layoutX="1457.0" layoutY="920.0" prefWidth="300.0" promptText="XXX" AnchorPane.leftAnchor="1420.0" AnchorPane.topAnchor="735.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <Label layoutX="1120.0" layoutY="813.0" text="Kortnummer:" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="550.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="1120.0" layoutY="908.0" text="Giltigt till:" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="680.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="1262.0" layoutY="837.0" prefWidth="14.0" text="/" textAlignment="CENTER" AnchorPane.leftAnchor="1212.0" AnchorPane.rightAnchor="694.0" AnchorPane.topAnchor="740.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="text_input_year" alignment="CENTER" layoutX="1295.0" layoutY="920.0" prefWidth="130.0" promptText="ÅÅ" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="735.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </TextField>
-                  <Label layoutX="1470.0" layoutY="887.0" text="CVC:" AnchorPane.leftAnchor="1420.0" AnchorPane.topAnchor="680.0">
-                     <font>
-                        <Font size="35.0" />
-                     </font>
-                  </Label>
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </StackPane>
    </children>
 </fx:root>

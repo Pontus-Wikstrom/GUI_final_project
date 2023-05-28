@@ -43,116 +43,6 @@
                   </Label>
                </children>
             </AnchorPane>
-            <AnchorPane fx:id="wizardBetalSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" style="-fx-background-color: #F5F5F5;" stylesheets="@leverans.css">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="514.0" layoutX="620.0" layoutY="311.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="672.0" />
-                  <Pane id="paypal_payment_method" fx:id="paypal" layoutX="585.0" layoutY="165.0" onMouseClicked="#payPalOption" prefHeight="130.0" prefWidth="149.0" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="620.0" AnchorPane.rightAnchor="1151.0" AnchorPane.topAnchor="180.0">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="86.1" layoutX="31.45" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/Paypal_2014_logo.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Label fx:id="tillbaka" alignment="CENTER" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="payment4" alignment="CENTER" onMouseClicked="#toPayment" prefHeight="70.0" prefWidth="160.0" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="achieved_button" />
-                        <String fx:value="buttons" />
-                     </styleClass>
-                  </Label>
-                  <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="payment2" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#backToDelivery" prefHeight="70.0" prefWidth="160.0" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="achieved_button" />
-                        <String fx:value="buttons" />
-                     </styleClass>
-                  </Label>
-                  <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                  <Label fx:id="payment1" alignment="CENTER" layoutX="20.0" layoutY="20.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="achieved_button" />
-                        <String fx:value="buttons" />
-                     </styleClass>
-                  </Label>
-                  <Pane fx:id="klarna" layoutX="595.0" layoutY="175.0" onMouseClicked="#klarnaOption" prefHeight="130.0" prefWidth="224.0" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="927.0" AnchorPane.topAnchor="180.0">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="165.58" layoutX="30.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/2560px-Klarna_Payment_Badge.svg.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Pane fx:id="card" layoutX="595.0" layoutY="175.0" onMouseClicked="#cardOption" prefHeight="130.0" prefWidth="155.0" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="992.0" AnchorPane.rightAnchor="773.0" AnchorPane.topAnchor="180.0">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.5" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/2695971.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Pane id="swish_payment_method" fx:id="swish" layoutX="605.0" layoutY="185.0" onMouseClicked="#swishOption" prefHeight="130.0" prefWidth="155.75" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="1140.0" AnchorPane.rightAnchor="624.0" AnchorPane.topAnchor="180.0">
-                     <children>
-                        <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="40.785" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@resources/Swish_Logo_Primary_Light-BG_P3.png" />
-                           </image>
-                        </ImageView>
-                     </children>
-                  </Pane>
-                  <Line endY="310.0" layoutX="769.0" scaleX="2.0" startY="180.0" />
-                  <Line endY="310.0" layoutX="992.0" scaleX="2.0" startY="180.0" />
-                  <Line endY="310.0" layoutX="1140.0" scaleX="2.0" startY="180.0" />
-                  <Line endX="1295.75" layoutY="310.0" scaleY="4.0" startX="620.0" />
-                  <Label fx:id="slutPris" alignment="CENTER" layoutX="657.75" layoutY="535.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #f5f5f5;" text="Pris" AnchorPane.bottomAnchor="302.0" AnchorPane.leftAnchor="657.75" AnchorPane.rightAnchor="662.25" AnchorPane.topAnchor="535.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="doneButton" alignment="CENTER" onMouseClicked="#toFinishPage" prefHeight="70.0" prefWidth="180.0" styleClass="complete_wizard_button" text="Slutför och betala" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="1078.0" AnchorPane.rightAnchor="662.0" AnchorPane.topAnchor="700.0">
-                     <font>
-                        <Font size="22.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="adress" alignment="CENTER" layoutX="657.75" layoutY="603.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #f5f5f5;" text="Adress" AnchorPane.bottomAnchor="234.0" AnchorPane.leftAnchor="657.75" AnchorPane.rightAnchor="662.25" AnchorPane.topAnchor="603.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="647.0" layoutY="700.0" mnemonicParsing="false" onAction="#backToTime" styleClass="last_buttons" text="Föregående" textFill="WHITE">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Button>
-                  <AnchorPane fx:id="paymentOptionContent" layoutX="620.0" layoutY="314.0" prefHeight="200.0" prefWidth="672.0" />
-                  <Label fx:id="payment3" alignment="CENTER" layoutX="970.0" layoutY="40.0" onMouseClicked="#toTime" prefHeight="70.0" prefWidth="160.0" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                     <styleClass>
-                        <String fx:value="achieved_button" />
-                        <String fx:value="buttons" />
-                     </styleClass>
-                  </Label>
-                  <Line endX="80.0" layoutX="1160.0" layoutY="77.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-               </children>
-            </AnchorPane>
             <AnchorPane fx:id="wizardLeveransSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
                <children>
                   <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="907.0" prefWidth="1920.0" stylesheets="@generall.css">
@@ -301,72 +191,6 @@
                         </Button>
                      </children>
                   </AnchorPane>
-               </children>
-               <stylesheets>
-                  <URL value="@leverans.css" />
-                  <URL value="@leverans.css" />
-               </stylesheets>
-            </AnchorPane>
-            <AnchorPane fx:id="wizardVarukorgSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
-               <children>
-                  <ScrollPane prefHeight="907.0" prefWidth="1920.0">
-                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
-                           <children>
-                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="1889.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
-                              <Label alignment="CENTER" layoutX="909.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Label>
-                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
-                              <Label alignment="CENTER" layoutX="1203.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Label>
-                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                                 <styleClass>
-                                    <String fx:value="achieved_button" />
-                                    <String fx:value="buttons" />
-                                 </styleClass>
-                              </Label>
-                              <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="762.0" />
-                              <Line endX="80.0" layoutX="921.0" layoutY="74.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
-                              <Label alignment="CENTER" layoutX="1001.0" layoutY="41.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
-                                 <font>
-                                    <Font size="30.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </AnchorPane>
-                     </content>
-                  </ScrollPane>
-                  <Label fx:id="tillbaka1" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
-                     <font>
-                        <Font size="48.0" />
-                     </font>
-                  </Label>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="450.0" layoutY="707.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1100.0" />
-                  <Text layoutX="587.0" layoutY="828.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp:">
-                     <font>
-                        <Font size="55.0" />
-                     </font>
-                  </Text>
-                  <Text fx:id="totalPris" layoutX="947.0" layoutY="830.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 KR">
-                     <font>
-                        <Font size="55.0" />
-                     </font>
-                  </Text>
-                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" onMouseClicked="#toDelivery" prefHeight="65.0" prefWidth="116.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
-                     <font>
-                        <Font size="30.0" />
-                     </font>
-                  </Label>
                </children>
                <stylesheets>
                   <URL value="@leverans.css" />
@@ -665,6 +489,177 @@
                         <Font size="30.0" />
                      </font>
                   </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="wizardVarukorgSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
+               <children>
+                  <ScrollPane prefHeight="907.0" prefWidth="1920.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="1080.0" prefWidth="1920.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="1889.0" layoutY="211.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
+                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
+                              <Label alignment="CENTER" layoutX="909.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="80.0" layoutX="36.0" layoutY="140.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
+                              <Label alignment="CENTER" layoutX="1203.0" layoutY="100.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="shoppingCart1" alignment="CENTER" layoutX="630.0" layoutY="100.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                                 <styleClass>
+                                    <String fx:value="achieved_button" />
+                                    <String fx:value="buttons" />
+                                 </styleClass>
+                              </Label>
+                              <FlowPane fx:id="varukorgWizardLista" layoutX="631.0" layoutY="303.0" prefHeight="200.0" prefWidth="762.0" />
+                              <Line endX="80.0" layoutX="921.0" layoutY="74.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
+                              <Label alignment="CENTER" layoutX="1001.0" layoutY="41.0" prefHeight="70.0" prefWidth="160.0" styleClass="not_achieved_button" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                                 <font>
+                                    <Font size="30.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
+                  <Label fx:id="tillbaka1" alignment="CENTER" layoutX="40.0" layoutY="17.0" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="200.0" layoutX="450.0" layoutY="707.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1100.0" />
+                  <Text layoutX="587.0" layoutY="828.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Totalbelopp:">
+                     <font>
+                        <Font size="55.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="totalPris" layoutX="947.0" layoutY="830.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 KR">
+                     <font>
+                        <Font size="55.0" />
+                     </font>
+                  </Text>
+                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" onMouseClicked="#toDelivery" prefHeight="65.0" prefWidth="116.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+               </children>
+               <stylesheets>
+                  <URL value="@leverans.css" />
+                  <URL value="@leverans.css" />
+               </stylesheets>
+            </AnchorPane>
+            <AnchorPane fx:id="wizardBetalSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0" style="-fx-background-color: #F5F5F5;" stylesheets="@leverans.css">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="514.0" layoutX="620.0" layoutY="311.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="672.0" />
+                  <Pane id="paypal_payment_method" fx:id="paypal" layoutX="585.0" layoutY="165.0" onMouseClicked="#payPalOption" prefHeight="130.0" prefWidth="149.0" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="620.0" AnchorPane.rightAnchor="1151.0" AnchorPane.topAnchor="180.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="86.1" layoutX="31.45" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/Paypal_2014_logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Label fx:id="tillbaka" alignment="CENTER" onMouseClicked="#backToMain" prefHeight="88.0" prefWidth="446.0" styleClass="last_buttons" text="Tillbaka till handling" textFill="WHITE" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="30.0">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="payment4" alignment="CENTER" onMouseClicked="#toPayment" prefHeight="70.0" prefWidth="160.0" text="Betalsätt:" textFill="WHITE" AnchorPane.leftAnchor="1240.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                  </Label>
+                  <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="680.0" AnchorPane.topAnchor="74.5" />
+                  <Label fx:id="payment2" alignment="CENTER" layoutX="10.0" layoutY="10.0" onMouseClicked="#backToDelivery" prefHeight="70.0" prefWidth="160.0" text="Leverans:" textFill="WHITE" AnchorPane.leftAnchor="760.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                  </Label>
+                  <Line endX="80.0" layoutY="102.0" AnchorPane.leftAnchor="920.0" AnchorPane.topAnchor="74.5" />
+                  <Label fx:id="payment1" alignment="CENTER" layoutX="20.0" layoutY="20.0" onMouseClicked="#stepBack" prefHeight="70.0" prefWidth="160.0" text="Varukorg:" textFill="WHITE" AnchorPane.leftAnchor="520.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                  </Label>
+                  <Pane fx:id="klarna" layoutX="595.0" layoutY="175.0" onMouseClicked="#klarnaOption" prefHeight="130.0" prefWidth="224.0" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="769.0" AnchorPane.rightAnchor="927.0" AnchorPane.topAnchor="180.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="165.58" layoutX="30.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/2560px-Klarna_Payment_Badge.svg.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="card" layoutX="595.0" layoutY="175.0" onMouseClicked="#cardOption" prefHeight="130.0" prefWidth="155.0" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="992.0" AnchorPane.rightAnchor="773.0" AnchorPane.topAnchor="180.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="27.5" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/2695971.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane id="swish_payment_method" fx:id="swish" layoutX="605.0" layoutY="185.0" onMouseClicked="#swishOption" prefHeight="130.0" prefWidth="155.75" styleClass="payment_method_button" AnchorPane.bottomAnchor="597.0" AnchorPane.leftAnchor="1140.0" AnchorPane.rightAnchor="624.0" AnchorPane.topAnchor="180.0">
+                     <children>
+                        <ImageView fitHeight="100.0" fitWidth="74.17" layoutX="40.785" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@resources/Swish_Logo_Primary_Light-BG_P3.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Line endY="310.0" layoutX="769.0" scaleX="2.0" startY="180.0" />
+                  <Line endY="310.0" layoutX="992.0" scaleX="2.0" startY="180.0" />
+                  <Line endY="310.0" layoutX="1140.0" scaleX="2.0" startY="180.0" />
+                  <Line endX="1295.75" layoutY="310.0" scaleY="4.0" startX="620.0" />
+                  <Label fx:id="slutPris" alignment="CENTER" layoutX="657.75" layoutY="541.0" prefHeight="70.0" prefWidth="600.0" style="-fx-background-color: #f5f5f5;" text="Pris" AnchorPane.bottomAnchor="296.0" AnchorPane.leftAnchor="657.75" AnchorPane.rightAnchor="662.25" AnchorPane.topAnchor="541.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="doneButton" alignment="CENTER" onMouseClicked="#toFinishPage" prefHeight="70.0" prefWidth="180.0" styleClass="complete_wizard_button" text="Slutför och betala" AnchorPane.bottomAnchor="137.0" AnchorPane.leftAnchor="1078.0" AnchorPane.rightAnchor="662.0" AnchorPane.topAnchor="700.0">
+                     <font>
+                        <Font size="22.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="647.0" layoutY="700.0" mnemonicParsing="false" onAction="#backToTime" styleClass="last_buttons" text="Föregående" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                  </Button>
+                  <AnchorPane fx:id="paymentOptionContent" layoutX="620.0" layoutY="314.0" prefHeight="200.0" prefWidth="672.0" />
+                  <Label fx:id="payment3" alignment="CENTER" layoutX="970.0" layoutY="40.0" onMouseClicked="#toTime" prefHeight="70.0" prefWidth="160.0" text="Tid:" textFill="WHITE" AnchorPane.leftAnchor="1000.0" AnchorPane.topAnchor="40.0">
+                     <font>
+                        <Font size="30.0" />
+                     </font>
+                     <styleClass>
+                        <String fx:value="achieved_button" />
+                        <String fx:value="buttons" />
+                     </styleClass>
+                  </Label>
+                  <Line endX="80.0" layoutX="1160.0" layoutY="77.0" AnchorPane.leftAnchor="1160.0" AnchorPane.topAnchor="74.5" />
                </children>
             </AnchorPane>
          </children>

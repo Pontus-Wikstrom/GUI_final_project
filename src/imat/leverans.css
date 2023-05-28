@@ -17,5 +17,31 @@
 .buttons:hover{
     -fx-background-color: #525252;
     -fx-cursor: hand;
+}
 
+.payment_method_button{
+    -fx-background-color: #f5f5f5;
+}
+
+.payment_method_button:hover{
+    -fx-background-color: #ffffff;
+    -fx-cursor: hand;
+}
+
+#paypal_payment_method{
+    -fx-background-radius: 25 0 0 0;
+}
+
+#swish_payment_method{
+    -fx-background-radius: 0 25 0 0;
+}
+
+.complete_wizard_button:hover{
+    -fx-background-color: #c1820d;
+    -fx-cursor: hand;
+}
+
+.complete_wizard_button{
+    -fx-background-color:  #fcab10;
+    -fx-background-radius: 90px;
 }

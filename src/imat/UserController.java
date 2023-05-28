@@ -56,6 +56,8 @@ public class UserController extends AnchorPane{
 
     private double vBarPosition = 0;
 
+    private double vBarPosition = 0;
+
     public UserController(HashMap<String, HistoryCardController> historyCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("user.fxml"));
         fxmlLoader.setRoot(this);
@@ -105,6 +107,19 @@ public class UserController extends AnchorPane{
         System.out.println("---------------------");
     }
 
+    public void showUserData(){
+        firstName.setText(customer.getFirstName());
+        lastName.setText(customer.getLastName());
+        text_input_kortnr.setText(creditCard.getCardNumber());
+        text_input_month.setText(String.valueOf(creditCard.getValidMonth()));
+        text_input_year.setText(String.valueOf(creditCard.getValidYear()));
+        text_input_cvc.setText(String.valueOf(creditCard.getVerificationCode()));
+        text_input_postCode.setText(customer.getPostCode());
+        text_input_address.setText(customer.getAddress());
+        text_input_city.setText(customer.getPostAddress());
+        text_input_email.setText(customer.getEmail());
+        text_input_phone.setText(customer.getPhoneNumber());
+    }
 
     public void saveCardInput(){
         user.setUserName(firstName.getText() + " " + lastName.getText());
@@ -141,6 +156,26 @@ public class UserController extends AnchorPane{
         text_input_phone.setText(customer.getPhoneNumber());
     }
 
+    public void saveCardInput(){
+        user.setUserName(firstName.getText() + " " + lastName.getText());
+        userName.setText(firstName.getText());
+        creditCard.setHoldersName(firstName.getText() + " " + lastName.getText());
+        customer.setFirstName(firstName.getText());
+        customer.setLastName(lastName.getText());
+
+        creditCard.setCardNumber(text_input_kortnr.getText());
+        if (text_input_cvc.getText() != "") {
+            creditCard.setVerificationCode(Integer.parseInt(text_input_cvc.getText()));
+        }
+        if (text_input_year.getText() != "") {
+            creditCard.setValidMonth(Integer.parseInt(text_input_month.getText()));
+        }
+        if (text_input_month.getText() != "") {
+            creditCard.setValidYear(Integer.parseInt(text_input_year.getText()));
+        }
+
+        System.out.println("hello hello" + creditCard.getCardNumber());
+    }
 
     private void updateOrderHistoryList() {
         orderHistoryList = model.getOrderHistory();

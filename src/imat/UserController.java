@@ -89,6 +89,8 @@ public class UserController extends AnchorPane{
     }
 
     public void showUserData(){
+        firstName.setText(customer.getFirstName());
+        lastName.setText(customer.getLastName());
         text_input_kortnr.setText(creditCard.getCardNumber());
         text_input_month.setText(String.valueOf(creditCard.getValidMonth()));
         text_input_year.setText(String.valueOf(creditCard.getValidYear()));

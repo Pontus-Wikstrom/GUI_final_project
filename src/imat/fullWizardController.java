@@ -37,8 +37,6 @@ public class fullWizardController extends AnchorPane{
 
     private final Model model = Model.getInstance();
 
-    private HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap;
-
     @FXML
     private StackPane wizardStackPane;
     @FXML
@@ -214,7 +212,7 @@ public class fullWizardController extends AnchorPane{
     String[] weekdays = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
 
 
-    public fullWizardController(MainViewController controller, HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap) {
+    public fullWizardController(MainViewController controller) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fullWizard.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -240,12 +238,6 @@ public class fullWizardController extends AnchorPane{
 
         addProduct();
         setPrice();
-
-        this.shoppingCartCardHashMap = shoppingCartCardHashMap;
-
-        //model.getShoppingCart().addShoppingCartListener(this);
-
-        initFlowPane();
 
     }
 
@@ -372,12 +364,12 @@ public class fullWizardController extends AnchorPane{
             }
         }
         wizardDoneSteg.toFront();
-        wizardDoneSteg.requestFocus();
+        /*wizardDoneSteg.requestFocus();
         if (wizardDoneSteg.isFocused()) {
             Thread.sleep(1000);
             wizardVarukorgSteg.toFront();
 
-        }
+        }*/
 
     }
 
@@ -445,7 +437,7 @@ public class fullWizardController extends AnchorPane{
         day2.setStyle("-fx-background-color: #2B9EB3");
         day1.setStyle("-fx-background-color: white");
         day3.setStyle("-fx-background-color: white");
-        day4.setStyle("-fx-background-color: green");
+        day4.setStyle("-fx-background-color: white");
 
     }
     @FXML
@@ -777,6 +769,7 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #ffffff");
         swish.setStyle("-fx-background-color: #f5f5f5");
+        betalningKortController.preFilled();
         AnchorPane cardPayment= new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_kort.fxml")));
         setPage(cardPayment);
         selectedOption = card;
@@ -798,66 +791,8 @@ public class fullWizardController extends AnchorPane{
         paymentOptionContent.getChildren().add(page);
     }
 
-    public void cardUsed(){
-
-    }
-
 
     //Varukorg
-
-    private void initFlowPane() {
-        varukorgWizardLista.getChildren().clear();
-        varukorgWizardLista.setVgap(20);
-    }
-
-    private void updateWizardFlowPane() {
-        ObservableList<Node> productCardList = varukorgWizardLista.getChildren();
-
-        List<String> lst = new ArrayList<String>(0);
-        for (Node item : productCardList) {
-            lst.add(((ShoppingCartCardController) item).getName());
-        }
-
-        lst.sort(null);
-
-        varukorgWizardLista.getChildren().clear();
-
-        for (String productName : lst) {
-            varukorgWizardLista.getChildren().add(this.shoppingCartCardHashMap.get(productName));
-        }
-
-        // for (ShoppingItem item : model.getShoppingCart().getItems()) {
-        //     if (item.getAmount() == 0) {
-        //         //productsFlowPane.getChildren().clear
-        //     }
-        // }
-        /*for (ShoppingItem item : model.getShoppingCart().getItems()) {
-            Product product = item.getProduct();
-        }*/
-    }
-
-    public void fillShoppingCartFlowPane() {
-        varukorgWizardLista.getChildren().clear();
-
-
-        List<String>  lst = new ArrayList<String>(0);
-
-        for (ShoppingItem item : model.getShoppingCart().getItems()) {
-            String productName = item.getProduct().getName();
-            lst.add(productName);
-        }
-
-        lst.sort(null);
-
-        for (String productName : lst) {
-            varukorgWizardLista.getChildren().add(this.shoppingCartCardHashMap.get(productName));
-        }
-    }
-
-    public void shoppingCartChanged(CartEvent arg0) {
-        //fillShoppingCartFlowPane();
-
-    }
 
     public void addProduct(){
 

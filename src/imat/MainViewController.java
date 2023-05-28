@@ -97,7 +97,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void initialize(URL url, ResourceBundle rb) {
         initProductCardHashMap();
 
-        deliveryPage = new fullWizardController(this, shoppingCartCardHashMap);
+        deliveryPage = new fullWizardController(this);
 
         categoryPageController = new CategoryPageController(productCardHashMap);
         shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
@@ -254,6 +254,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void userPageClick() {
+        userPage.showUserData();
         setPage(userPage);
         profile_marker.setVisible(true);
 

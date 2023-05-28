@@ -24,22 +24,22 @@
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2200.0" prefWidth="1920.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="2150.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1820.0" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0" />
-                        <Label alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="80.0">
+                        <Label fx:id="userName" alignment="CENTER" prefHeight="90.0" prefWidth="368.0" text="Användarnamn" AnchorPane.leftAnchor="776.0" AnchorPane.topAnchor="80.0">
                            <font>
                               <Font size="50.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="284.0" layoutY="611.0" prefHeight="65.0" prefWidth="400.0" promptText="randommelj@mejl.com" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="345.0">
+                        <TextField fx:id="text_input_email" layoutX="284.0" layoutY="611.0" prefHeight="65.0" prefWidth="400.0" promptText="randommelj@mejl.com" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="345.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="570.0" layoutY="617.0" prefHeight="65.0" prefWidth="300.0" promptText="070-XXXXXXX" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="345.0">
+                        <TextField fx:id="text_input_phone" layoutX="570.0" layoutY="617.0" prefHeight="65.0" prefWidth="300.0" promptText="070-XXXXXXX" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="345.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <Button fx:id="savePaymentOptionButton" layoutX="1213.0" layoutY="922.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="470.0" styleClass="buttons" text="Spara betalningssätt" AnchorPane.leftAnchor="1205.0" AnchorPane.topAnchor="820.0">
+                        <Button fx:id="savePaymentOptionButton" layoutX="1213.0" layoutY="922.0" mnemonicParsing="false" onAction="#saveCardInput" prefHeight="100.0" prefWidth="470.0" styleClass="buttons" text="Spara betalningssätt" AnchorPane.leftAnchor="1205.0" AnchorPane.topAnchor="820.0">
                            <font>
                               <Font size="45.0" />
                            </font>
@@ -93,7 +93,7 @@
                               </AnchorPane>
                            </children>
                         </FlowPane>
-                        <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" prefHeight="100.0" prefWidth="420.0" styleClass="buttons" text="Spara information" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="820.0">
+                        <Button fx:id="saveAddressButton" layoutX="446.0" layoutY="1000.0" mnemonicParsing="false" onAction="#saveUserInput" prefHeight="100.0" prefWidth="420.0" styleClass="buttons" text="Spara information" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="820.0">
                            <font>
                               <Font size="45.0" />
                            </font>
@@ -130,17 +130,17 @@
                               <Font size="35.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="275.0" layoutY="851.0" prefHeight="65.0" prefWidth="400.0" promptText="Randomvägen 3" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="475.0">
+                        <TextField fx:id="text_input_address" layoutX="275.0" layoutY="851.0" prefHeight="65.0" prefWidth="400.0" promptText="Randomvägen 3" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="475.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="726.0" layoutY="805.0" prefHeight="65.0" prefWidth="300.0" promptText="Göteborgdåva" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="475.0">
+                        <TextField fx:id="text_input_city" layoutX="726.0" layoutY="805.0" prefHeight="65.0" prefWidth="300.0" promptText="Göteborgdåva" AnchorPane.leftAnchor="650.0" AnchorPane.topAnchor="475.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="275.0" layoutY="948.0" prefHeight="65.0" prefWidth="400.0" promptText="431XX" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="605.0">
+                        <TextField fx:id="text_input_postCode" layoutX="275.0" layoutY="948.0" prefHeight="65.0" prefWidth="400.0" promptText="431XX" AnchorPane.leftAnchor="200.0" AnchorPane.topAnchor="605.0">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -160,27 +160,27 @@
                               <Font size="35.0" />
                            </font>
                         </Label>
-                        <TextField layoutX="1116.0" layoutY="780.0" prefWidth="300.0" promptText="Förnamn" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="475.0">
+                        <TextField fx:id="firstName" layoutX="1116.0" layoutY="780.0" prefWidth="300.0" promptText="Förnamn" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="475.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="1452.0" layoutY="780.0" prefWidth="300.0" promptText="Efternamn" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="475.0">
+                        <TextField fx:id="lastName" layoutX="1452.0" layoutY="780.0" prefWidth="300.0" promptText="Efternamn" AnchorPane.rightAnchor="200.0" AnchorPane.topAnchor="475.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="1120.0" layoutY="860.0" prefHeight="65.0" prefWidth="650.0" promptText="0000-0000-0000-0000" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="605.0">
+                        <TextField fx:id="text_input_kortnr" layoutX="1120.0" layoutY="860.0" prefHeight="65.0" prefWidth="650.0" promptText="0000-0000-0000-0000" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="605.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField alignment="CENTER" layoutX="1120.0" layoutY="940.0" prefWidth="130.0" promptText="MM" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="735.0">
+                        <TextField fx:id="text_input_month" alignment="CENTER" layoutX="1120.0" layoutY="940.0" prefWidth="130.0" promptText="MM" AnchorPane.leftAnchor="1070.0" AnchorPane.topAnchor="735.0">
                            <font>
                               <Font size="30.0" />
                            </font>
                         </TextField>
-                        <TextField layoutX="1457.0" layoutY="920.0" prefWidth="300.0" promptText="XXX" AnchorPane.leftAnchor="1420.0" AnchorPane.topAnchor="735.0">
+                        <TextField fx:id="text_input_cvc" layoutX="1457.0" layoutY="920.0" prefWidth="300.0" promptText="XXX" AnchorPane.leftAnchor="1420.0" AnchorPane.topAnchor="735.0">
                            <font>
                               <Font size="30.0" />
                            </font>
@@ -200,7 +200,7 @@
                               <Font size="35.0" />
                            </font>
                         </Label>
-                        <TextField alignment="CENTER" layoutX="1295.0" layoutY="920.0" prefWidth="130.0" promptText="ÅÅ" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="735.0">
+                        <TextField fx:id="text_input_year" alignment="CENTER" layoutX="1295.0" layoutY="920.0" prefWidth="130.0" promptText="ÅÅ" AnchorPane.rightAnchor="550.0" AnchorPane.topAnchor="735.0">
                            <font>
                               <Font size="30.0" />
                            </font>

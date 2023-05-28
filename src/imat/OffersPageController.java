@@ -8,16 +8,21 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.FlowPane;
+import se.chalmers.cse.dat216.project.CartEvent;
 import se.chalmers.cse.dat216.project.Product;
+import se.chalmers.cse.dat216.project.ShoppingCartListener;
 
-public class OffersPageController extends AnchorPane{
+public class OffersPageController extends AnchorPane implements ShoppingCartListener {
     @FXML
     private FlowPane offersListFlowPane;
+    @FXML
+    private AnchorPane toPayment;
 
     private HashMap<String, ProductCardController> productCardHashMap;
     private final Model model = Model.getInstance();
+    private MainViewController parentController;
 
-    public OffersPageController(HashMap<String, ProductCardController> productCardHashMap) {
+    public OffersPageController(HashMap<String, ProductCardController> productCardHashMap, MainViewController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("erbjudanden.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -29,8 +34,15 @@ public class OffersPageController extends AnchorPane{
         }
 
         this.productCardHashMap = productCardHashMap;
+        this.parentController = parentController;
 
         initFlowPane();
+        model.getShoppingCart().addShoppingCartListener(this);
+    }
+
+    @FXML
+    public void toPayment() {
+        if (model.getShoppingCart().getItems().size() != 0) parentController.toPayment();
     }
 
     private void initFlowPane() {
@@ -48,6 +60,15 @@ public class OffersPageController extends AnchorPane{
                 offersListFlowPane.getChildren().add(this.productCardHashMap.get(product.getName()));
             }
             i++;
+        }
+    }
+
+    @Override
+    public void shoppingCartChanged(CartEvent arg0) {
+        if (model.getShoppingCart().getItems().size() == 0) {
+            toPayment.setVisible(false);
+        } else {
+            toPayment.setVisible(true);
         }
     }
 }

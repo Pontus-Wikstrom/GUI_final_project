@@ -106,6 +106,10 @@ public class Model {
         iMatDataHandler.placeOrder(clearShoppingCart);
     }
 
+    public void shutDown() {
+        iMatDataHandler.shutDown();
+    }
+
     
     // public List<ShoppingItem> getShoppingCartItemsAlphabetically() {
     //     List<ShoppingItem> itemList = getShoppingCart().getItems();

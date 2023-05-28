@@ -95,7 +95,7 @@ public class fullWizardController extends AnchorPane{
     @FXML
     private Pane swish;
     @FXML
-    private Label totalpris;
+    private Text totalPris;
     @FXML
     private Label confirmation;
     @FXML
@@ -212,8 +212,9 @@ public class fullWizardController extends AnchorPane{
     String timeSpot;
     String[] weekdays = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
 
+    private HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap;
 
-    public fullWizardController(MainViewController controller) {
+    public fullWizardController(MainViewController controller, HashMap<String, ShoppingCartCardController> shoppingCartCardHashMap) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("fullWizard.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -232,6 +233,7 @@ public class fullWizardController extends AnchorPane{
         }
 
         this.controller = controller;
+        this.shoppingCartCardHashMap = shoppingCartCardHashMap;
         setBokningsbar();
         setTimes();
         setDates();
@@ -239,10 +241,35 @@ public class fullWizardController extends AnchorPane{
 
         addProduct();
         setPrice();
+        initFlowPane();
 
     }
 
+    private void initFlowPane() {
+        varukorgWizardLista.getChildren().clear();
+        varukorgWizardLista.setVgap(20);
+    }
+
+    private void fillShoppingCartFlowPane() {
+        varukorgWizardLista.getChildren().clear();
+
+        
+        List<String>  lst = new ArrayList<String>(0);
+
+        for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            String productName = item.getProduct().getName();
+            lst.add(productName);
+        }
+
+        lst.sort(null);
+
+        for (String productName : lst) {
+            varukorgWizardLista.getChildren().add(this.shoppingCartCardHashMap.get(productName));
+        } 
+    }
+
     //Knappar och dess implementation
+    
 
     @FXML
     public void stepBack(){
@@ -376,7 +403,15 @@ public class fullWizardController extends AnchorPane{
 
     public void reset() {
         wizardVarukorgSteg.toFront();
+        fillShoppingCartFlowPane();
 
+        double totalCost = 0;
+        for (ShoppingItem item : model.getShoppingCart().getItems()) {
+            totalCost += (item.getProduct().getPrice() * item.getAmount());
+        }
+
+        totalPris.setText(String.format("%.2f", totalCost) + " kr");
+        slutPris.setText(String.format("%.2f", (totalCost + 79)) + " kr");
     }
 
     @FXML

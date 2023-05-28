@@ -18,7 +18,7 @@ import javafx.fxml.FXMLLoader;
 
 import se.chalmers.cse.dat216.project.*;
 
-public class CategoryPageController extends AnchorPane{
+public class CategoryPageController extends AnchorPane implements ShoppingCartListener {
     
     @FXML
     private FlowPane categoryFlowPane;
@@ -28,12 +28,15 @@ public class CategoryPageController extends AnchorPane{
     private ScrollPane category1ScrollPane;
     @FXML
     private ScrollPane category2ScrollPane;
+    @FXML
+    private AnchorPane toPayment;
 
     private HashMap<String, ProductCardController> productCardHashMap;
 
     private final Model model = Model.getInstance();
+    private MainViewController parentController;
 
-    public CategoryPageController(HashMap<String, ProductCardController> productCardHashMap) {
+    public CategoryPageController(HashMap<String, ProductCardController> productCardHashMap, MainViewController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("kategorier.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -45,7 +48,9 @@ public class CategoryPageController extends AnchorPane{
         }
 
         this.productCardHashMap = productCardHashMap;
+        this.parentController = parentController;
         initFlowPane();
+        model.getShoppingCart().addShoppingCartListener(this);
         
 
         category1ScrollPane.setFitToWidth(true);
@@ -55,6 +60,11 @@ public class CategoryPageController extends AnchorPane{
     @FXML
     public void setCategoryToFront(){
     category2ScrollPane.toFront();
+    }
+
+    @FXML
+    public void toPayment() {
+        if (model.getShoppingCart().getItems().size() != 0) parentController.toPayment();
     }
 
     private void initFlowPane() {
@@ -205,5 +215,14 @@ public void getVegFruit() {
         }
 
        
+    }
+
+    @Override
+    public void shoppingCartChanged(CartEvent arg0) {
+        if (model.getShoppingCart().getItems().size() == 0) {
+            toPayment.setVisible(false);
+        } else {
+            toPayment.setVisible(true);
+        }
     }
 }

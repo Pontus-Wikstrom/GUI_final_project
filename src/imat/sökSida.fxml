@@ -17,12 +17,12 @@
         <content>
           <AnchorPane fx:id="flowPaneAnchorPane" maxHeight="100000.0" minHeight="338.0" minWidth="0.0" prefWidth="1920.0">
                <children>
-                  <TextField fx:id="searchBar" layoutX="432.0" layoutY="38.0" onKeyTyped="#displaySearchResults" prefHeight="100.0" prefWidth="1126.0" promptText="Sök efter produkter här...">
+                  <TextField fx:id="searchBar" layoutX="432.0" layoutY="38.0" onKeyTyped="#displaySearchResults" prefHeight="100.0" prefWidth="1126.0" promptText="Sök efter produkter här..." AnchorPane.leftAnchor="397.0" AnchorPane.rightAnchor="397.0" AnchorPane.topAnchor="38.0">
                      <font>
                         <Font size="55.0" />
                      </font>
                   </TextField>
-                  <FlowPane fx:id="productListFlowPane" layoutX="169.0" layoutY="202.0" prefHeight="83.0" prefWidth="1588.0" AnchorPane.bottomAnchor="115.0" AnchorPane.topAnchor="202.0" />
+                  <FlowPane fx:id="productListFlowPane" layoutX="169.0" layoutY="202.0" prefHeight="83.0" prefWidth="1588.0" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="166.0" AnchorPane.rightAnchor="166.0" AnchorPane.topAnchor="202.0" />
                   <AnchorPane fx:id="leftButton" layoutX="910.0" layoutY="340.0" prefHeight="50.0" prefWidth="50.0" styleClass="switcharrows" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="885.0">
                      <children>
                         <ImageView fx:id="leftButtonImage" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#previousPageClick" pickOnBounds="true" preserveRatio="true">

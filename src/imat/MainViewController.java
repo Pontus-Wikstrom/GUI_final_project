@@ -196,7 +196,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         
         userPage.testData();
 
-        userPage.setScrollPanePosition(0.28);
+        userPage.setScrollPanePosition(0.77);
         userPage.updateFlowPane();
 
         userPage.testData();

@@ -333,6 +333,7 @@ public class fullWizardController extends AnchorPane{
         if (available == "79.00kr" & date != null) {
             wizardBetalSteg.toFront();
             address.setText(customer.getAddress());
+            //adress.setText("testig");
         }else if(date == null || timeSpot == null) {
             if (date == null) {
                 timeFill1.setStyle("-fx-border-color: red");
@@ -383,19 +384,24 @@ public class fullWizardController extends AnchorPane{
                 System.out.println("CardWorked");
                 confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
                 wizardDoneSteg.toFront();
+
+                controller.onPlaceOrder();
             }
 
         }else if (selectedOption == klarna){
             if (klarnaochPayPalController.controlEmail()) {
                 wizardDoneSteg.toFront();
+                controller.onPlaceOrder();
             }
         }else if (selectedOption == paypal){
             if (klarnaochPayPalController.controlEmail()) {
                 wizardDoneSteg.toFront();
+                controller.onPlaceOrder();
             }
         }else if (selectedOption == swish){
             if (swishPaymentController.controlPhoneNumber()) {
                 wizardDoneSteg.toFront();
+                controller.onPlaceOrder();
             }
         }
 

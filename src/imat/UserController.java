@@ -158,8 +158,12 @@ public class UserController extends AnchorPane{
 
         historyFlowPane.getChildren().clear();
 
-        for (Order order : orderHistoryList) {
+        for (int i = orderHistoryList.size() - 1; i >= 0; i--) {
+            Order order = orderHistoryList.get(i);
             historyFlowPane.getChildren().add(new OrderHistoryCardController(order));
         }
+        // for (Order order : orderHistoryList) {
+        //     historyFlowPane.getChildren().add(new OrderHistoryCardController(order));
+        // }
     }
 }

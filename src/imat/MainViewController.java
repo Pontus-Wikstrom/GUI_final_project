@@ -108,6 +108,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     public void initialize(URL url, ResourceBundle rb) {
         initProductCardHashMap();
+        //model.resetData();
 
         deliveryPage = new fullWizardController(this, shoppingCartCardHashMap);
 
@@ -335,13 +336,13 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         setPage(userPage);
         profile_marker.setVisible(true);
 
-        model.placeOrder(true);
         userPage.updateFlowPane();
-        onPlaceOrder();
 
     }
 
     public void onPlaceOrder() { // resets HashMaps so new order can start to be built
+        
+        model.placeOrder(true);
         productCardHashMap.clear();
         shoppingCartCardHashMap.clear();
         historyCardHashMap.clear();

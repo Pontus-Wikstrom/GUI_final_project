@@ -56,7 +56,7 @@ public class shoppingCart extends AnchorPane implements ShoppingCartListener {
     }
 
     public void toPayment(){
-        controller.toPayment();
+        if (model.getShoppingCart().getItems().size() != 0) controller.toPayment();
     }
 
     private void updateProductFlowPane() {

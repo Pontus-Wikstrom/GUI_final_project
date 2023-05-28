@@ -19,7 +19,7 @@ import javafx.fxml.FXMLLoader;
 
 import se.chalmers.cse.dat216.project.*;
 
-public class HomePageController extends AnchorPane{
+public class HomePageController extends AnchorPane implements ShoppingCartListener {
     @FXML
     private TextField searchBar;
     @FXML
@@ -34,6 +34,8 @@ public class HomePageController extends AnchorPane{
     private AnchorPane leftButton;
     @FXML
     private AnchorPane rightButton;
+    @FXML
+    private AnchorPane toPayment;
 
     private HashMap<String, ProductCardController> productCardHashMap;
 
@@ -41,8 +43,9 @@ public class HomePageController extends AnchorPane{
 
     private int sideIndex;
     private List<Product> currentProducts;
+    private MainViewController parentController;
 
-    public HomePageController(HashMap<String, ProductCardController> productCardHashMap) {
+    public HomePageController(HashMap<String, ProductCardController> productCardHashMap, MainViewController parentController) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("sökSida.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
@@ -55,6 +58,7 @@ public class HomePageController extends AnchorPane{
 
     
         this.productCardHashMap = productCardHashMap;
+        this.parentController = parentController;
         currentProducts = model.getProducts();
         sideIndex = 0;
         leftButton.setVisible(false);
@@ -63,6 +67,8 @@ public class HomePageController extends AnchorPane{
         searchBar.setFocusTraversable(false);
 
         homePageScrollPane.setFitToWidth(true);
+
+        model.getShoppingCart().addShoppingCartListener(this);
         
 
         //searchBar.textProperty().addListener(null);
@@ -74,6 +80,11 @@ public class HomePageController extends AnchorPane{
 
     public void clearSearchBar() {
         searchBar.clear();
+    }
+
+    @FXML
+    public void toPayment() {
+        if (model.getShoppingCart().getItems().size() != 0) parentController.toPayment();
     }
 
 
@@ -159,5 +170,14 @@ public class HomePageController extends AnchorPane{
         currentProducts = model.findProducts(searchBar.getText());
 
         fillProductListFlowPane();
+    }
+
+    @Override
+    public void shoppingCartChanged(CartEvent arg0) {
+        if (model.getShoppingCart().getItems().size() == 0) {
+            toPayment.setVisible(false);
+        } else {
+            toPayment.setVisible(true);
+        }
     }
 }

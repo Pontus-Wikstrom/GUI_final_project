@@ -50,7 +50,7 @@
             </AnchorPane>
         </content>
       </ScrollPane>
-      <AnchorPane layoutX="1580.0" layoutY="780.0" prefHeight="100.0" prefWidth="300.0" styleClass="tillkassan" stylesheets="@generall.css">
+      <AnchorPane fx:id="toPayment" layoutX="1580.0" layoutY="780.0" onMouseClicked="#toPayment" prefHeight="100.0" prefWidth="300.0" styleClass="tillkassan" stylesheets="@generall.css">
          <children>
             <Text fill="WHITE" layoutX="31.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Till Kassan">
                <font>

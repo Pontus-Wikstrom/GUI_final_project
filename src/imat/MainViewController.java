@@ -109,13 +109,13 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void initialize(URL url, ResourceBundle rb) {
         initProductCardHashMap();
 
-        deliveryPage = new fullWizardController(this);
+        deliveryPage = new fullWizardController(this, shoppingCartCardHashMap);
 
-        categoryPageController = new CategoryPageController(productCardHashMap);
+        categoryPageController = new CategoryPageController(productCardHashMap, this);
         shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
-        homePage = new HomePageController(productCardHashMap);
-        offersPage = new OffersPageController(productCardHashMap);
-        favouritesPage = new FavouritesPageController(productCardHashMap);
+        homePage = new HomePageController(productCardHashMap, this);
+        offersPage = new OffersPageController(productCardHashMap, this);
+        favouritesPage = new FavouritesPageController(productCardHashMap, this);
         userPage = new UserController(historyCardHashMap);
         productCardInfo = new ProductCardInfoController(this);
       
@@ -347,11 +347,11 @@ public class MainViewController implements Initializable, ShoppingCartListener {
         historyCardHashMap.clear();
         initProductCardHashMap();
 
-        categoryPageController = new CategoryPageController(productCardHashMap);
+        categoryPageController = new CategoryPageController(productCardHashMap, this);
         shoppingCartPage = new shoppingCart(this, shoppingCartCardHashMap);
-        homePage = new HomePageController(productCardHashMap);
-        offersPage = new OffersPageController(productCardHashMap);
-        favouritesPage = new FavouritesPageController(productCardHashMap);
+        homePage = new HomePageController(productCardHashMap, this);
+        offersPage = new OffersPageController(productCardHashMap, this);
+        favouritesPage = new FavouritesPageController(productCardHashMap, this);
         userPage = new UserController(historyCardHashMap);
 
     }

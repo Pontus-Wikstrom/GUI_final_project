@@ -254,6 +254,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void userPageClick() {
+        userPage.showUserData();
         setPage(userPage);
         profile_marker.setVisible(true);
 

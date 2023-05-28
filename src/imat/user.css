@@ -24,3 +24,7 @@
 .rec_purchase_history{
     -fx-border-color: #000000;
 }
+
+.hover_image{
+    -fx-cursor: hand;
+}

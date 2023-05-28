@@ -78,3 +78,7 @@
 .starBackground{
 -fx-background-color:white;
 }
+
+.hover_image:hover{
+    -fx-cursor: hand;
+}

@@ -63,7 +63,7 @@
                <children>
                   <AnchorPane fx:id="favourite" prefHeight="50.0" prefWidth="50.0" styleClass="starBackground">
                      <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="hover_image">
                            <image>
                               <Image url="@resources/favourite.png" />
                            </image>
@@ -72,7 +72,7 @@
                   </AnchorPane>
                   <AnchorPane fx:id="notFavourite" prefHeight="50.0" prefWidth="50.0" styleClass="starBackground">
                      <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" styleClass="hover_image">
                            <image>
                               <Image url="@resources/notFavourite.png" />
                            </image>

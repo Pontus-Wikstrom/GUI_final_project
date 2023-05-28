@@ -15,7 +15,7 @@
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" stroke="BLACK" strokeType="INSIDE" width="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
       <ScrollPane fx:id="homePageScrollPane" prefHeight="907.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
         <content>
-          <AnchorPane fx:id="flowPaneAnchorPane" maxHeight="100000.0" minHeight="400.0" minWidth="0.0" prefWidth="1920.0">
+          <AnchorPane fx:id="flowPaneAnchorPane" maxHeight="100000.0" minHeight="338.0" minWidth="0.0" prefWidth="1920.0">
                <children>
                   <TextField fx:id="searchBar" layoutX="432.0" layoutY="38.0" onKeyTyped="#displaySearchResults" prefHeight="100.0" prefWidth="1126.0" promptText="Sök efter produkter här...">
                      <font>
@@ -23,24 +23,29 @@
                      </font>
                   </TextField>
                   <FlowPane fx:id="productListFlowPane" layoutX="169.0" layoutY="202.0" prefHeight="83.0" prefWidth="1588.0" AnchorPane.bottomAnchor="115.0" AnchorPane.topAnchor="202.0" />
-                  <AnchorPane fx:id="leftButton" layoutX="910.0" layoutY="340.0" prefHeight="50.0" prefWidth="50.0" styleClass="switcharrows" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="900.0">
+                  <AnchorPane fx:id="leftButton" layoutX="910.0" layoutY="340.0" prefHeight="50.0" prefWidth="50.0" styleClass="switcharrows" AnchorPane.bottomAnchor="50.0" AnchorPane.leftAnchor="885.0">
                      <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="leftButtonImage" fitHeight="50.0" fitWidth="50.0" onMouseClicked="#previousPageClick" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/leftarrowProduct.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="Rightbutton" layoutX="1000.0" layoutY="340.0" prefHeight="50.0" prefWidth="50.0" styleClass="switcharrows" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="900.0">
+                  <AnchorPane fx:id="rightButton" layoutX="1000.0" layoutY="340.0" onMouseClicked="#nextPageClick" prefHeight="50.0" prefWidth="50.0" styleClass="switcharrows" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="885.0">
                      <children>
-                        <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="rightButtonImage" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                            <image>
                               <Image url="@resources/rightarrowProduct.png" />
                            </image>
                         </ImageView>
                      </children>
                   </AnchorPane>
+                  <Text fx:id="currentSideText" layoutX="951.0" layoutY="340.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1" AnchorPane.bottomAnchor="51.466796875" AnchorPane.leftAnchor="950.0" AnchorPane.rightAnchor="950.0">
+                     <font>
+                        <Font size="34.0" />
+                     </font>
+                  </Text>
                </children>
             </AnchorPane>
         </content>

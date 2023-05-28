@@ -656,7 +656,7 @@
                         <Font size="55.0" />
                      </font>
                   </Text>
-                  <Label fx:id="nextButton" layoutX="1307.0" layoutY="780.0" onMouseClicked="#toDelivery" prefHeight="65.0" prefWidth="116.0" styleClass="last_buttons" text="   Nästa" textAlignment="CENTER" textFill="WHITE">
+                  <Label fx:id="nextButton" accessibleRole="BUTTON" alignment="CENTER" layoutX="1307.0" layoutY="780.0" onMouseClicked="#toDelivery" prefHeight="65.0" prefWidth="200.0" styleClass="last_buttons" text="Nästa" textAlignment="CENTER" textFill="WHITE" AnchorPane.rightAnchor="450.0">
                      <font>
                         <Font size="30.0" />
                      </font>

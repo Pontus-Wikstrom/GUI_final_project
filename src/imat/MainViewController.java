@@ -52,7 +52,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     @FXML
     private UserController userPage;
     @FXML
-    private AnchorPane deliveryPage;
+    private fullWizardController deliveryPage;
     @FXML
     private shoppingCart shoppingCartPage;
 
@@ -182,7 +182,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void toPayment() {
-        //eliveryPage.reset();
+        deliveryPage.reset();
         setPage(deliveryPage);
     }
 

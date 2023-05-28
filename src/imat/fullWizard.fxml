@@ -651,7 +651,7 @@
                         <Font size="55.0" />
                      </font>
                   </Text>
-                  <Text layoutX="947.0" layoutY="830.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 KR">
+                  <Text fx:id="totalPris" layoutX="947.0" layoutY="830.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 KR">
                      <font>
                         <Font size="55.0" />
                      </font>

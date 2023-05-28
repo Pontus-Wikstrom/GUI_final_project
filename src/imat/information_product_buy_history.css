@@ -1,4 +1,5 @@
 .rec_information_product_buy_history{
     -fx-background-color: #ffffff;
+    -fx-border-width: 0 1 1 1;
     -fx-border-color: #000000;
 }

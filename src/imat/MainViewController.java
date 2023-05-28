@@ -163,6 +163,28 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     // ---------------- GO TO DIFFERENT PAGES ------------------------------------
 
+    public void purchaseHistoryClick() {
+        setPage(userPage);
+        
+        userPage.testData();
+
+        userPage.setScrollPanePosition(0.77);
+        userPage.updateFlowPane();
+
+        userPage.testData();
+
+        closeHamburgerMenu();
+                
+    }
+
+    private void test() {
+        setPage(userPage);
+
+        closeHamburgerMenu();
+        userPage.updateFlowPane();
+        userPage.setScrollPanePosition(0.77);
+    }
+
     public void productCardClick() {
         productDescriptionBackground.toFront();
     }

@@ -3,6 +3,11 @@
     -fx-background-radius: 5px;
 }
 
+.close_button:hover{
+    -fx-background-color: #1B7181;
+    -fx-cursor: hand;
+}
+
 .varukorg_rec{
     -fx-background-color: #2B9EB3;
     -fx-background-radius: 50px;

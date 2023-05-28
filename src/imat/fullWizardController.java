@@ -390,16 +390,19 @@ public class fullWizardController extends AnchorPane{
 
         }else if (selectedOption == klarna){
             if (klarnaochPayPalController.controlEmail()) {
+                confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
                 wizardDoneSteg.toFront();
                 controller.onPlaceOrder();
             }
         }else if (selectedOption == paypal){
             if (klarnaochPayPalController.controlEmail()) {
+                confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
                 wizardDoneSteg.toFront();
                 controller.onPlaceOrder();
             }
         }else if (selectedOption == swish){
             if (swishPaymentController.controlPhoneNumber()) {
+                confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
                 wizardDoneSteg.toFront();
                 controller.onPlaceOrder();
             }

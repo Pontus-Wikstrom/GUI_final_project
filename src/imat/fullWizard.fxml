@@ -26,17 +26,17 @@
             <AnchorPane fx:id="wizardDoneSteg" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="907.0" prefWidth="1920.0">
                <children>
                   <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITESMOKE" height="907.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="1920.0" />
-                  <Label alignment="CENTER" layoutX="112.0" layoutY="162.0" text="Tack för din beställning" AnchorPane.bottomAnchor="699.0" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="513.0" AnchorPane.topAnchor="123.0">
+                  <Label alignment="CENTER" layoutX="112.0" layoutY="162.0" text="Tack för din beställning" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="513.0" AnchorPane.topAnchor="123.0">
                      <font>
                         <Font size="70.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="796.0" layoutY="419.0" text="Du kan nu stänga ner den här sidan" AnchorPane.bottomAnchor="392.0" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="513.0" AnchorPane.topAnchor="392.0">
+                  <Label alignment="CENTER" layoutX="796.0" layoutY="419.0" text="Du kan nu stänga ner den här sidan" AnchorPane.leftAnchor="513.0" AnchorPane.rightAnchor="513.0" AnchorPane.topAnchor="465.0">
                      <font>
                         <Font size="50.0" />
                      </font>
                   </Label>
-                  <Label fx:id="confirmation" alignment="CENTER" layoutX="569.0" layoutY="246.0" text="Din beställning kommer fram den ......... mellan ......." wrapText="true" AnchorPane.leftAnchor="569.0" AnchorPane.rightAnchor="569.0" AnchorPane.topAnchor="246.0">
+                  <Label fx:id="confirmation" alignment="CENTER" layoutX="569.0" layoutY="246.0" text="Din beställning kommer fram Torsdag den 30/10 mellan 16:00-18:00" wrapText="true" AnchorPane.leftAnchor="569.0" AnchorPane.rightAnchor="569.0" AnchorPane.topAnchor="246.0">
                      <font>
                         <Font size="50.0" />
                      </font>

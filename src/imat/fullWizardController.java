@@ -417,7 +417,7 @@ public class fullWizardController extends AnchorPane{
         }
 
         totalPris.setText(String.format("%.2f", totalCost) + " kr");
-        slutPris.setText(String.format("%.2f", (totalCost + 79)) + " kr");
+        slutPris.setText("Totalbelopp: " + String.format("%.2f", (totalCost + 79)) + " kr");
     }
 
     @FXML

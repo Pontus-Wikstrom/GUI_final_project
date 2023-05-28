@@ -1,5 +1,7 @@
 package imat;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -8,6 +10,7 @@ import java.util.HashMap;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.FlowPane;
@@ -40,6 +43,7 @@ public class OrderHistoryCardController extends AnchorPane {
         } catch (IOException exception) {
             throw new RuntimeException(exception);
         }
+
 
         this.order = order;
         initHistoryCardHashMap();

@@ -54,6 +54,7 @@ public class UserController extends AnchorPane{
 
 
 
+
     private double vBarPosition = 0;
 
     public UserController(HashMap<String, HistoryCardController> historyCardHashMap) {

@@ -19,15 +19,16 @@ public class BetalningKortController extends AnchorPane{
     @FXML
     private TextField text_input_cvc;
     CreditCard creditCard;
+    public FXMLLoader kortBetalning;
 
     public BetalningKortController() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("betalning_kort.fxml"));
-        fxmlLoader.setRoot(this);
-        fxmlLoader.setController(this);
+        kortBetalning = new FXMLLoader(getClass().getResource("betalning_kort.fxml"));
+        kortBetalning.setRoot(this);
+        kortBetalning.setController(this);
         System.out.println("hello");
 
         try {
-            fxmlLoader.load();
+            kortBetalning.load();
         } catch (
                 IOException exception) {
             throw new RuntimeException(exception);

@@ -35,6 +35,8 @@ public class fullWizardController extends AnchorPane{
 
     KlarnaochPayPalController klarnaochPayPalController = new KlarnaochPayPalController();
 
+    SwishPaymentController swishPaymentController = new SwishPaymentController();
+
     private final Model model = Model.getInstance();
 
     @FXML
@@ -208,7 +210,6 @@ public class fullWizardController extends AnchorPane{
     String date;
     String available;
     String timeSpot;
-
     String[] weekdays = {"Måndag", "Tisdag", "Onsdag", "Torsdag", "Fredag", "Lördag", "Söndag"};
 
 
@@ -304,6 +305,7 @@ public class fullWizardController extends AnchorPane{
     public void toPayment(){
         if (available == "79.00kr" & date != null) {
             wizardBetalSteg.toFront();
+            address.setText(customer.getAddress());
         }else if(date == null || timeSpot == null) {
             if (date == null) {
                 timeFill1.setStyle("-fx-border-color: red");
@@ -354,27 +356,32 @@ public class fullWizardController extends AnchorPane{
                 System.out.println("CardWorked");
                 confirmation.setText("Din beställning kommer fram " + day + " den " + date + " mellan " + timeSpot);
                 wizardDoneSteg.toFront();
-                wizardDoneSteg.requestFocus();
             }
 
         }else if (selectedOption == klarna){
             if (klarnaochPayPalController.controlEmail()) {
                 wizardDoneSteg.toFront();
-                wizardDoneSteg.requestFocus();
+            }
+        }else if (selectedOption == paypal){
+            if (klarnaochPayPalController.controlEmail()) {
+                wizardDoneSteg.toFront();
+            }
+        }else if (selectedOption == swish){
+            if (swishPaymentController.controlPhoneNumber()) {
+                wizardDoneSteg.toFront();
             }
         }
-        wizardDoneSteg.toFront();
-        /*wizardDoneSteg.requestFocus();
-        if (wizardDoneSteg.isFocused()) {
-            Thread.sleep(1000);
-            wizardVarukorgSteg.toFront();
 
-        }*/
+    }
+
+    public void reset() {
+        wizardVarukorgSteg.toFront();
 
     }
 
     @FXML
     public void toDelivery(){
+        loadDataFromAccount();
         wizardLeveransSteg.toFront();
     }
 
@@ -748,8 +755,8 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #f5f5f5");
-        AnchorPane payPalPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
-        setPage(payPalPayment);
+        klarnaochPayPalController.preFilled();
+        setPage(klarnaochPayPalController);
         selectedOption = paypal;
     }
 
@@ -759,8 +766,8 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #ffffff");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #f5f5f5");
-        AnchorPane klarnaPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("paypalochklarna.fxml")));
-        setPage(klarnaPayment);
+        klarnaochPayPalController.preFilled();
+        setPage(klarnaochPayPalController);
         selectedOption = klarna;
     }
     @FXML
@@ -770,8 +777,7 @@ public class fullWizardController extends AnchorPane{
         card.setStyle("-fx-background-color: #ffffff");
         swish.setStyle("-fx-background-color: #f5f5f5");
         betalningKortController.preFilled();
-        AnchorPane cardPayment= new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_kort.fxml")));
-        setPage(cardPayment);
+        setPage(betalningKortController);
         selectedOption = card;
     }
     @FXML
@@ -780,8 +786,8 @@ public class fullWizardController extends AnchorPane{
         klarna.setStyle("-fx-background-color: #f5f5f5");
         card.setStyle("-fx-background-color: #f5f5f5");
         swish.setStyle("-fx-background-color: #ffffff");
-        AnchorPane swishPayment = new SitePane(this.controller, new FXMLLoader(getClass().getResource("betalning_telefonnr.fxml")));
-        setPage(swishPayment);
+        swishPaymentController.preFilled();
+        setPage(swishPaymentController);
         selectedOption = swish;
     }
 

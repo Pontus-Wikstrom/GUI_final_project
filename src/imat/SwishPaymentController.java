@@ -9,15 +9,14 @@ import se.chalmers.cse.dat216.project.IMatDataHandler;
 
 import java.io.IOException;
 
-public class KlarnaochPayPalController extends AnchorPane {
-
-    Customer customer;
+public class SwishPaymentController extends AnchorPane {
 
     @FXML
-    private TextField email;
+    private TextField phoneNumber;
+    Customer customer;
 
-    public KlarnaochPayPalController() {
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("paypalochklarna.fxml"));
+    public SwishPaymentController() {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("betalning_telefonnr.fxml"));
         fxmlLoader.setRoot(this);
         fxmlLoader.setController(this);
         System.out.println("hello");
@@ -29,21 +28,18 @@ public class KlarnaochPayPalController extends AnchorPane {
             throw new RuntimeException(exception);
         }
         customer = IMatDataHandler.getInstance().getCustomer();
-
     }
 
-    public boolean controlEmail() {
-        if (email.getText().isBlank()) {
+    public boolean controlPhoneNumber() {
+        if (phoneNumber.getText().isBlank()) {
             return false;
         }
         return true;
     }
 
     public void preFilled() {
-        if (customer.getEmail() != null && customer.getEmail() != "") {
-            email.setText(customer.getEmail());
+        if (customer.getPhoneNumber() != null && customer.getPhoneNumber() != "") {
+            phoneNumber.setText(customer.getPhoneNumber());
         }
     }
 }
-
-

@@ -85,7 +85,7 @@ public class UserController extends AnchorPane{
         customer.setPostAddress(text_input_city.getText());
         customer.setEmail(text_input_email.getText());
         customer.setMobilePhoneNumber(text_input_phone.getText());
-        System.out.println(customer.getAddress());
+
     }
 
     public void showUserData(){
@@ -104,6 +104,8 @@ public class UserController extends AnchorPane{
         user.setUserName(firstName.getText() + " " + lastName.getText());
         userName.setText(firstName.getText());
         creditCard.setHoldersName(firstName.getText() + " " + lastName.getText());
+        customer.setFirstName(firstName.getText());
+        customer.setLastName(lastName.getText());
 
         creditCard.setCardNumber(text_input_kortnr.getText());
         if (text_input_cvc.getText() != "") {
@@ -115,7 +117,8 @@ public class UserController extends AnchorPane{
         if (text_input_month.getText() != "") {
             creditCard.setValidYear(Integer.parseInt(text_input_year.getText()));
         }
-        System.out.println(creditCard.getCardNumber());
+
+        System.out.println("hello hello" + creditCard.getCardNumber());
     }
 
     private void updateOrderHistoryList() {

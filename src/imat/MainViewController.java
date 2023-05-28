@@ -182,6 +182,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
 
     @FXML
     public void toPayment() {
+        //eliveryPage.reset();
         setPage(deliveryPage);
     }
 
@@ -189,7 +190,7 @@ public class MainViewController implements Initializable, ShoppingCartListener {
     public void offersPageClick() {
         setPage(offersPage);
         offersPage.fillProductListFlowPane();
-        offer_marker.setVisible(true);;
+        offer_marker.setVisible(true);
     }
 
     @FXML

@@ -20,3 +20,7 @@
 .burgirbutton:hover{
     -fx-cursor:hand;
 }
+
+.varukorg_image:hover{
+    -fx-cursor: hand;
+}
